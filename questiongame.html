@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="me" href="https://www.blogger.com/profile/02013393696042949918" />
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+</head>
+
+<body onload="enter();">
+  <script type = "text/javascript">
+  qs = [
+    "Frozen or Tangled?",
+    "If all the fruit grew arms and legs and got into a fight, which fruit would win?",
+    "What is your favorite holiday?",
+    "If you could have any animal–changed to the size of a horse–to ride into battle, which animal would you choose and why?",
+    "What is your favorite song?",
+    "What are you a snob about?",
+    "What is your favorite subject?",
+    "What was your favorite movie when you were seven?",
+    "If you could have any lame super power, what would it be?",
+    "What is your favorite meal?",
+    "What is a little victory that is actually huge in your mind?",
+    "You have to assemble a team of people to save the world, name five people to be on that team.",
+    "What is your favorite season?",
+    "My younger brother is in fifth grade–what advice do you wish you'd been given in middle school?",
+    "What are you better than 99 percent of the population at?",
+    "What do you wish they taught in school?",
+    "If you could add a zero to any number in your life, what would you change?",
+    "What small thing do you feel strongly about?",
+    "If life had Achievements, like many video games, what are some fun achievements you could unlock, other than Marriage, or having Children?",
+    "If you could call yourself of five years ago, but only had thirty seconds to talk, what would you tell yourself?",
+    "What can you talk about for hours on end?",
+    "What were your parents right about?",
+    "A sugar daddy buys you nice things–what does a Splenda daddy buy?",
+    "Is a hot dog a sandwich?",
+    "In what way do you rebel, how do you stick it to the man?",
+    "Is a cereal a soup?",
+    "1%, 2%, skim, or whole?",
+    "What is worth buying the high quality version of?",
+    "What is the best movie?",
+    "What is the most embarrassing thing you're willing to admit right now?",
+    "What is truly fascinating?",
+    "Batman gets his name from his fear of bats. Using that logic, what is your superhero name?",
+    "Who's your favorite dictator?",
+    "What's your relationship deal breaker?",
+    "You have to beat your twelve-year-old self at a game of their choosing–what game is it, and how do you win?",
+    "What's the most pointless argument you've ever been passionately involved in?",
+    "What's your crazy useless talent?",
+    "What is a personal rule you hold yourself to?",
+    "If you could be any animal, what would you choose?",
+    "You are a burglar, but instead of stealing, you try to annoy your victims–what do you do?",
+    "How many third-graders do you think you could fight, and what would be your strategy?",
+    "You are inducted into the pantheon of the gods, but only at an entry level position, what mundane thing do you choose to be god of?",
+    "If there was a place where people that 'did okay, I guess' in life went, called 'Mehven', what things would you find there?",
+    "What's your favorite fun fact?",
+    "If Satan opened up 'heck', a toned-down version of hell, what would you find there?",
+    "You now have the obedience and loyalty of all squirrels. How do you proceed?",
+    "What is your favorite Disney side character?",
+    "If you could have any superpower, what would it be?",
+    "What's your favorite smell?",
+    "If all the animals could talk, which animal would swear the most?",
+    "If you could get paid a livable wage to pursue any hobby, what would you do?"
+  ];
+    function enter(){
+
+      for ( var i  = 0; i < qs.length; i++ ){
+        document.getElementById('question_container').innerHTML += "<div class = 'well'><div class='row'><div class='col-sm-1'><h1>"+(++i) + ': </h1></div><h1><div class="col-sm-11" style = "color:#666666" >' + qs[i-1]+"</h1></div><div></div>";
+        i--;
+      }
+      return;
+    }
+  </script>
+  <div class = "container" >
+
+  <br>
+    <h1>The Question Game</h1>
+    <h2>
+      <small>
+          This webpage exists because I'm really bad about running out of things to talk about. A while ago, I started looking for fun quesitons to ask people in conversation, other than "How 'bout that weather?". A lot of the questions come from askreddit, some I just made up, and some are just classics.
+        <br>
+          The fruit question is my go-to in when I'm sitting around people looking for something to talk about. A lot of heated debates come about as a result, and they're all hilarious.
+        <br>
+          I came across <a href="https://www.nytimes.com/2015/01/11/fashion/no-37-big-wedding-or-small.html?_r=1">this article</a> about while I was putting together this list. It offers that going through their list of questions can give you an intimate glimpse into the mind of the person you're talking with. 
+      </small>
+    </h2>
+    <br>
+      <div id = "question_container">
+      </div>
+  </div>
+</body>
+</html>
