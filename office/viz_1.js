@@ -1,7 +1,7 @@
 var hoverStr = "Hover for Info";
 
 var URLSJSON = {
-  "Jim":"images/jim.png",
+  "Jim":"office/images/jim.png",
   "Angela":"images/angela.jpg",
   "Andy":"images/andy.png",
   "Pam":"images/pam.jpg",
