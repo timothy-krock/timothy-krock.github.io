@@ -1,23 +1,23 @@
 var hoverStr = "Hover for Info";
 
 var urlsJSON = {
-  "Jim":"images/jim.png",
-  "Angela":"images/angela.jpg",
-  "Andy":"images/andy.png",
-  "Pam":"images/pam.jpg",
-  "Oscar":"images/oscar.png",
-  "Phyllis":"images/phyllis.jpg",
-  "Meredith":"images/meredith.jpg",
-  "Michael":"images/michael.png",
-  "Ryan":"images/ryan.jpg",
-  "Darryl":"images/darryl.png",
-  "Kelly":"images/kelly.png",
-  "Toby":"images/toby.jpg",
-  "Erin":"images/erin.png",
-  "Kevin":"images/kevin.jpg",
-  "Dwight":"images/dwight.png",
-  "Stanley": "images/stanley.png",
-  "Jan": "images/jan.png"
+  "Jim":"office/images/jim.png",
+  "Angela":"office/images/angela.jpg",
+  "Andy":"office/images/andy.png",
+  "Pam":"office/images/pam.jpg",
+  "Oscar":"office/images/oscar.png",
+  "Phyllis":"office/images/phyllis.jpg",
+  "Meredith":"office/images/meredith.jpg",
+  "Michael":"office/images/michael.png",
+  "Ryan":"office/images/ryan.jpg",
+  "Darryl":"office/images/darryl.png",
+  "Kelly":"office/images/kelly.png",
+  "Toby":"office/images/toby.jpg",
+  "Erin":"office/images/erin.png",
+  "Kevin":"office/images/kevin.jpg",
+  "Dwight":"office/images/dwight.png",
+  "Stanley": "office/images/stanley.png",
+  "Jan": "office/images/jan.png"
 }
 var data ={
   "Angela":.0041,
