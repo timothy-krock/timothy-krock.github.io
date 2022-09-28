@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Krock House Teal Orbit</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <br> 
+    <div class = "container-fluid">
+        <div class="well">
+          <h1>Krock House Teal Orbit<small><br>13 September 2021</small></h1>
+          
+
+          <div class="row">
+              <div class="col-sm-4">
+                  <video width="400" controls autoplay>
+                    <source src="videos/raw_eo_flight.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                  </video>
+                  <h3>Undistorted Vis Data</h1>
+
+              </div>
+            <div class="col-sm-4">
+                <video width="400" controls autoplay>
+                  <source src="videos/raw_ir_flight.mp4" type="video/mp4">
+                  Your browser does not support HTML video.
+                </video>
+                <h3>Undistorted IR Data</h1>
+
+            </div>
+
+            <div class="col-sm-4">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1804.5885279078936!2d-90.08052891083912!3d40.597716617157545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x249447d9d63eb00a!2zNDDCsDM1JzUwLjMiTiA5MMKwMDQnNDYuMiJX!5e1!3m2!1sen!2sus!4v1661273159775!5m2!1sen!2sus" width="400" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+
+          </div>
+        </div>
+    </div>
+    <div class = "container-fluid">
+        <div class="well">
+            <h3>Platform: Teal Golden Eagle</h3>
+            <table class="table table-striped">
+              <tbody>
+                <tr>
+                    <td>Vis and IR are NOT time aligned.</td>
+                </tr>
+                <tr>
+                    <td>Flight Planned w/ Mission Planner in the Teal TAC</td>
+                </tr>
+              </table>
+            </tbody>
+            <h3>Collection Info</h3>
+            <table class="table table-striped">
+              <tbody>
+                <tr>
+                    <td>Date</td>
+                    <td>13 September 2021 </td>
+                </tr>
+                <tr>
+                  <td>Location</td>
+                  <td>Canton, IL (Tim's House) </td>
+                </tr>
+                <tr>
+                  <td>Latitude, Longitude</td>
+                  <td><a href = "https://goo.gl/maps/EMAH3HmsAqjfUCb9A">40.59740970974009, -90.07940390142224</a>
+                  </td>
+
+                </tr>
+
+                <tr>
+                  <td>BA4S RMSE (IR, Sift Root)</td>
+                  <td><a href = "ba4s_out_ir_flight_1_undistorted_sift_root_j1_a15_F1_g0/report.html">0.540156</a></td>
+                </tr>
+                <tr>
+                  <td>BA4S RMSE (Vis, Sift Root)</td>
+                  <td><a href = "ba4s_out_eo_flight_1_undistorted_sift_root_j1_a15_F1_g0/report.html">0.448937</a></td>
+                </tr>
+                <tr>
+                  <td>Path to Undistorted Vis</td>
+                  <td><link></td>
+                </tr>
+                <tr>
+                  <td>Path to Undistorted Vis KRt</td>
+                  <td><link></td>
+                </tr>
+                <tr>
+                  <td>Path to Undistorted IR</td>
+                  <td><link></td>
+                </tr>
+                <tr>
+                  <td>Path to Undistorted IR KRt</td>
+                  <td><link></td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+    </div>
+    
+    
+    <div class = "container-fluid">
+        <div class="well">
+          <h1>Point Clouds</h1>
+
+          <div class="row">
+              <div class="col-sm-4">
+                  <video width="400" controls autoplay loop>
+                    <source src="videos/raw_ir_ironbow480.mov" type="video/mp4">
+                    Your browser does not support HTML video.
+                  </video>
+                  <h3>VB3D IR Point Cloud</h1>
+
+              </div>
+            <div class="col-sm-4">
+                <video width="400" controls autoplay loop>
+                  <source src="videos/vis480.mov" type="video/mp4">
+                  Your browser does not support HTML video.
+                </video>
+                <h3>VB3D Vis Point Cloud</h1>
+
+            </div>
+            <div class="col-sm-4">
+                <video width="400" controls autoplay loop>
+                  <source src="videos/greedy_ironbow480.mov" type="video/mp4">
+                  Your browser does not support HTML video.
+                </video>
+                <h3>Vis Cloud Painted IR<small> (Using Greedy Algorithm)</small> </h1>
+
+            </div>
+          </div>
+        </div>
+    </div>
+
+    
+
+
+
+</body> 
+</html>
+
+
+
