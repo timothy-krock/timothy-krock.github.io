@@ -16,7 +16,7 @@ body, html {
   background-color: black;
 }
 
-.bgimg-1, .bgimg-2, .bgimg-3 {
+.lander-bgimg, .about-bgimg, .bgimg-3, .contact-bgimg{
   position: relative;
   opacity: 1;
   background-attachment: fixed;
@@ -25,15 +25,15 @@ body, html {
   background-size: cover;
 
 }
-.bgimg-1 {
-  background-image: url("img/a.JPG");
+.lander-bgimg {
+  background-image: url("img/lander.JPG");
   min-height: 100%;
   opacity: 1;
 
 }
 
-.bgimg-2 {
-  background-image: url("img/b.JPG");
+.about-bgimg {
+  background-image: url("img/about.JPG");
   min-height: 800px;
 }
 
@@ -41,53 +41,92 @@ body, html {
   background-image: url("img/c.JPG");
   min-height: 800px;
 }
+.contact-bgimg {
+    background-image: url("img/contact.JPG");
+    min-height: 800px;
+}
 
 .caption {
   position: absolute;
   left: 0;
-  top: 50%;
+  top: 20%;
   width: 100%;
   text-align: center;
   color: #000;
 }
+
+
+.about-box {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      bottom: 20px;
+      right:20px;
+      text-align: center;
+      background-color: rgba(0, 0, 0, .5);
+}
 .lander {
       position: absolute;
-      left: 0;
       top: 25%;
       width: 100%;
       text-align: center;
-      opacity:1;
       color: white;
-      padding: 18px;
       font-size: 25px;
       letter-spacing: 4px;
+}
+.lander-box {
+    margin: auto;
+    background-color: rgba(0, 0, 0, .5);
+    width:250px;
+    height:200px;
+    text-align: center;
 }
 .caption span.border {
   background-color: #111;
   color: #fff;
   padding: 18px;
   font-size: 25px;
-  letter-spacing: 10px;
+  letter-spacing: 2px;
 }
     
 .profile {
     border-radius: 50%;
     width: 200px;
     outline-width:30;
-    border: 2px solid #FFF;
+    border: 2px solid #6ED873;
+    margin:auto;
 
 }
 
 h3 {
-  letter-spacing: 2px;
+  letter-spacing: 10px;
   text-transform: uppercase;
-  font: 20px "Lato", sans-serif;
-  color: #111;
+  font: 25px "Lato", sans-serif;
+  color: #fff;
+}
+.dot {
+      height: 18px;
+      width: 18px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+}
+.contact-box {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      bottom: 20px;
+      right:20px;
+      text-align: center;
+      background-color: rgba(0, 0, 0, .5);
+      letter-spacing: 2px;
+      font: 25px "Lato", sans-serif;
+      color: #fff;
 }
 
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
-  .bgimg-1, .bgimg-2, .bgimg-3 {
+.lander-bgimg, .about-bgimg, .bgimg-3, .contact-bgimg {
     background-attachment: scroll;
   }
 }
@@ -96,20 +135,31 @@ h3 {
 <body>
 
     
-<div class="bgimg-1" id = "lander">
-    <div class = "lander">
-    <img class = "profile" src="img/profpic.jpg" alt="Avatar">
-    <br>
+<div class="lander-bgimg" id = "lander">
+    <div class = "lander" >
     Hi! I'm Tim
     <br>
-    <a style = "color:white;" href = "#about"> about</a><br>
-    <a style = "color:white;" href = "#resume"> resume</a><br>
-    <a style = "color:white;" href = "#projects"> projects</a><br>
-    <a style = "color:white;" href = "#contact"> contact</a><br>
+    <img class = "profile" src="img/profpic.jpg">
+    <br><br>
+    <div class = "lander-box">
+        <div style ="height:7px"></div>
+        <a style = "color:white;" href = "#about"   ><span class="dot" style = "background-color:#F2A56B"></span> about</a><br>
+        <a style = "color:white;" href = "#resume"  ><span class="dot" style = "background-color:#6ED873"></span> resume</a><br>
+        <a style = "color:white;" href = "#projects"><span class="dot" style = "background-color:#F7C4B7"></span> projects</a><br>
+        <a style = "color:white;" href = "#contact" ><span class="dot" style = "background-color:#617BDC"></span> contact</a><br>
+    </div>
     </div>
 </div>
 
-<div id = "resume" style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+<div class="about-bgimg" id = "about">
+    <div class="about-box">
+            <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;opacity:1.0;"><h3>ABOUT</h3>
+                <p>I'm a computer vision PhD student at the University of Missouri. I work in the Computational Imaging and Visual Analysis (CIVA) Lab.
+            </span>
+    </div>
+</div>
+
+<div id = "resume" style="color: #777;background-color:white;text-align:center;padding:10px 10px;text-align: justify;">
   <h3 style="text-align:center;">RESUME</h3>
 
     <!-- RESUME ------------------------------>
@@ -196,33 +246,31 @@ h3 {
   
 </div>
 
-<div class="bgimg-2">
-  <div class="caption">
-  <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">LESS HEIGHT</span>
-  </div>
-</div>
 
 <div style="position:relative;">
   <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-  <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+  <p></p>
   </div>
 </div>
 
 <div class="bgimg-3">
   <div class="caption">
-  <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">SCROLL UP</span>
+  <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">Projects</span>
   </div>
 </div>
 
 <div style="position:relative;">
   <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-  <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+  <p></p>
   </div>
 </div>
 
-<div class="bgimg-1">
-  <div class="caption">
-  <span class="border">COOL!</span>
+
+<div class="contact-bgimg" id = "contact">
+  <div class="contact-box"><h3>Contact</h3>
+      309-338-6647<br>
+      
+      krocktim@gmail.com
   </div>
 </div>
 
