@@ -39,11 +39,13 @@
                             
                             .bgimg-3 {
                                 background-image: url("img/c.JPG");
-                                min-height: 200%;
+
                             }
                             .contact-bgimg {
                                 background-image: url("img/contact.JPG");
-                                min-height: 800px;
+                                min-height: 600px;
+                                background-position: top;
+
                             }
                             
                             .caption {
@@ -111,11 +113,13 @@
                                 display: inline-block;
                             }
                             .contact-box {
-                                position: absolute;
-                                left: 20px;
-                                top: 20px;
-                                bottom: 20px;
-                                right:20px;
+                                position: relative;
+                                width:400px;
+                                margin:auto;
+                                top:20px;
+                                padding-top:40px;
+                                padding-bottom:40px;
+
                                 text-align: center;
                                 background-color: rgba(0, 0, 0, .5);
                                 letter-spacing: 2px;
@@ -130,10 +134,6 @@
                             .project-entry {
                                 border-radius: 75px;
                                 margin: 20px;
-                                width:auto;
-                                right:20px;
-                                min-height: 150px;
-                                background-color: rgba(0, 0, 0, .5);
                                 letter-spacing: 2px;
                                 font: 20px "Lato", sans-serif;
                                 color: #fff;
@@ -149,18 +149,23 @@
                                 
                             }
                             .project-text {
-                                padding-left:10px;
-                                padding-right:75px;
-                                padding-top:10px;
+                                background-color: rgba(0, 0, 0, .5);
+                                right:20px;
+                                left: 1 0px;
+                                min-height: 150px;
+                                padding-left:50px;
+                                padding-right:50px;
                                 border-radius: 75px;
-                                float: left;
-                                text-align: justify;
-                                letter-spacing: 2px;
-                                min-width:0;
+                                text-align: center;
                                 font: 20px "Lato", sans-serif;
+                                
+                            }
+                            .social_icon {
+                                width: 100px;
+                                letter-spacing: 2px;
                                 display: inline-block;
                                 margin: 0 auto;
-                                
+        
                             }
                             /* Turn off parallax scrolling for tablets and phones */
                             @media only screen and (max-device-width: 1024px) {
@@ -183,7 +188,7 @@
                         <div style ="height:7px"></div>
                         <a style = "color:white;" href = "#about"   ><span class="dot" style = "background-color:#F2A56B"></span> about</a><br>
                         <a style = "color:white;" href = "#resume"  ><span class="dot" style = "background-color:#6ED873"></span> resume</a><br>
-                        <a style = "color:white;" href = "#projects"><span class="dot" style = "background-color:#F7C4B7"></span> projects</a><br>
+                        <a style = "color:white;" href = "#etc"><span class="dot" style = "background-color:#F7C4B7"></span> etc</a><br>
                         <a style = "color:white;" href = "#contact" ><span class="dot" style = "background-color:#617BDC"></span> contact</a><br>
                     </div>
             </div>
@@ -285,53 +290,52 @@
         </div>
         
         
-        <div style="position:relative;">
-            <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-                <p></p>
-            </div>
-        </div>
+
         
         <div class="bgimg-3">
-            <br>
-            <h3 style = "text-align:center">etc</h3>
-            <br>
-            <div class = "project-entry">
-                <img class = "project-image" src="img/office.png"></img>
-                <div class = "project-text">Project
-                    
-                    Project 1
+            <div style="position:relative;" id = "etc">
+                <div style="color:#FFF;opacity:0.7;background-color:#282E34;padding:10px;top:0px;">
+                    <h3 style = "text-align:center">etc</h3>
                 </div>
             </div>
-            
-            
-            <div class = "project-entry">
-                <img class = "project-image" src="img/hope.png"></img>
-                <div class = "project-text">Project
-                    <br>
-                    info
-                </div>
-            </div>
-            
-            <div class = "project-entry">
-                <img class = "project-image" src="img/mavic_air_2.png"></img>
-                <div class = "project-text">Project
-                    <br>
-                    info
-                </div>
-            </div>
-            
-            <div class = "project-entry">
-                <img class = "project-image" src="img/m2ea.png"></img>
-                <div class = "project-text">Project
-                    <br>
-                    info
-                </div>
-            </div>
-            
-            <h3 style = "text-align:center">Hobbies</h3>
-            
+            <h3 style = "text-align:center">drones</h3>
+
+    
+  
             <table class = "project-entry">
                 
+                <tr>
+                    <td><img class = "project-image" src="img/hope.png"></img></td>
+                    <td class = "project-text">This is Hope! She's an Eachine Airloader that I mounted four props to. She carries a Pixhawk Orange Cube with a Here3 GPS. </td>
+                </tr>
+            </table>
+            <table class = "project-entry">
+                
+                <tr>
+                    <td><img class = "project-image" src="img/mavic_air_2.png"></img></td>
+                    <td class = "project-text">I play Iron Hands in Warhammer 40,000! I'm bad at it, but I love painting, which I am also bad at.</td>
+                </tr>
+            </table>
+            <table class = "project-entry">
+                
+                <tr>
+                    <td><img class = "project-image" src="img/m2ea.png"></img></td>
+                    <td class = "project-text">I play Iron Hands in Warhammer 40,000! I'm bad at it, but I love painting, which I am also bad at.</td>
+                </tr>
+            </table>
+            
+            
+            <h3 style = "text-align:center">Hobbies</h3>
+            <table class = "project-entry">
+                <tr>
+                    <td><img class = "project-image" src="img/office.png"></img></td>
+                    <td class = "project-text">
+                        <a style = "color:white" href="http://www.timkrock.com/office"> Did Micheal Scott impact the IMDB ratings of the Office?</a>
+                    </td>
+                </tr>
+            </table>
+            
+            <table class = "project-entry">
                 <tr>
                     <td><img class = "project-image" src="img/40k.png"></img></td>
                     <td class = "project-text">I play Iron Hands in Warhammer 40,000! I'm bad at it, but I love painting, which I am also bad at.</td>
@@ -339,18 +343,25 @@
             </table>
             
             
-            <div style="position:relative;">
-                <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-                    <p></p>
-                </div>
-            </div>
+
+            
+            
             
             
             <div class="contact-bgimg" id = "contact">
-                <div class="contact-box"><h3>Contact</h3>
+                    <div style="color:#FFF;opacity:0.9;background-color:#282E34;padding:10px;top:0px;">
+                        <h3 style = "text-align:center">Contact Me!</h3>
+                    </div>
+                    <br>
+                <div class="contact-box">
                     309-338-6647<br>
-                    
+                    <br>
                     krocktim@gmail.com
+                    <br>
+                    <br>
+                    <a class = "social_icon" href = "https://www.facebook.com/tim.krock.5/"><img   src="img/instagram.png"></img></a>
+                    <a class = "social_icon" href = "https://www.facebook.com/tim.krock.5/"><img   src="img/linkedin.png"></img></a>
+                    <a class = "social_icon" href = "https://www.facebook.com/tim.krock.5/"><img   src="img/facebook.png"></img></a>
                 </div>
             </div>
             
