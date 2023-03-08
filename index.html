@@ -63,6 +63,8 @@
                                 top: 20px;
                                 bottom: 20px;
                                 right:20px;
+                                padding-left:20px;
+                                padding-right:20px;
                                 text-align: center;
                                 background-color: rgba(0, 0, 0, .5);
                             }
@@ -89,7 +91,6 @@
                                 font-size: 25px;
                                 letter-spacing: 2px;
                             }
-                            
                             .profile {
                                 border-radius: 50%;
                                 width: 200px;
@@ -119,7 +120,6 @@
                                 top:20px;
                                 padding-top:40px;
                                 padding-bottom:40px;
-
                                 text-align: center;
                                 background-color: rgba(0, 0, 0, .5);
                                 letter-spacing: 2px;
@@ -145,19 +145,18 @@
                                 margin: 0;
                                 top:0;
                                 text-align: justify;
-                                
-                                
                             }
                             .project-text {
                                 background-color: rgba(0, 0, 0, .5);
                                 right:20px;
-                                left: 1 0px;
                                 min-height: 150px;
+                                width: 100%;
                                 padding-left:50px;
                                 padding-right:50px;
                                 border-radius: 75px;
-                                text-align: center;
-                                font: 20px "Lato", sans-serif;
+                                padding-top: 8px;
+                                padding-bottom: 8px;
+                                font: 18px "Lato", sans-serif;
                                 
                             }
                             .social_icon {
@@ -197,7 +196,12 @@
         <div class="about-bgimg" id = "about">
             <div class="about-box">
                 <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;opacity:1.0;"><h3>ABOUT</h3>
-                    <p>I'm a computer vision PhD student at the University of Missouri. I work in the Computational Imaging and Visual Analysis (CIVA) Lab.
+                    <p>I'm a computer vision PhD student at the University of Missouri. I work in the Computational Imaging and Visual Analysis (CIVA) Lab. I'm interested in all things 3D. I fly drones for work and for fun. 
+                    <br><br>
+                    Over the past few years, CIVALab has evolved from photogrammetry on a few datasets from a single custom WAMI system–mounted in an airplane–to processing hundreds of datasets from myriad different sources. I worked to process data from many different drones and metadata sources to be handed off to our bundle adjustment and 3D reconstruction pipeline.
+                    <br><br>
+                    
+                    Currently I'm interested in model georegistration EO+IR registration for drone localization and situational awareness, and processing all that data I collected last summer. By the end of April, I want to have every orbit of the building demolition in the same coordinate system, and to step through the demolition, model by model, completely stabilized.
                 </span>
             </div>
         </div>
@@ -277,13 +281,15 @@
                         </li>
                         
                     </ul>
-                    Over the past few years, CIVALab has evolved from photogrammetry on a few datasets from a single custom WAMI system–mounted in an airplane–to processing hundreds of datasets from myriad different sources. I worked to process data from many different drones and metadata sources to be handed off to our bundle adjustment and 3D reconstruction pipeline.
-                    
-                    <br><br>
-                    Currently I'm interested in model georegistration EO+IR registration for drone localization and situational awareness, and processing all that data I collected last summer. By the end of April, I want to have every orbit of the building demolition in the same coordinate system, and to step through the demolition, model by model, completely stabilized.
+  
                 </div>
                 <hr>
+
+
                 
+                <br><br>
+                
+                <br><br> <br>
                 
             </div>
             
@@ -302,29 +308,29 @@
 
     
   
-            <table class = "project-entry">
-                
-                <tr>
-                    <td><img class = "project-image" src="img/hope.png"></img></td>
-                    <td class = "project-text">This is Hope! She's an Eachine Airloader that I mounted four props to. She carries a Pixhawk Orange Cube with a Here3 GPS. </td>
-                </tr>
-            </table>
+
             <table class = "project-entry">
                 
                 <tr>
                     <td><img class = "project-image" src="img/mavic_air_2.png"></img></td>
-                    <td class = "project-text">I play Iron Hands in Warhammer 40,000! I'm bad at it, but I love painting, which I am also bad at.</td>
+                    <td class = "project-text">I got a Mavic Air 2 when I moved to N.M. to do drone work, and it changed my life. All of a sudden, I wanted to take pictures of everything. All the pictures on this website were taken with this drone. I have used this drone in my work, and have made some beautiful models with some of the orbits I've flown.</td>
                 </tr>
             </table>
             <table class = "project-entry">
                 
                 <tr>
                     <td><img class = "project-image" src="img/m2ea.png"></img></td>
-                    <td class = "project-text">I play Iron Hands in Warhammer 40,000! I'm bad at it, but I love painting, which I am also bad at.</td>
+                    <td class = "project-text">I bought a Mavic 2 Enterprised Advanced to pursue some assorted business ventures, and to use with research. I wrote some code to automate flight paths for photgrammetric models. I flew the same orbit a hundred times over two months as a building on campus was torn down. I live in the country and I fly it as much to find wildlife as for work. On the thermal camera, Seen tons of deer, possums, a squirrel, and no coyotes. I desperately want to see a coyote.</td>
                 </tr>
             </table>
             
-            
+            <table class = "project-entry">
+                
+                <tr>
+                    <td><img class = "project-image" src="img/hope.png"></img></td>
+                    <td class = "project-text">This is Hope! She's an Eachine Airloader that I mounted four props to. She carries a Pixhawk Orange Cube with a Here3 GPS. I'm a terrible fixed-wing pilot, so I added a quad to make her easier to land. She has flown as a fixed-wing, and as a quad, but she broke the first time I tried to transition. I hope to get her flying this summer. There's an incredible peace listening to music and soldering things–even things I just crashed. </td>
+                </tr>
+            </table>
             <h3 style = "text-align:center">Hobbies</h3>
             <table class = "project-entry">
                 <tr>
@@ -341,7 +347,12 @@
                     <td class = "project-text">I play Iron Hands in Warhammer 40,000! I'm bad at it, but I love painting, which I am also bad at.</td>
                 </tr>
             </table>
-            
+            <table class = "project-entry">
+                <tr>
+                    <td><img class = "project-image" src="img/toothless.png"></img></td>
+                    <td class = "project-text">I have an Anycubic Photon and a Flashforge Creator Pro that I've had tons of fun with. The picture to the left is a resin print from the photon, and I've used the Creator Pro (FDM) to print parts for Hope, a robot arm for a raspberry pi robot Steve, and tons of little home improvement things. I took a bunch of CAD courses in high school and it feels good to be able to put them to good use making whatever I want.  </td>
+                </tr>
+            </table>
             
 
             
@@ -359,8 +370,8 @@
                     krocktim@gmail.com
                     <br>
                     <br>
-                    <a class = "social_icon" href = "https://www.facebook.com/tim.krock.5/"><img   src="img/instagram.png"></img></a>
-                    <a class = "social_icon" href = "https://www.facebook.com/tim.krock.5/"><img   src="img/linkedin.png"></img></a>
+                    <a class = "social_icon" href = "https://www.instagram.com/timkrock/"><img   src="img/instagram.png"></img></a>
+                    <a class = "social_icon" href = "https://www.linkedin.com/in/timothykrock/"><img   src="img/linkedin.png"></img></a>
                     <a class = "social_icon" href = "https://www.facebook.com/tim.krock.5/"><img   src="img/facebook.png"></img></a>
                 </div>
             </div>
