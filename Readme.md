@@ -2,8 +2,9 @@
 
 
 ### Todos: 
--Add website social media links (Maybe? Is this stupid?)
--Upgrade mailto icon. 
+- Add website social media links (Maybe? Is this stupid?)
+- Upgrade mailto icon.
+
 ---
 
 ### Rough blog plan
@@ -17,6 +18,7 @@
     - hope hovering
     - Endurance Hovering 
     - DIYDrones part list
+
 
 
 
