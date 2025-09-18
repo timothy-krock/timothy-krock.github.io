@@ -19,7 +19,7 @@ a:hover {
 
 /* Hero Background */
 .hero {
-  background-image: url('/img/lander.JPG');
+  background-image: url('/assets/img/lander.JPG');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

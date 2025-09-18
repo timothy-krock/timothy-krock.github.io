@@ -24,7 +24,7 @@
   }
   .tab { margin-left: 40px; }
   #head  {
-          background-image: url("office/images/background.jpg");
+          background-image: url("assets/img/office/background.jpg");
           padding-top: 15vw;
           background-position: top;
           vertical-align: top;
@@ -35,6 +35,20 @@
   </style>
 </head>
 <body>
+    <div style="
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      font-family: sans-serif;
+      font-size: 0.9rem;
+    ">
+      <a href="/" style="color: white; text-decoration: none;">← Back to Home</a>
+    </div>
   <div id = "head" style = "margin-left:0vw;width:100v;heigh:30vh;">
   <h1 style = "margin-top:0px;margin-left:10vw;width:80vw">The Office: Analysis<br><small>By Tim Krock</small></h1></h1>
   <div style = "text-align:left;margin-left:10vw;width:80vw;font-size: 3.5vh;color:#555555;">
@@ -56,7 +70,7 @@
 -->
 <div id = "head_graph" style = "position:relative;top:-1vw;height:40vw;width:100vw;background-color: rgba(0,0,0,0);"></div>
 <br>
-<script type = "text/javascript" src = "office/viz_1.js"></script>
+<script type = "text/javascript" src = "assets/js/office_viz_1.js"></script>
 
 
 <div class="well well-lg" id = "tipwell" style = "margin-left:10vw;text-align:center;width:80vw;" >Hover for Info</div>
@@ -100,7 +114,7 @@ This graph shows what we could expect to happen to the IMDB rating of the Office
 -->
 <div id = "head_graph2" style = "position:relative;height:40vw;width:100vw;"></div>
 <br>
-<script type = "text/javascript" src = "office/viz_2.js"></script>
+<script type = "text/javascript" src = "assets/js/office_viz_2.js"></script>
 <div class="well well-lg" id = "tipwell2" style = "margin-left:10vw;text-align:center;width:80vw;" >Hover Over/Tap heads for Info</div>
 
 
@@ -121,7 +135,7 @@ This graph shows what we could expect to happen to the IMDB rating of the Office
   </small>
 </h3>
   <div style = "width:94vw;margin-left:3vw;height:94vw;" id = "chord">
-    <script src = "office/viz_3.js"></script>
+    <script src = "assets/js/office_viz_3.js"></script>
   </div>
   <div class = "well" style = "margin-left: 10vw;width:80vw;" id = "chordExplanation"  >
     Hover over the Chord Diagram
