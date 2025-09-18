@@ -7,16 +7,17 @@
 ---
 
 ### Rough blog plan
--Photography attempts 
-    -cults3d links
--Vbecad blog 
--vibecode post
--wally 
--packout
--VTOL Adventures
+- Photography attempts 
+    - cults3d links
+- Vbecad blog 
+- vibecode post
+- wally 
+- packout
+- VTOL Adventures
     - hope hovering
     - Endurance Hovering 
     - DIYDrones part list
+
 
 
 
