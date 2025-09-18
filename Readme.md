@@ -4,9 +4,11 @@
 ### Todos: 
 -Add website social media links (Maybe? Is this stupid?)
 -Upgrade mailto icon. 
+---
 
 ### Rough blog plan
--
+-Photography attempts 
+    -cults3d links
 -Vbecad blog 
 -vibecode post
 -wally 
@@ -15,6 +17,7 @@
     - hope hovering
     - Endurance Hovering 
     - DIYDrones part list
+
 
 
 
