@@ -1,384 +1,98 @@
-
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-            <meta charset="utf-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1">
-                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-                        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-                        <style>
-                            body, html {
-                                height: 100%;
-                                width:100%
-                                margin: 0;
-                                font: 400 15px/1.8 "Lato", sans-serif;
-                                background-color: black;
-                            }
-                            
-                            .lander-bgimg, .about-bgimg, .bgimg-3, .contact-bgimg{
-                                position: relative;
-                                opacity: 1;
-                                background-attachment: fixed;
-                                background-position: center;
-                                background-repeat: no-repeat;
-                                background-size: cover;
-                                
-                            }
-                            .lander-bgimg {
-                                background-image: url("img/lander.JPG");
-                                min-height: 100%;
-                                opacity: 1;
-                                
-                            }
-                            
-                            .about-bgimg {
-                                background-image: url("img/about.JPG");
-                                min-height: 800px;
-                            }
-                            
-                            .bgimg-3 {
-                                background-image: url("img/c.JPG");
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tim Krock</title>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
 
-                            }
-                            .contact-bgimg {
-                                background-image: url("img/contact.JPG");
-                                min-height: 600px;
-                                background-position: top;
+  <!-- HERO -->
+  <section class="hero">
+    <h1 class="hero-title">Hi, I'm Tim</h1>
+    <div class="hero-box">
+      <img src="/img/profpic.jpg" alt="Tim Krock portrait" class="profile" />
+      <div class="hero-text">
+        <p>
+          I build drones, write code, paint plastic warriors, and sometimes publish papers.
+          This site is where I document it all.
+        </p>
+      </div>
+    </div>
+    <div class="resume-wrapper">
+        <a class="resume-button" href="/resume.html">View Résumé →</a>
+    </div>
+  </section>
 
-                            }
-                            
-                            .caption {
-                                position: absolute;
-                                left: 0;
-                                top: 20%;
-                                width: 100%;
-                                text-align: center;
-                                color: #000;
-                            }
-                            
-                            
-                            .about-box {
-                                overflow:scroll;
-                                position: absolute;
-                                left: 30px;
-                                top: 30px;
-                                bottom: 30px;
-                                right:30px;
-                                color: #fff;
-                                font-size: 18px;
-
-                                padding-left:20px;
-                                padding-right:20px;
-                                text-align: center;
-                                background-color: rgba(0, 0, 0, .5);
-                            }
-                            .lander {
-                                position: absolute;
-                                top: 15%;
-                                width: 100%;
-                                text-align: center;
-                                color: white;
-                                font-size: 25px;
-                                letter-spacing: 4px;
-                            }
-                            .lander-box {
-                                margin: auto;
-                                background-color: rgba(0, 0, 0, .5);
-                                width:250px;
-                                height:200px;
-                                text-align: center;
-                            }
-                            .caption span.border {
-                                background-color: #111;
-                                color: #fff;
-                                padding: 18px;
-                                font-size: 25px;
-                                letter-spacing: 2px;
-                            }
-                            .profile {
-                                border-radius: 50%;
-                                width: 200px;
-                                outline-width:30;
-                                border: 2px solid #6ED873;
-                                margin:auto;
-                                
-                            }
-                            
-                            h3 {
-                                letter-spacing: 10px;
-                                text-transform: uppercase;
-                                font: 25px "Lato", sans-serif;
-                                color: #fff;
-                            }
-                            .dot {
-                                height: 18px;
-                                width: 18px;
-                                background-color: #bbb;
-                                border-radius: 50%;
-                                display: inline-block;
-                            }
-                            .contact-box {
-                                position: relative;
-                                width:400px;
-                                margin:auto;
-                                top:20px;
-                                padding-top:40px;
-                                padding-bottom:40px;
-                                text-align: center;
-                                background-color: rgba(0, 0, 0, .5);
-                                letter-spacing: 2px;
-                                font: 25px "Lato", sans-serif;
-                                color: #fff;
-                            }
-                            .media  {
-                                font: "Lato", sans-serif;
-                                
-                                
-                            }
-                            .project-entry {
-                                border-radius: 75px;
-                                margin: 20px;
-                                letter-spacing: 2px;
-                                font: 20px "Lato", sans-serif;
-                                color: #fff;
-                                background-color: rgba(0, 0, 0, .5);
-
-                            }
-                            .project-image {
-                                display: inline-block;
-                                float: left;
-                                height: 150px;
-                                margin: 0;
-                                top:0;
-                                text-align: justify;
-                            }
-                            .project-text {
-                                right:20px;
-                                min-height: 150px;
-                                width: 100%;
-                                padding-left:3px;
-                                padding-right:30px;
-                                border-radius: 75px;
-                                padding-top: 10px;
-                                padding-bottom: 10px;
-                                font: 12px "Lato", sans-serif;
-                                
-                            }
-                            .social_icon {
-                                width: 100px;
-                                letter-spacing: 2px;
-                                display: inline-block;
-                                margin: 0 auto;
-        
-                            }
-                            /* Turn off parallax scrolling for tablets and phones */
-                            @media only screen and (max-device-width: 1024px) {
-                                .lander-bgimg, .about-bgimg, .bgimg-3, .contact-bgimg {
-                                    background-attachment: scroll;
-                                }
-                            }
-                        </style>
-                    </head>
-    <body>
-        
-        
-        <div class="lander-bgimg" id = "lander">
-            <div class = "lander" >
-                Hi! I'm Tim
-                <br>
-                <img class = "profile" src="img/profpic.jpg">
-                    <br><br>
-                    <div class = "lander-box">
-                        <div style ="height:7px"></div>
-                        <a style = "color:white;" href = "#about"   ><span class="dot" style = "background-color:#F2A56B"></span> about</a><br>
-                        <a style = "color:white;" href = "#resume"  ><span class="dot" style = "background-color:#6ED873"></span> resume</a><br>
-                        <a style = "color:white;" href = "#etc"><span class="dot" style = "background-color:#F7C4B7"></span> etc</a><br>
-                        <a style = "color:white;" href = "#contact" ><span class="dot" style = "background-color:#617BDC"></span> contact</a><br>
-                    </div>
-            </div>
-        </div>
-        
-        <div class="about-bgimg" id = "about">
-            <div class="about-box">
-                <h3>ABOUT</h3>
-                    <p>I'm working on a PhD in computervision in the Computational Imaging and Visual Analysis (CIVA) Lab at the University of Missouri. I'm interested in all things 3D and I fly drones for work and for fun. In the past few years, CIVALab has evolved from running photogrammetry on a few datasets from a single custom WAMI system–mounted in an airplane–to processing hundreds of datasets from myriad different sources. I worked to process data from many different drones and metadata sources to be handed off to our bundle adjustment and 3D reconstruction pipeline, and I collected a lot of that data.
-                    <br><br>
-                    
-                    
-                    Currently I'm interested in: model georegistration and joint 3D EO+IR registration for GPS denied drone localization and situational awareness. (and processing a terabyte of data I collected last summer.)
-            </div>
-        </div>
-        
-        <div id = "resume" style="color: #777;background-color:white;text-align:center;padding:10px 10px;text-align: justify;">
-            <h3 style="text-align:center;">RESUME</h3>
-            
-            <!-- RESUME ------------------------------>
-            <!-- Illinois -->
-            <div class="media">
-                <div class="media-left">
-                    <img src="resume/illinois.png" class="media-object" style="width:60px">
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading">BS Independent Study: Computer Science+Economics
-                        <br> University of Illinois <small>2013-2017</small>
-                    </h4>
-                </div>
-                    <ul>
-                        <li>CS 105 Course Assistant <small>2015</small></li>
-                        <li>Lead Course Assistant 2016</li>
-                        
-                        <li><a href="http://www.timkrock.com/office">Did Micheal Scott impact the IMDB ratings of the Office?</a></li>
-                    </ul>
-            </div>
-            <hr>
-            <!-- Bradley -->
-            <div class="media">
-                <div class="media-left">
-                    <img src="resume/bradley.png" class="media-object" style="width:60px">
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading">M.S. Computer Science
-                        <br> Bradley University <small>2018-2019</small>
-                    </h4>
-                </div>
-                    <p>
-                    <h4>Interlabs Research Assistant <small>2018</small></h4>
-                    <ul>
-                        <li>Co-Author: Smart Learning Analytics: Conceptual Modeling and Agile Engineering</li>
-                    </ul>
-                    <h4>Ciliate Macronuclear Database Graduate Programmer <small>2018-2019</small></h4>
-                    <ul>
-                        <li>Built Euplotes vannus Genome database and Ciliate Macronuclear Shapes Database</li>
-                        <li>Co-Author: Genome analysis of the unicellular eukaryote Euplotes vannus reveals molecular basis for sex determination and tolerance to environmental stresses </li>
-                        <li>Student Research Expo Dean’s Award CS+Math: Updates to the Ciliate.org Organism Databases.</li>
-                        <ul>
-                            </p>
-            </div>
-            <hr>
-            <!-- Mizzou -->
-            <div class="media">
-                <div class="media-left">
-                    <img src="resume/mizzou.png" class="media-object" style="width:60px">
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading">PhD: Computer Science
-                        <br> University of Missouri <small>2019-Present</small>
-                        <br>Computational Imaging and Visual Analysis Lab (CIVA)
-                        
-                    </h4>
-                    </div>
-                    <ul>
-                        <li>Dean's Excellence Fellowship</li>
-                        <li>Worked with TransparentSky in New Mexico to build a drone mounted sensor carrying FLIR IR+ Custom EO WAMI sensor with LIDAR Summer 2020</li>
-                        <li>Flew at Yuma Proving Grounds in Arizona Summer 2021 (<a href = "https://engineering.missouri.edu/2021/army-research-lab-internship-part-of-ongoing-research-around-drones/?fbclid=IwAR3oxx91Jtsa6qR_1PBuNh1RTvhUWI3btR48m2HdAqLKXnzEKsKYLhVEbIU">MU article</a>)
-                            <ul>
-                                <li>Recorded Ground Truth Data for ARL’s Intelligent Perception Branch for project convergence using the drone/sensor package mentioned above. </li>
-                                <li>500+ meter manned flight missions in the desert required problem solving on the fly (no pun intended), soldering in the hotel room, wrote our own FPV/IP thermal stream one night so we could find targets better, etc. </li>
-                            </ul>
-                        </li>
-                        <li>Army DEVCOM at Adelphi MD - Integrated the Teal Golden Eagle Blue sUAS into ARL ROS pipeline. Summer 2021</li>
-                        <li>Massive civilian drone data collections. Summer 2022
-                            <ul>
-                                <li>Covered a square mile in twenty flights on a golf course over three days time. </li>
-                                <li>Orbited the same building a hundred times throughout demolition over months for 3D change detection dataset.</li>
-                            </ul>
-                        </li>
-                        
-                    </ul>
   
-                </div>
-                <hr>
+  <!-- BLOG CARDS -->
+  <div class="card-section-bg">
+    <section class="card-section">
+      <h2>Latest Logs</h2>
+      
+      <div class="card-grid">
 
+        <!-- Resume card -->
+        <a href="/office.html" class="card">
+          <img src="/img/office.png" class="card-icon-img" alt="Resume Icon" />
+          <div class="card-body">
+            <h3 class="card-title">The Office</h3>
+            <p class="card-subtitle">Regression Analysis of NBC's the Office</p>
+          </div>
+        </a>
 
-                
-                <br><br>
-                
-                
-            
-        </div>
-        
-        
+        <!-- Card 1 -->
+        <a href="/log/hope.html" class="card">
+          <img src="/img/hope.png" class="card-icon-img" alt="Hope Icon" />
+          <div class="card-body">
+            <h3 class="card-title">Hope</h3>
+            <p class="card-subtitle">DIY Attempts to Fly</p>
+          </div>
+        </a>
 
-        
-        <div class="bgimg-3">
-            <div style="position:relative;" id = "etc">
-                <div style="color:#FFF;opacity:0.7;background-color:#282E34;padding:10px;top:0px;">
-                    <h3 style = "text-align:center">etc</h3>
-                </div>
-            </div>
-            <h3 style = "text-align:center">drones</h3>
+        <!-- Card 2 -->
+        <a href="/log/hope.html" class="card">
+          <img src="/img/hope.png" class="card-icon-img" alt="Hope Icon" />
+          <div class="card-body">
+            <h3 class="card-title">Hope</h3>
+            <p class="card-subtitle">DIY Attempts to Fly</p>
+          </div>
+        </a>
 
-    
+        <!-- Card 3 -->
+        <a href="/log/hope.html" class="card">
+          <img src="/img/m2ea.png" class="card-icon-img" alt="M2EA Icon" />
+          <div class="card-body">
+            <h3 class="card-title">Hope</h3>
+            <p class="card-subtitle">DIY Attempts to Fly</p>
+          </div>
+        </a>
+
+        <!-- Card 4 -->
+        <a href="/log/hope.html" class="card">
+          <img src="/img/m2ea.png" class="card-icon-img" alt="M2EA Icon" />
+          <div class="card-body">
+            <h3 class="card-title">Hope</h3>
+            <p class="card-subtitle">DIY Attempts to Fly</p>
+          </div>
+        </a>
+
+      </div>
+    </section>
+  </div>
+
   
+  
+  
+  
+  
+ 
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>📬 <a href="mailto:krocktim@gmail.com">krocktim@gmail.com</a></p>
+  </footer>
 
-            <table class = "project-entry">
-                
-                <tr>
-                    <td><img class = "project-image" src="img/mavic_air_2.png"></img></td>
-                    <td class = "project-text">I got a Mavic Air 2 when I moved to N.M. to do drone work, and it changed my life. All of a sudden, I wanted to take pictures of everything. All the pictures on this website were taken with this drone. I have used this drone in my work, and have made some beautiful models with some of the orbits I've flown.</td>
-                </tr>
-            </table>
-            <table class = "project-entry">
-                
-                <tr>
-                    <td><img class = "project-image" src="img/m2ea.png"></img></td>
-                    <td class = "project-text">I bought a Mavic 2 Enterprised Advanced to pursue some assorted business ventures, and to use with research. I wrote some code to automate flight paths for photgrammetric models. I flew the same orbit a hundred times over two months as a building on campus was torn down.  By the end of April, I want to have every orbit of the building demolition in the same coordinate system, and to step through the demolition, model by model, completely stabilized. I live in the country and I fly it as much to find wildlife as for work. On the thermal camera, I've seen tons of deer, opossums, a squirrel, and no coyotes. I desperately want to see a coyote.</td>
-                </tr>
-            </table>
-            
-            <table class = "project-entry">
-                
-                <tr>
-                    <td><img class = "project-image" src="img/hope.png"></img></td>
-                    <td class = "project-text">This is Hope! She's an Eachine Airloader that I mounted four props to. She carries a Pixhawk Orange Cube with a Here3 GPS. I'm a terrible fixed-wing pilot, so I added a quad to make her easier to land. She has flown as a fixed-wing, and as a quad, but she broke the first time I tried to transition. I hope to get her flying this summer. There's an incredible peace listening to music and soldering things–even things I just crashed. </td>
-                </tr>
-            </table>
-            <h3 style = "text-align:center">Hobbies</h3>
-            <table class = "project-entry">
-                <tr>
-                    <td><img class = "project-image" src="img/office.png"></img></td>
-                    <td class = "project-text">
-                        <a style = "color:white" href="http://www.timkrock.com/office"> Link: Did Micheal Scott impact the IMDB ratings of the Office?</a>
-                    </td>
-                </tr>
-            </table>
-            
-            <table class = "project-entry">
-                <tr>
-                    <td><img class = "project-image" src="img/40k.png"></img></td>
-                    <td class = "project-text">I play Iron Hands in Warhammer 40,000! I'm bad at it, but I love painting, which I am also bad at.</td>
-                </tr>
-            </table>
-            <table class = "project-entry">
-                <tr>
-                    <td><img class = "project-image" src="img/toothless.png"></img></td>
-                    <td class = "project-text">I have an Anycubic Photon and a Flashforge Creator Pro that I've had tons of fun with. The picture to the left is a resin print from the photon, and I've used the Creator Pro (FDM) to print parts for Hope, a robot arm for a raspberry pi robot Steve, and tons of little home improvement things. I took a bunch of CAD courses in high school and it feels good to be able to put them to good use making whatever I want.  </td>
-                </tr>
-            </table>
-
-            
-            
-            
-            
-            <div class="contact-bgimg" id = "contact">
-                    <div style="color:#FFF;opacity:0.9;background-color:#282E34;padding:10px;top:0px;">
-                        <h3 style = "text-align:center">Contact Me!</h3>
-                    </div>
-                    <br>
-                <div class="contact-box">
-                    309-338-6647<br>
-                    <br>
-                    krocktim@gmail.com
-                    <br>
-                    <br>
-                    <a class = "social_icon" href = "https://www.instagram.com/timkrock/"><img   src="img/instagram.png"></img></a>
-                    <a class = "social_icon" href = "https://www.linkedin.com/in/timothykrock/"><img   src="img/linkedin.png"></img></a>
-                    <a class = "social_icon" href = "https://www.facebook.com/tim.krock.5/"><img   src="img/facebook.png"></img></a>
-                </div>
-            </div>
-            
-    </body>
+</body>
 </html>
 
