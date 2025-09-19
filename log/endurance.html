@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DIY Attempts to Fly — Endurance</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- styles: global → blog → post-specific -->
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/css/blog.css" />
+  <link rel="stylesheet" href="/assets/css/posts/endurance.css" />
+</head>
+<body>
+
+  <!-- Back to Home (non-intrusive) -->
+  <a href="/" style="position: fixed; top: 1rem; left: 1rem; background: rgba(0,0,0,0.6); color: #fff; padding: 0.5rem 0.9rem; border-radius: 999px; text-decoration: none; z-index: 1000;">
+    ← Back to Home
+  </a>
+
+  <main class="blog-post">
+    <h1 class="blog-title">DIY Attempts to Fly</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam viverra, nisi in pulvinar tempus,
+      mauris libero fermentum nulla, vitae iaculis metus turpis non nulla. Curabitur sit amet vestibulum
+      risus. Donec id orci nec massa sodales consectetur.
+    </p>
+
+    <!-- Hope -->
+    <h2>Hope</h2>
+    <img src="/assets/img/posts/endurance/hope.jpg" alt="Hope drone" style="max-width:100%; border-radius:12px; margin-bottom:1rem;" />
+    <p>
+      Hope is a tiltrotor experiment that taught me a bunch about structure, weight, and control.
+      She’s overbuilt, a little stubborn, and an excellent teacher.
+    </p>
+
+    <!-- Hope crash clip (smaller via class) -->
+    <div style="margin: 2rem 0;">
+      <video class="video-sm" autoplay muted loop playsinline preload="metadata" width="420" height="236">
+        <source src="/assets/video/posts/endurance/hope_crash.webm" type="video/webm" />
+        <source src="/assets/video/posts/endurance/hope_crash.mp4"  type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <p style="text-align:center; font-style:italic; opacity:0.85; margin-top:0.5rem;">A memorable “learning moment.”</p>
+    </div>
+
+    <!-- Endurance -->
+    <h2>Endurance</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur iaculis urna et sem vestibulum,
+      non feugiat nulla luctus. Fusce imperdiet, dolor nec blandit hendrerit, odio mi posuere nisi,
+      sed feugiat magna nisl eget turpis.
+    </p>
+
+    <!-- Bill of Materials -->
+    <h2>Bill of Materials</h2>
+    <p>Core components for these builds. I’ll add wiring notes and PDFs here later.</p>
+
+    <div class="grid-links">
+      <a href="https://store.proficnc.com/product/cube-orange-plus-ads-b-carrier-board/" target="_blank" rel="noopener">
+        <div class="part-thumb">
+          <img src="/assets/img/posts/endurance/cube_orange.png" alt="Cube Orange + ADS-B" loading="lazy" decoding="async" width="150" height="150">
+        </div>
+        <p>Cube Orange + ADS-B</p>
+      </a>
+
+      <a href="https://www.hex.aero/product/herelink/" target="_blank" rel="noopener">
+        <div class="part-thumb">
+          <img src="/assets/img/posts/endurance/herelink_airunit.png" alt="Herelink" loading="lazy" decoding="async" width="150" height="150">
+        </div>
+        <p>Herelink Air Unit</p>
+      </a>
+
+      <a href="https://www.hex.aero/product/here3-gps/" target="_blank" rel="noopener">
+        <div class="part-thumb">
+          <img src="/assets/img/posts/endurance/here3.png" alt="Here3 GPS" loading="lazy" decoding="async" width="150" height="150">
+        </div>
+        <p>Here3</p>
+      </a>
+
+      <a href="https://www.mauch-electronic.com/" target="_blank" rel="noopener">
+        <div class="part-thumb">
+          <img src="/assets/img/posts/endurance/mauch.png" alt="Mauch power/BEC" loading="lazy" decoding="async" width="150" height="150">
+        </div>
+        <p>Mauch</p>
+      </a>
+
+      <a href="https://www.siyi.biz/a8-mini-gimbal-camera/" target="_blank" rel="noopener">
+        <div class="part-thumb">
+          <img src="/assets/img/posts/endurance/siyi_a8.png" alt="SIYI A8" loading="lazy" decoding="async" width="150" height="150">
+        </div>
+        <p>SIYI A8</p>
+      </a>
+
+      <a href="https://ardupilot.org/copter/docs/common-pitot-tube.html" target="_blank" rel="noopener">
+        <div class="part-thumb">
+          <img src="/assets/img/posts/endurance/pitot.png" alt="Pitot Tube" loading="lazy" decoding="async" width="150" height="150">
+        </div>
+        <p>Digital Airspeed Sensor (Pitot Tube)</p>
+      </a>
+    </div>
+
+    <!-- Hover test videos (smaller via class) -->
+    <h2>Hover Tests</h2>
+    <p>I'm afraid of transitioning to forward flight in two different frames now lol.</p>
+    <div class="grid-videos">
+      <div>
+        <video class="video-sm" autoplay muted loop playsinline preload="metadata" width="420" height="236">
+          <source src="/assets/video/posts/endurance/hope_hover.webm" type="video/webm" />
+          <source src="/assets/video/posts/endurance/hope_hover.mp4"  type="video/mp4" />
+        </video>
+        <p>Hope — hover test</p>
+      </div>
+      <div>
+        <video class="video-sm" autoplay muted loop playsinline preload="metadata" width="420" height="236">
+          <source src="/assets/video/posts/endurance/endurance_hover.webm" type="video/webm" />
+          <source src="/assets/video/posts/endurance/endurance_hover.mp4"  type="video/mp4" />
+        </video>
+        <p>Endurance — hover test</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>📬 <a href="mailto:krocktim@gmail.com">krocktim@gmail.com</a></p>
+  </footer>
+
+</body>
+</html>
+
