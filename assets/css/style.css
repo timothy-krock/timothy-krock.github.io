@@ -36,7 +36,7 @@ img,video{max-width:100%; height:auto; display:block}
 
 /* ========== HERO ========== */
 .hero{
-  background: url('/assets/img/lander.JPG') center/cover fixed no-repeat;
+  background: url('/assets/img/lander/lander.JPG') center/cover fixed no-repeat;
   padding: 6rem 1.5rem 4rem;
   text-align:center;
 }
