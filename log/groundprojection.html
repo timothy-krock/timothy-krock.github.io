@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ground Projection — Tim Krock</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Your styles: global → blog → (optional) post-specific -->
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/css/blog.css" />
+
+  <!-- MathJax (LaTeX rendering) -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$','$$'], ['\\[','\\]']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+  <!-- Social preview (optional) -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Ground Projection" />
+  <meta property="og:description" content="Camera model, homography setup, and a practical inverse-warp recipe for ground-plane projection." />
+  <meta property="og:image" content="https://timkrock.com/assets/img/common/og-home.jpg" />
+  <meta property="og:url" content="https://timkrock.com/log/ground-projection.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+</head>
+<body>
+
+  <!-- Back to Home (non-intrusive) -->
+  <a href="/" style="position:fixed;top:1rem;left:1rem;background:rgba(0,0,0,.6);color:#fff;padding:.5rem .9rem;border-radius:999px;text-decoration:none;z-index:1000">
+    ← Back to Home
+  </a>
+
+  <main class="blog-post">
+    <h1 class="blog-title">Ground Projection</h1>
+    <p><em>May 12, 2025 — Tim Krock</em></p>
+
+    <h2>Camera Model and Homography Setup</h2>
+    <p>
+      We use a standard pinhole model with intrinsics $K$, rotation $R \in SO(3)$, and translation
+      $t = -RC$, where $C$ is the camera center. The ground-plane homography $H$ maps $(x,y, z{=}0)$
+      world points to image pixels; for image resampling we use its inverse $H^{-1}$.
+    </p>
+
+    <h2>Solution at the Very Beginning</h2>
+    <p>The overall warp applied for visualization combines centering and a $y$-flip with the inverse homography:</p>
+
+    <p>
+      \[
+      \text{Transformation } = 
+      \begin{bmatrix}
+        1 & 0 & w/2 \\
+        0 & -1 & h/2 \\
+        0 & 0 & 1
+      \end{bmatrix}
+      \cdot
+      \Bigl(
+      \underbrace{
+      \begin{bmatrix}
+        f_x & 0 & c_x \\
+        0 & f_y & c_y \\
+        0 & 0 & 1
+      \end{bmatrix}}_{K}
+      \cdot
+      \underbrace{
+      \begin{bmatrix}
+        r_{11} & r_{12} & -h r_{13} \\
+        r_{21} & r_{22} & -h r_{23} \\
+        r_{31} & r_{32} & -h r_{33}
+      \end{bmatrix}}_{\bigl[\,r_1\;\;r_2\;\;t\,\bigr]}
+      \Bigr)^{-1}
+      \]
+    </p>
+
+    <h2>Intrinsic Matrix</h2>
+    <p>
+      The intrinsic matrix maps normalized camera coordinates to pixels:
+    </p>
+    <p>
+      \[
+      K =
+      \begin{bmatrix}
+        f_x & 0 & c_x \\
+        0 & f_y & c_y \\
+        0 & 0 & 1
+      \end{bmatrix}
+      \]
+    </p>
+
+    <h2>Rotation Matrix</h2>
+    <p>
+      The rotation $R = [\,r_1\;\;r_2\;\;r_3\,]$ maps world coordinates to the camera frame; its
+      columns are the world axes expressed in the camera coordinate system.
+    </p>
+
+    <h2>Camera Center and Translation</h2>
+    <p>
+      Let $C \in \mathbb{R}^3$ be the camera center in world coordinates. Then
+      \[
+        t = -RC, \qquad C = -R^\top t.
+      \]
+    </p>
+
+    <h2>Special Case: Local Frame Centered Under Drone</h2>
+    <p>
+      If the world origin is directly below the drone at altitude $h$ and the optical axis aligns with $r_3$, then
+      \[
+        C =
+        \begin{bmatrix} 0\\[2pt] 0\\[2pt] h \end{bmatrix}
+        \quad\Rightarrow\quad
+        t = -h\,r_3.
+      \]
+      This yields the plane-induced homography
+      \[
+        H = K\,[\,r_1\;\;r_2\;\;t\,],
+      \]
+      which maps $(x,y,0)$ on the ground plane to image pixels.
+    </p>
+
+    <h2>Inverse Homography for Warping</h2>
+    <p>
+      For image warping (e.g., <code>cv::warpPerspective</code>), we use inverse mapping, sampling source pixels for each output
+      canvas pixel. Consequently, we compute
+      \[
+        H_{\text{warp}} = H^{-1}.
+      \]
+    </p>
+
+    <h2>Practical Note on Image Alignment</h2>
+    <p>
+      Image coordinates typically have origin $(0,0)$ at the top-left. To recentre the drone in the output and make the
+      $y$-axis increase downward, we post-multiply by
+      \[
+      A =
+      \begin{bmatrix}
+        1 & 0 & w/2 \\
+        0 & -1 & h/2 \\
+        0 & 0 & 1
+      \end{bmatrix},
+      \qquad
+      H_{\text{warp}} = A\,H^{-1}.
+      \]
+      In C++:
+    </p>
+
+    <pre><code>// width, height are the output canvas dimensions in pixels
+cv::Matx33d A(
+    1, 0,  width  / 2.0,
+    0, -1, height / 2.0,
+    0, 0,  1
+);
+
+cv::Matx33d H_warp = A * H.inv();</code></pre>
+
+    <p style="opacity:.8">
+      Source: Ground Projection notes. :contentReference[oaicite:0]{index=0}
+    </p>
+  </main>
+
+  <!-- site footer bar -->
+  <footer class="site-contact">
+    <div class="container">
+      <span>📬 <a href="mailto:krocktim@gmail.com">krocktim@gmail.com</a></span>
+      <span>© <script>document.write(new Date().getFullYear())</script> Tim Krock</span>
+    </div>
+  </footer>
+</body>
+</html>
+
