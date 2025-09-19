@@ -1,0 +1,60 @@
+/* Only affects the Endurance post page */
+.blog-post{
+  /* Give this article its own accent if you want */
+  --accent:#00ff99;;              /* mint for this post only */
+}
+
+/* Slightly larger part thumbs for this article */
+:root{ --part-thumb: 150px }      /* or scope: .blog-post { --part-thumb:150px } */
+
+/* Optional: a subtle header banner behind the H1 (purely decorative) */
+.blog-title{
+  position:relative;
+}
+.blog-title::after{
+  content:"";
+  position:absolute; left:50%; transform:translateX(-50%);
+  bottom:-12px; width:120px; height:3px;
+  background: var(--accent); border-radius:999px; opacity:.8;
+}
+
+
+
+
+
+/* Endurance: fix BOM thumbnail centering & sizing */
+.blog-post { --part-thumb: 150px; }
+
+.blog-post .grid-links a {
+  align-items: center;            /* keep link content centered */
+}
+
+.blog-post .part-thumb {
+  width: var(--part-thumb);
+  height: var(--part-thumb);
+  aspect-ratio: 1 / 1;            /* guarantee a square */
+  display: grid;                  /* easiest centering */
+  place-items: center;            /* center both axes */
+  padding: 10px;                  /* breathing room */
+}
+
+/* Use max-* so images never stretch and always center visually */
+.blog-post .part-thumb img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,.35));
+}
+
+
+/* smaller on-page video */
+.video-sm {
+  width: 420px;          /* shrink here */
+  max-width: 100%;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;        /* center it */
+}
