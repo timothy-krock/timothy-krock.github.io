@@ -2,6 +2,7 @@
 
 
 ### Todos: 
+- change that stupid about
 - Add website social media links (Maybe? Is this stupid?)
 - Upgrade mailto icon.
 

@@ -1,262 +1,109 @@
-/* Base reset */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: system-ui, sans-serif;
-  background-color: #0b0b0b;
-  color: #f2f2f2;
-  line-height: 1.6;
+/* ========== TOKENS (site-wide) ========== */
+:root{
+  --bg: #0b0b0b;
+  --bg-soft:#111;
+  --card:#1b1b1b;
+  --border:#333;
+  --text:#f2f2f2;
+  --muted:#bdbdbd;
+  --accent:#00ff99;                 /* site accent (green) */
+  --radius: 12px;
+  --max-w: 1100px;
+
+  /* hero specific */
+  --hero-radius: 75px;              /* also controls hero height = 2x */
+  --hero-h: calc(var(--hero-radius)*2);
+
+  /* cards */
+  --icon-size: 60px;                /* controls card icon + pill shape */
+  --card-h: calc(var(--icon-size)*2);
+  --card-r: var(--icon-size);
 }
 
-a {
-  color: #00ff99;
-  text-decoration: none;
+/* ========== BASE ========== */
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg); color:var(--text);
+  font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
 }
+a{color:var(--accent); text-decoration:none}
+a:hover{text-decoration:underline}
+img,video{max-width:100%; height:auto; display:block}
 
-a:hover {
-  text-decoration: underline;
+/* ========== LAYOUT HELPERS ========== */
+.container{max-width:var(--max-w); margin:0 auto; padding:2rem 1rem}
+
+/* ========== HERO ========== */
+.hero{
+  background: url('/assets/img/lander.JPG') center/cover fixed no-repeat;
+  padding: 6rem 1.5rem 4rem;
+  text-align:center;
 }
-
-/* Hero Background */
-.hero {
-  background-image: url('/assets/img/lander.JPG');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  padding: 6rem 2rem 4rem 2rem;
-  text-align: center;
-}
-
-/* Hero Title */
-.hero-title {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-}
-
-/* Hero Box Layout */
-.hero-box {
-  --radius: 75px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  background-color: rgba(0, 0, 0, 0.5);
+.hero-title{font-size:2.6rem; margin:0 0 2rem}
+.hero-box{
+  --radius: var(--hero-radius);
+  display:flex; align-items:center; justify-content:flex-start;
+  background: rgba(0,0,0,.5);
   border-radius: var(--radius);
-  height: calc(var(--radius) * 2);
-  max-width: 900px;
-  margin: 0 auto;
-  padding-left: 0;     /* ✅ Remove inner offset */
-  padding-right: 2rem;
-  gap: 2rem;
+  height: calc(var(--radius)*2);
+  max-width: 900px; margin:0 auto;
+  padding-right:2rem; gap:2rem;
+}
+.profile{
+  width:150px; height:150px; border-radius:50%;
+  object-fit:cover; border:3px solid var(--accent); flex-shrink:0;
+}
+.hero-text{ text-align:left; margin-left:1.5rem; max-width:600px }
+.resume-wrapper{ margin-top:1.25rem }
+.resume-button{
+  display:inline-block; padding:.75rem 1.5rem; border-radius:999px;
+  background:var(--accent); color:#0b0b0b; font-weight:700;
+  transition:transform .2s ease
+}
+.resume-button:hover{ transform:scale(1.05) }
+
+/* responsive hero */
+@media (max-width: 768px){
+  .hero-box{ flex-direction:column; height:auto; padding:2rem; border-radius:30px }
+  .hero-text{ margin-left:0; text-align:center }
 }
 
-
-
-/* Profile Image */
-.profile {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 3px solid #00ff99;
-  object-fit: cover;
-  flex-shrink: 0;
+/* ========== CARD GRID (home “Latest Logs”) ========== */
+.card-section-bg{
+  background: url('/assets/img/common/card-bg.jpg') center/cover fixed no-repeat, var(--bg-soft);
+  padding: 4rem 1rem;
 }
+.card-section{ text-align:center }
+.card-section h2{ margin:0 0 1.5rem; color:var(--accent) }
 
-/* Hero Text */
-.hero-text {
-  margin-left: 1.5rem; /* ✅ Creates space between image and text */
-  text-align: left;
-  max-width: 600px;
-}
-/* Resume Button */
-.resume-wrapper {
-  margin-top: 1.5rem;
-}
-
-.resume-button {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: #00ff99;
-  color: #0b0b0b;
-  font-weight: bold;
-  border-radius: 30px;
-  transition: transform 0.2s ease;
-}
-
-.resume-button:hover {
-  transform: scale(1.05);
-  background-color: #00cc77;
-}
-
-:root {
-  --icon-size: 100px;
-  --radius: 50px;
-}
-
-/* Card Section */
-.card-section {
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.card-grid {
-  display: grid;
+.card-grid{
+  display:grid; gap:1.5rem; margin:0 auto; max-width:var(--max-w);
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
 }
 
-.card {
-  display: flex;
-  align-items: center;
-  border: 1px solid #444;
-  border-radius: var(--radius);
-  padding: 0;
-  margin-bottom: 1rem;
-  text-decoration: none;
-  color: white;
-  background: #111;
-  height: var(--icon-size);
-  overflow: hidden;
-  transition: background 0.2s ease;
+.card{
+  display:flex; align-items:center; gap:1rem;
+  background: rgba(255,255,255,.05);
+  height: var(--card-h);
+  border-radius: var(--card-r);
+  padding: 0 1rem;
+  color:var(--text); text-decoration:none;
+  transition: transform .2s, box-shadow .3s; box-shadow:0 0 0 transparent;
+  overflow:hidden;
+}
+.card:hover{ transform:scale(1.02); box-shadow:0 0 15px 3px var(--accent) }
+
+.card-icon-img{
+  width: var(--icon-size); height: var(--icon-size);
+  border-radius:50%; object-fit:cover; flex-shrink:0;
 }
 
-.card:hover {
-  background: #222;
-}
+.card-body{ flex:1; display:flex; flex-direction:column; justify-content:center }
+.card-title{ margin:0; font-size:1.05rem; color:var(--accent) }
+.card-subtitle{ margin:.25rem 0 0; font-size:.95rem; color:#eaeaea }
 
-.card-icon-img {
-  width: var(--icon-size);
-  height: var(--icon-size);
-  object-fit: cover;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-.card-body {
-  flex-grow: 1;
-  height: 100%;
-  padding-left: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
-  align-items: flex-start;
-}
-
-.card-title {
-  color: #00ff99;
-  margin: 0;
-  font-size: 1rem;
-  font-weight: bold;
-  line-height: 1.2;
-}
-
-.card-subtitle {
-  color: white;
-  margin: 0.2rem 0 0 0;
-  font-size: 0.9rem;
-  opacity: 0.9;
-}
-
-
-
-/* Footer */
-.footer {
-  background-color: #000;
-  color: #00ff99;
-  padding: 1.5rem 2rem;
-  text-align: center;
-  font-size: 0.95rem;
-}
-
-.footer a {
-  color: #00ff99;
-}
-
-/* Responsive Layout */
-@media screen and (max-width: 768px) {
-  .hero-box {
-    flex-direction: column;
-    height: auto;
-    padding: 2rem;
-    border-radius: 30px;
-  }
-
-  .hero-text {
-    margin-left: 0;
-    text-align: center;
-  }
-
-  .profile {
-    margin-bottom: 1rem;
-  }
-}
-
-/* Resume Page Styling */
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 4rem 1.5rem;
-}
-
-.container h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #00ff99;
-}
-
-.media {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  background-color: rgba(255, 255, 255, 0.05);
-  padding: 1.5rem;
-  border-radius: 1rem;
-  margin-bottom: 2rem;
-}
-
-.media img {
-  width: 60px;
-  height: auto;
-  object-fit: contain;
-  border-radius: 8px;
-}
-
-.media-heading {
-  font-size: 1.25rem;
-  margin: 0 0 0.5rem 0;
-  color: #fff;
-}
-
-.media-body ul {
-  margin: 0.5rem 0 1rem 1rem;
-  padding-left: 1rem;
-}
-
-hr {
-  border: none;
-  border-top: 1px solid #333;
-  margin: 2rem 0;
-}
-
-.container a {
-  color: #00ff99;
-}
-
-.container a:hover {
-  text-decoration: underline;
-}
-
-
-
-.card-container {
-  max-width: 960px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-
+/* ========== FOOTER ========== */
+.footer{ background:#000; color:var(--accent); text-align:center; padding:1.25rem 1rem }
+.footer a{ color:var(--accent) }
 
