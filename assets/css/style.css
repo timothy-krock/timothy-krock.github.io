@@ -15,7 +15,7 @@
   --hero-h: calc(var(--hero-radius)*2);
 
   /* cards */
-  --icon-size: 60px;                /* controls card icon + pill shape */
+  --icon-size: 100px;                /* controls card icon + pill shape */
   --card-h: calc(var(--icon-size)*2);
   --card-r: var(--icon-size);
 }
@@ -107,3 +107,62 @@ img,video{max-width:100%; height:auto; display:block}
 .footer{ background:#000; color:var(--accent); text-align:center; padding:1.25rem 1rem }
 .footer a{ color:var(--accent) }
 
+
+
+
+
+
+
+
+
+
+
+/* --- Blog cards: keep icon, radius, and height in sync --- */
+.card-section {
+  /* one knob to rule them all (auto scales on viewport) */
+  --icon-size: clamp(80px, 6vw, 72px);
+}
+
+/* card geometry = 2 × icon; radius = icon */
+.card {
+  height: calc(var(--icon-size));
+  border-radius: var(--icon-size);
+  padding: 0;                    /* don't add extra height via padding */
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* icon exactly var(--icon-size), hugging the left edge */
+.card-icon-img {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  flex: 0 0 var(--icon-size);
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;                /* kill inline gaps */
+  margin: 0;                     /* ensure no theme margins */
+}
+
+/* text area fills the rest; its padding won't change card height */
+.card-body {
+  flex: 1 1 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+/* tidy text line heights so they don't "stretch" the card visually */
+.card-title {
+  margin: 0;
+  line-height: 1.1;
+  font-size: 1.05rem;
+  color: var(--accent);
+}
+.card-subtitle {
+  margin: .25rem 0 0 0;
+  line-height: 1.15;
+  font-size: .95rem;
+}
