@@ -25,7 +25,7 @@
 
 
 - [x] hobbes post 
-
+   - [ ] proofread
 
 
 
