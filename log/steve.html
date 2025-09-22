@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Steve the Robot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Styles: global → blog → (optional) per-post -->
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/css/blog.css" />
+  <!-- <link rel="stylesheet" href="/assets/css/posts/steve.css" /> -->
+
+  <!-- Social preview -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Steve the Robot — Eight Years from Wobbly to (Kinda) Woke" />
+  <meta property="og:description" content="A funny retrospective on Steve the Robot, vibecadding brackets, the OAK-D upgrade, and a cleaner wiring loom—with video and galleries." />
+  <meta property="og:image" content="https://timkrock.com/assets/img/posts/steve/og.jpg" />
+  <meta property="og:url" content="https://timkrock.com/log/steve.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+</head>
+<body>
+
+  <!-- unobtrusive back link -->
+  <a href="/" style="position:fixed;top:1rem;left:1rem;background:rgba(0,0,0,.6);color:#fff;padding:.5rem .9rem;border-radius:999px;text-decoration:none;z-index:1000">← Back to Home</a>
+
+  <main class="blog-post">
+    <h1 class="blog-title">Steve the Robot</h1>
+
+    <p class="muted">
+        if somebody stumbles upon this website while this text is there, treat the text as ipsum text--it's slop.
+      Pi 5 brain, OAK-D eyes, and a lot of vibecadding. Also: a shameless shout-out to my silicon co-pilot (hi, ChatGPT).
+    </p>
+
+    <!-- Background -->
+    <h2>Background</h2>
+    <p>
+      Circa <strong>2017</strong>, baby Steve rolled for the first time—loose wires, scuffed treads, big dreams.
+      Extremely cute, slightly alarming, and absolutely the moment the mission creep began.
+    </p>
+
+    <!-- Baby video -->
+    <figure class="frame" style="margin:1.25rem 0">
+      <video class="media" controls preload="metadata" poster="/assets/img/posts/steve/baby-steve-2017-poster.jpg" style="width:100%;border-radius:12px">
+        <source src="/assets/video/posts/steve/oldsteve.webm" type="video/webm" />
+        <source src="/assets/video/posts/steve/oldsteve.mp4" type="video/mp4" />
+        Sorry, your browser doesn’t support embedded videos.
+      </video>
+      <figcaption style="text-align:center; opacity:.85; margin-top:.5rem;">
+        Baby Steve (2017): the primordial wobble.
+      </figcaption>
+    </figure>
+
+    <!-- Then vs. now (4-up gallery) -->
+    <div class="gallery four" style="--ratio: 1/1;">
+      <div>
+        <figure class="frame">
+          <picture>
+            <source srcset="/assets/img/posts/steve/history/2019.webp" type="image/webp">
+            <img src="/assets/img/posts/steve/history/2019.jpg" alt="Steve in 2019 with breadboards" loading="lazy">
+          </picture>
+        </figure>
+        <div class="caption">2019 — breadboard years.</div>
+      </div>
+
+      <div>
+        <figure class="frame">
+          <picture>
+            <source srcset="/assets/img/posts/steve/history/2021.webp" type="image/webp">
+            <img src="/assets/img/posts/steve/history/2021.jpg" alt="Steve in 2021 with tidier wiring" loading="lazy">
+          </picture>
+        </figure>
+        <div class="caption">2021 — first tidy wiring pass.</div>
+      </div>
+
+      <div>
+        <figure class="frame">
+          <picture>
+            <source srcset="/assets/img/posts/steve/robotchassis.webp" type="image/webp">
+            <img src="/assets/img/posts/steve/2023.jpg" alt="Steve in 2023 with camera rig" loading="lazy">
+          </picture>
+        </figure>
+        <div class="caption">2023 — camera era.</div>
+      </div>
+
+      <div>
+        <figure class="frame">
+          <picture>
+            <source srcset="/assets/img/posts/steve/history/2025.webp" type="image/webp">
+            <img src="/assets/img/posts/steve/history/2025.jpg" alt="Steve in 2025 with Pi 5 and OAK-D" loading="lazy">
+          </picture>
+        </figure>
+        <div class="caption">2025 — Pi 5 + OAK-D.</div>
+      </div>
+    </div>
+
+    <!-- Vibecadding -->
+    <h2>Vibecadding: draw → print → test → repeat</h2>
+    <p>
+      <strong>Vibecad</strong> = rapid, low-ceremony iteration. Sketch the contour, print the bracket, test the
+      fit, tweak, reprint. Fewer ceremony points, faster feedback loops.
+    </p>
+    <ul>
+      <li><strong>Latency-killer:</strong> a 30-minute print beats a 3-day CAD rabbit hole.</li>
+      <li><strong>Constraint discovery:</strong> the part tells you what’s wrong when it touches reality.</li>
+      <li><strong>Confidence compounding:</strong> many small wins &gt; one mythical “final” design.</li>
+    </ul>
+
+    <!-- Vibecad gallery (3–4 up; keep same structure) -->
+    <div class="gallery four" style="--ratio: 1/1;">
+      <div>
+        <figure class="frame">
+          <picture>
+            <source srcset="/assets/img/posts/steve/vibe/mount-v1.webp" type="image/webp">
+            <img src="/assets/img/posts/steve/vibe/mount-v1.jpg" alt="Vibecad mount v1" loading="lazy">
+          </picture>
+        </figure>
+        <div class="caption">v1 — guessed holes; instant learnings.</div>
+      </div>
+
+      <div>
+        <figure class="frame">
+          <picture>
+            <source srcset="/assets/img/posts/steve/vibe/mount-v2.webp" type="image/webp">
+            <img src="/assets/img/posts/steve/vibe/mount-v2.jpg" alt="Vibecad mount v2" loading="lazy">
+          </picture>
+        </figure>
+        <div class="caption">v2 — slots for forgiveness.</div>
+      </div>
+
+      <div>
+        <figure class="frame">
+          <picture>
+            <source srcset="/assets/img/posts/steve/vibe/mount-v3.webp" type="image/webp">
+            <img src="/assets/img/posts/steve/vibe/mount-v3.jpg" alt="Vibecad mount v3" loading="lazy">
+          </picture>
+        </figure>
+        <div class="caption">v3 — cable relief (finally).</div>
+      </div>
+
+      <div>
+        <figure class="frame">
+          <picture>
+            <source srcset="/assets/img/posts/steve/vibe/mount-v4.webp" type="image/webp">
+            <img src="/assets/img/posts/steve/vibe/mount-v4.jpg" alt="Vibecad mount v4" loading="lazy">
+          </picture>
+        </figure>
+        <div class="caption">v4 — rotated for strength; prints clean.</div>
+      </div>
+    </div>
+
+    <!-- OAK-D + wiring -->
+    <h2>Brains &amp; Eyes: Pi 5 + OAK-D, and a saner wiring loom</h2>
+    <p>
+      <strong>Compute:</strong> Raspberry Pi 5. <strong>Vision:</strong> Luxonis OAK-D (RGB + stereo depth).
+      <strong>Drive:</strong> TB6612FNG motor driver. Clean 5&nbsp;V rail via UBECs, fused harness, common ground.
+    </p>
+
+    <ul>
+      <li><strong>Cleaner power:</strong> logic isolated from motor supply; shared ground to banish ghosts.</li>
+      <li><strong>Deterministic control:</strong> correct input polarity fixed the “only one direction” gremlin.</li>
+      <li><strong>Edge depth:</strong> OAK-D handles depth on-device; Pi focuses on planning + UI.</li>
+    </ul>
+
+    <!-- UI image -->
+    <figure class="frame" style="margin:1.25rem 0">
+      <picture>
+        <source srcset="/assets/img/posts/steve/ui.webp" type="image/webp">
+        <img src="/assets/img/posts/steve/ui.png" alt="Robot control UI with live feed and controls" loading="lazy" style="border-radius:12px; width:100%; max-width:1100px; margin:0 auto; display:block;">
+      </picture>
+      <figcaption style="text-align:center; opacity:.85; margin-top:.5rem;">
+        Control UI — live camera, depth toggle, drive sliders, and a big red “stop being spicy.”
+      </figcaption>
+    </figure>
+
+    <!-- Depth stream video -->
+    <figure class="frame" style="margin:1.25rem 0">
+      <video class="media" controls preload="metadata" poster="/assets/img/posts/steve/depth-poster.jpg" style="width:100%;border-radius:12px">
+        <source src="/assets/video/posts/steve/depth.webm" type="video/webm" />
+        <source src="/assets/video/posts/steve/depth.mp4" type="video/mp4" />
+        Sorry, your browser doesn’t support embedded videos.
+      </video>
+      <figcaption style="text-align:center; opacity:.85; margin-top:.5rem;">
+        OAK-D depth stream — halls, corners, and the occasional chair-leg jump scare.
+      </figcaption>
+    </figure>
+
+    <!-- Quick hits -->
+    <h3>What worked (and what didn’t)</h3>
+    <ul>
+      <li>✅ <strong>Vibecad FTW:</strong> fitment bugs die fast when you print the problem.</li>
+      <li>✅ <strong>Shared ground:</strong> half the “mystery bugs” vanished.</li>
+      <li>✅ <strong>UI first:</strong> seeing state (and a panic stop) shortens the debug loop.</li>
+      <li>❌ <strong>Floating references:</strong> unreliable signals until we normalized grounds.</li>
+      <li>❌ <strong>Cable spaghetti:</strong> first harness drafted by a plate of linguine. Now: labeled + strain-relieved.</li>
+    </ul>
+
+    <!-- Future Work -->
+    <h2>Future Work</h2>
+    <ul>
+      <li>Lightweight ORB-SLAM-ish pipeline with OAK-D features as priors.</li>
+      <li>Real-time point-cloud streaming to a laptop app (WebRTC/ZeroMQ → Qt/GL).</li>
+      <li>FOC/closed-loop drive for smoother low-speed torque.</li>
+      <li>Battery mgmt: smart pack + single-port charge-in-place.</li>
+      <li>Autonomy v0.1: corridor following, docking, and “fetch coffee” (stretch).</li>
+      <li>LED halo revival, because vibes.</li>
+    </ul>
+
+    <!-- Credit -->
+    <p class="muted">
+      This build absolutely had a silicon co-pilot: ChatGPT. From “why do my treads only go forward” to
+      “decode the TB6612 pinout again,” Steve is a collaboration between a human with zip ties and a language model
+      with opinions. I regret nothing.
+    </p>
+  </main>
+</body>
+</html>
+
