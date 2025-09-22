@@ -11,10 +11,26 @@
 ### Rough blog plan
 - Photography attempts 
     - cults3d links
+    - make a mmf account? 
+    - upload photobooth
+
 - Vbecad blog 
 - vibecode post
+    - [ ] link to steve
+    - [ ] link to nik's mask
+    
 - wally 
 - packout
+
+- Steve 
+   - [ ] make depth gif
+   - [ ] ui screenshot 
+
+
+- Nik's Mask
+   - [ ] make gifs
+   - [ ] screenshot ui
+
 - VTOL Adventures
    - [x] hope hovering
    - [x] Endurance Hovering 
