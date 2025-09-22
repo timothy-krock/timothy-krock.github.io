@@ -20,16 +20,20 @@
     - [ ] link to nik's mask
     
 - wally 
+
 - packout
 
 - Steve 
    - [ ] make depth gif
    - [ ] ui screenshot 
+   - [ ] let's add pictures of the soldering/banana plugs and such. 
 
 
 - Nik's Mask
    - [ ] make gifs
    - [ ] screenshot ui
+   - [ ] do I add stm code for the mask? 
+
 
 - VTOL Adventures
    - [x] hope hovering
