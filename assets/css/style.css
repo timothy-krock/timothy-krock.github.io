@@ -15,7 +15,7 @@
   --hero-h:calc(var(--hero-radius)*2);
 
   /* Cards (homepage logs) */
-  --icon-size:100px;                  /* icon DIAMETER */
+  --icon-size:150px;                  /* icon DIAMETER */
   --card-h:calc(var(--icon-size)*2);  /* card height = 2 × diameter */
   --card-r:var(--icon-size);          /* pill radius = diameter */
 }
@@ -32,6 +32,13 @@ a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
 img,video{max-width:100%;height:auto;display:block}
 .container{max-width:var(--max-w);margin:0 auto;padding:2rem 1rem}
+
+/* Subtle neutral container for ANY .card by default (non-pill contexts) */
+.card{
+  background:transparent;
+  border:0;
+  border-radius:var(--radius);
+}
 
 /* ========== HERO ========== */
 .hero{
@@ -85,39 +92,38 @@ img,video{max-width:100%;height:auto;display:block}
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 }
 
-/* Cards (pill) — 100% derived from --icon-size */
-.card{
+/* Long-form “pill” cards live only inside the main card grid */
+.card-grid .card{
   display:flex;align-items:center;gap:1rem;
   background:rgba(255,255,255,.06);
-  height:calc(var(--icon-size));   /* exact: 2 × DIAMETER */
+  height:calc(var(--icon-size)); /* 2 × DIAMETER (correct) */
   border-radius:var(--icon-size);    /* semicircular ends */
   padding:0;                         /* avoid adding to height */
   color:var(--text);text-decoration:none;
   transition:transform .2s,box-shadow .3s;box-shadow:0 0 0 transparent;
   overflow:hidden;
 }
-.card:hover{transform:scale(1.02);box-shadow:0 0 15px 3px var(--accent)}
+.card-grid .card:hover{transform:scale(1.02);box-shadow:0 0 15px 3px var(--accent)}
 
-.card-icon-img{
+.card-grid .card-icon-img{
   width:var(--icon-size);height:var(--icon-size);
   flex:0 0 var(--icon-size);
   border-radius:50%;object-fit:cover;display:block;margin:0;
 }
-.card-body{
+.card-grid .card-body{
   flex:1 1 auto;height:100%;
   display:flex;flex-direction:column;justify-content:center;
   padding:0 1rem;
 }
-.card-title{
+.card-grid .card-title{
   margin:0;line-height:1.1;font-size:1.05rem;color:var(--accent)
 }
-.card-subtitle{
+.card-grid .card-subtitle{
   margin:.25rem 0 0 0;line-height:1.15;font-size:.95rem;color:#eaeaea
 }
 
 /* ========== FOOTER (over background image, no parallax) ========== */
 .site-footer{
-  /* base footer styles if you use a plain footer elsewhere */
   background:#000;color:var(--text);
   border-top:1px solid #222;
   padding-top:1.25rem;
@@ -125,11 +131,11 @@ img,video{max-width:100%;height:auto;display:block}
 
 .site-footer--image{
   position:relative;isolation:isolate;
-  --footer-bg: url('/assets/img/common/background.png');  /* inline style can override */
+  --footer-bg: url('/assets/img/common/background.png');
   background-image:var(--footer-bg);
   background-size:cover;background-position:center;background-repeat:no-repeat;
   color:var(--text);
-  border-top:none;                 /* cleaner edge when over photo */
+  border-top:none;
   padding-top:1.25rem;
 }
 .site-footer--image::before{
@@ -143,7 +149,7 @@ img,video{max-width:100%;height:auto;display:block}
 .footer-grid{
   display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
   gap:1.25rem 2rem;align-items:start;
-  padding:2.25rem 1rem 1.5rem;       /* banner-like spacing over image */
+  padding:2.25rem 1rem 1.5rem;
   max-width:var(--max-w);margin:0 auto;
 }
 .footer-col h4{
@@ -179,4 +185,166 @@ img,video{max-width:100%;height:auto;display:block}
   height:38vh;max-height:520px;
   object-fit:cover;object-position:center;
 }
+
+/* ========== MICRO IMAGE-POST (IG-style slider) ========== */
+/* Card variant */
+.card.micro.igpost { padding: 10px; }
+
+/* Slider shell */
+.igslider {
+  position: relative;
+  border-radius: calc(var(--radius,12px) - 2px);
+  overflow: hidden;
+  background: var(--card,#1b1b1b);
+  border: 1px solid var(--border,#333);
+}
+
+/* Scroll-snap track (native swipe) */
+.igslider .track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.igslider .track::-webkit-scrollbar { display: none; }
+
+/* Slides */
+.igslider .slide { margin: 0; scroll-snap-align: start; }
+.igslider img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+/* Arrows */
+.igslider .nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  border: 0; background: rgba(0,0,0,.35);
+  color: #fff; width: 36px; height: 36px; border-radius: 50%;
+  display: grid; place-items: center; cursor: pointer; backdrop-filter: blur(2px);
+}
+.igslider .nav:hover { background: rgba(0,0,0,.5); }
+.igslider .prev { left: 8px; }
+.igslider .next { right: 8px; }
+
+/* Dots */
+.igslider .dots {
+  position: absolute; left: 50%; transform: translateX(-50%);
+  bottom: 8px; display: flex; gap: 6px; margin: 0; padding: 4px 6px;
+  list-style: none; background: rgba(0,0,0,.25); border-radius: 999px;
+}
+.igslider .dots > li {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: rgba(255,255,255,.5); cursor: pointer;
+}
+.igslider .dots > li[aria-selected="true"] { background: #fff; }
+
+/* Text below slider (inherits your tokens) */
+.micro-title { margin:.5rem 0 0; font-size:.98rem; color:var(--text,#f2f2f2); }
+.micro-cap   { margin:.15rem 0 0; font-size:.9rem; color:var(--muted,#bdbdbd); }
+
+/* Affiliate pills (reused global) */
+.aff { display:flex; flex-wrap:wrap; gap:8px; padding:0; margin:6px 0 0; list-style:none; }
+.aff a {
+  display:inline-block; padding:5px 9px; border-radius:999px; font-size:.8rem; text-decoration:none;
+  background: color-mix(in oklab, var(--accent,#00ff99) 18%, transparent);
+  border: 1px solid color-mix(in oklab, var(--accent,#00ff99) 45%, transparent);
+}
+
+/* A11y: reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .igslider .track { scroll-behavior: auto !important; }
+}
+
+/* ========== MICRO GRID (site-wide reusable) ========== */
+.micro-grid-wrap { margin-block: 8px 40px; }
+.micro-grid-wrap .grid-head {
+  display:flex; align-items:baseline; justify-content:space-between; margin-bottom:8px;
+}
+
+
+/* Match Latest Logs <h2> style */
+.micro-grid-wrap .grid-head h2{
+  margin: 0 0 1.5rem;
+  color: var(--accent);
+  letter-spacing: normal;  /* keep it clean; remove any prior tweaks */
+}
+
+.micro-grid-wrap .grid-link { font-size:.9rem; color:var(--muted,#bdbdbd); text-decoration:none; }
+
+.micro-grid {
+  --gap: 16px;
+  --col-min: 220px;                 /* tweak to taste */
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--col-min), 1fr));
+  gap: var(--gap);
+}
+
+/* Card sizing in grid context */
+.micro-grid .igpost { padding: 10px; }
+.micro-grid .igpost .igslider img { aspect-ratio: 1 / 1; object-fit: cover; }
+
+
+/* === Micro section with the same photo background as the footer === */
+.micro-grid--image{
+  position: relative;
+  isolation: isolate;
+  /* use same image var pattern as footer; override via inline style */
+  --micro-bg: url('/assets/img/lander/background.png');
+  background-image: var(--micro-bg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--text);
+  padding: 1.25rem 0 2.5rem; /* top/bottom breathing room */
+  border-top: none;
+}
+.micro-grid--image::before{
+  /* same vibe as .site-footer--image overlay */
+  content:"";
+  position:absolute; inset:0; z-index:0; pointer-events:none;
+  background: linear-gradient(to bottom, rgba(0,0,0,.50), rgba(0,0,0,.68));
+}
+/* ensure content sits above overlay */
+.micro-grid--image > .container{ position: relative; z-index: 1; }
+
+/* optional: add a subtle inner shadow around each micro card to pop off photo */
+.micro-grid .igpost .igslider{
+  box-shadow: 0 1px 0 rgba(255,255,255,.03), 0 8px 24px rgba(0,0,0,.35);
+}
+
+
+/* === Shared image band for continuous background === */
+.image-band{
+  position: relative;
+  isolation: isolate;
+  --band-bg: url('/assets/img/lander/background.png');
+  background-image: var(--band-bg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* one overlay across the whole band */
+.image-band::before{
+  content:"";
+  position:absolute; inset:0; z-index:0; pointer-events:none;
+  background: linear-gradient(to bottom, rgba(0,0,0,.50), rgba(0,0,0,.68));
+}
+
+/* lift inner content above overlay */
+.image-band > *{ position: relative; z-index: 1; }
+
+/* neutralize the footer's own image overlay when inside the band */
+.image-band .site-footer--image{
+  background: transparent;
+  background-image: none;
+  border-top: 1px solid rgba(255,255,255,.15); /* keep its divider */
+}
+.image-band .site-footer--image::before{ display:none; }
+
+/* micro grid itself stays transparent; cards already pop */
 
