@@ -7,6 +7,8 @@
 - Upgrade mailto icon.
 - makerworld account
 - printables account
+- list photo booth. 
+
 
 ---
 
