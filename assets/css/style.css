@@ -348,3 +348,66 @@ img,video{max-width:100%;height:auto;display:block}
 
 /* micro grid itself stays transparent; cards already pop */
 
+
+
+
+
+
+
+
+
+
+/* STL banner — single rounded rectangle, same font vibe as your <h2> */
+.stl-banner{
+  display:inline-flex;
+  align-items:stretch;
+  border-radius: 12px;                 /* outer rounded edges */
+  overflow:hidden;                     /* clips inner corners */
+  background:#000;                     /* matches your mock */
+  border:1px solid var(--border,#333);
+  box-shadow: 0 8px 24px rgba(0,0,0,.25);
+}
+
+/* “STL:” text block — inherit h2 styling when placed near it */
+.stl-label{
+  display:flex; align-items:center;
+  padding: .1rem .4rem .1rem .4rem;
+  color: var(--accent,#00ff99);
+  font-family: inherit;                /* same family as surrounding <h2> */
+  font-weight: bold;                /* same weight as <h2> if nested */
+  font-size: .8em;                      /* scales if placed inside a header */
+  letter-spacing:.02em;
+  background:#000;                     /* solid black left cell */
+}
+
+/* Square tiles that crop rectangular images centered */
+.stl-tile{
+  position: relative;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;                 /* crop any overflow neatly */
+  display: inline-block;            /* keep layout tight */
+  background: #111;                 /* or brand colors (you already set per-site) */
+  border-left:1px solid rgba(255,255,255,.06);
+}
+
+/* Make the image fill the square, centered */
+.stl-tile img{
+  width: 100%;
+  height: 100%;
+  display: block;                   /* remove inline-gap */
+  object-fit: cover;                /* fill tile; allow overflow */
+  object-position: center;          /* center the crop */
+  filter: none;                     /* don't invert colored PNGs */
+  opacity: 1;
+}
+.stl-tile:hover{ filter: brightness(1); transform: translateY(-1px); }
+
+/* Brand-ish tile backgrounds (tune to taste) */
+.stl-tile.mmf       { background:#43c6b6; }  /* Cults teal */
+.stl-tile.cults       { background:#6c3bcf; }  /* MMF purple */
+.stl-tile.printables  { background:#444444; }  /* Printables orange */
+.stl-tile.makerworld  { background:#79d041; }  /* MakerWorld green */
+
+/* Compact variant if you embed right on an <h2> line */
+.h2-inline { display:flex; align-items:center; gap:.75rem; }
