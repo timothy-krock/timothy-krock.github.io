@@ -1,151 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tim Krock</title>
-  <link rel="stylesheet" href="/assets/css/style.css" />
-</head>
-<body>
-
-  <!-- HERO -->
-  <section class="hero">
-    <h1 class="hero-title">Hi, I'm Tim</h1>
-    <div class="hero-box">
-      <img src="assets/img/lander/profpic.jpg" alt="Tim Krock portrait" class="profile" />
-      <div class="hero-text">
-        <p>
-          cv, painting, games, 3d printing, cad, electronics
-        </p>
-      </div>
-    </div>
-    <div class="resume-wrapper">
-        <a class="resume-button" href="/resume.html">View Résumé →</a>
-    </div>
-  </section>
-
-  
-  <!-- BLOG CARDS -->
-  <section
-    class="card-section card-section--parallax"  >
-    <div class="card-section__inner">
-      <h2>Latest Logs</h2>
-      
-      <div class="card-grid">
-
-        <!-- Resume card -->
-        <a href="/office.html" class="card">
-          <img src="/assets/img/lander/office.png" class="card-icon-img" alt="Resume Icon" />
-          <div class="card-body">
-            <h3 class="card-title">The Office</h3>
-            <p class="card-subtitle">Regression Analysis of NBC's the Office</p>
-          </div>
-        </a>
-
-        <!-- Card 1 -->
-        <a href="/log/endurance.html" class="card">
-          <img src="/assets/img/lander/hope.png" class="card-icon-img" alt="Hope Icon" />
-          <div class="card-body">
-            <h3 class="card-title">Making a VTOL Drone</h3>
-            <p class="card-subtitle">DIY Attempts to Fly</p>
-          </div>
-        </a>
-
-        <!-- Card 2 -->
-        <a href="/log/hobbes.html" class="card">
-            <video class="card-icon-img"
-                   autoplay muted loop playsinline
-                   poster="/assets/img/icons/hope_static.png"  width="60" height="60">
-              <source src="/assets/video/posts/hobbes/hobbes.webm" type="video/webm">
-              <source src="/assets/video/posts/hobbes/hobbes.mp4"  type="video/mp4">
-            </video>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tim Krock</title>
+        <link rel="stylesheet" href="/assets/css/style.css" />
+    </head>
+    <body>
+        
+        <!-- HERO -->
+        <section class="hero">
+            <h1 class="hero-title">Hi, I'm Tim</h1>
+            <div class="hero-box">
+                <img src="/assets/img/lander/profpic.jpg" alt="Tim Krock portrait" class="profile" />
+                <div class="hero-text">
+                    <p>cv, painting, games, 3d printing, cad, electronics</p>
+                </div>
+            </div>
+            <div class="resume-wrapper">
+                <a class="resume-button" href="/resume.html">View Résumé →</a>
+            </div>
+        </section>
+        
+        <!-- BLOG CARDS -->
+        <section class="card-section">
+            <div class="card-section__inner">
+                <h2>Long Form</h2>
+                
+                <div class="card-grid">
+                    
+                    <!-- Resume card -->
+                    <a href="/office.html" class="card">
+                        <img src="/assets/img/lander/office.png" class="card-icon-img" alt="Resume Icon" />
+                        <div class="card-body">
+                            <h3 class="card-title">The Office</h3>
+                            <p class="card-subtitle">Regression Analysis of NBC's The Office</p>
+                        </div>
+                    </a>
+                    
+                    <!-- Card 1 -->
+                    <a href="/log/endurance.html" class="card">
+                        <img src="/assets/img/lander/hope.png" class="card-icon-img" alt="Hope Icon" />
+                        <div class="card-body">
+                            <h3 class="card-title">Making a VTOL Drone</h3>
+                            <p class="card-subtitle">DIY Attempts to Fly</p>
+                        </div>
+                    </a>
+                    
+                    <!-- Card 2 -->
+                    <a href="/log/hobbes.html" class="card">
+                        <video class="card-icon-img"
+                            autoplay muted loop playsinline
+                            poster="/assets/img/icons/hope_static.png" width="60" height="60">
+                            <source src="/assets/video/posts/hobbes/hobbes.webm" type="video/webm">
+                                <source src="/assets/video/posts/hobbes/hobbes.mp4"  type="video/mp4">
+                                </video>
+                        <div class="card-body">
+                            <h3 class="card-title">Building a Better Dreadnought</h3>
+                            <p class="card-subtitle">and taking pictures of it</p>
+                        </div>
+                    </a>
+                    
+                    <!-- Card 3 -->
+                    <a href="/log/steve.html" class="card">
+                        <img src="/assets/img/lander/steve.webp" class="card-icon-img" alt="Steve Picture" />
+                        <div class="card-body">
+                            <h3 class="card-title">Steve</h3>
+                            <p class="card-subtitle">the robot</p>
+                        </div>
+                    </a>
+                    
+                    <!-- Card 4 -->
+                    <a href="/log/hope.html" class="card">
+                        <img src="/img/m2ea.png" class="card-icon-img" alt="M2EA Icon" />
+                        <div class="card-body">
+                            <h3 class="card-title">Hope</h3>
+                            <p class="card-subtitle">DIY Attempts to Fly</p>
+                        </div>
+                    </a>
+                    
+                </div><!-- /.card-grid -->
+            </div><!-- /.card-section__inner -->
+        </section>
+        
+        
+        
+        <!-- ONE continuous background for Micro + Footer -->
+        <section class="image-band" style="--band-bg:url('/assets/img/lander/background.png')">
             
-          <div class="card-body">
-            <h3 class="card-title">Building a Better Dreadnought</h3>
-            <p class="card-subtitle">and taking pictures of it</p>
-          </div>
-        </a>
+            <!-- MICRO GRID (now transparent, inside the band) -->
+            <section class="micro-grid-wrap" id="micro">
+                <div class="container">
+                    <header class="grid-head">
+                        <h2>misc. thoughts</h2>
+                        <a class="grid-link" href="/micro/">See all</a>
+                    </header>
+                    
+                    <div class="micro-grid">
+                        <article class="card micro igpost" id="m-plate-2025">
+                            <div class="igslider" role="region" aria-roledescription="carousel" aria-label="Fresh Plate">
+                                <div class="track" tabindex="0">
+                                    <figure class="slide">
+                                        <picture>
+                                            <source srcset="/assets/micro/plate1.webp" type="image/webp">
+                                                <img loading="lazy" decoding="async" src="/assets/micro/plate1.jpg" alt="Resin minis on plate">
+                                        </picture>
+                                    </figure>
+                                    <figure class="slide">
+                                        <picture>
+                                            <source srcset="/assets/micro/plate2.webp" type="image/webp">
+                                                <img loading="lazy" decoding="async" src="/assets/micro/plate2.jpg" alt="Close-up of vents">
+                                        </picture>
+                                    </figure>
+                                    <figure class="slide">
+                                        <picture>
+                                            <source srcset="/assets/micro/plate3.webp" type="image/webp">
+                                                <img loading="lazy" decoding="async" src="/assets/micro/plate3.jpg" alt="Cured parts">
+                                        </picture>
+                                    </figure>
+                                </div>
+                                <button class="nav prev" type="button" aria-label="Previous image" hidden>&#10094;</button>
+                                <button class="nav next" type="button" aria-label="Next image">&#10095;</button>
+                                <ol class="dots" role="tablist" aria-label="Choose image">
+                                    <li role="tab" aria-selected="true" tabindex="0"></li>
+                                    <li role="tab" aria-selected="false" tabindex="-1"></li>
+                                    <li role="tab" aria-selected="false" tabindex="-1"></li>
+                                </ol>
+                            </div>
+                            
+                            <h4 class="micro-title">Fresh Plate ✨</h4>
+                            <p class="micro-cap">Dawn Treaders helmets—crisp vents, zero warp.</p>
+                            <ul class="aff">
+                                <li><a rel="sponsored nofollow" href="https://amzn.to/xyz">Resin</a></li>
+                                <li><a rel="sponsored nofollow" href="https://amzn.to/abc">Gloves</a></li>
+                            </ul>
+                        </article>
+                        
+                        <!-- more .igpost cards -->
+                    </div>
+                </div>
+            </section>
+            
+            <!-- FOOTER (transparent in the band; keeps its layout/links) -->
+            <footer class="site-footer site-footer--image">
+                <div class="container footer-grid">
 
-        <!-- Card 3 -->
-        <a href="/log/steve.html" class="card">
-          <img src="/assets/img/lander/steve.webp" class="card-icon-img" alt="Steve Picture" />
-          <div class="card-body">
-            <h3 class="card-title">Steve</h3>
-            <p class="card-subtitle">the robot</p>
-          </div>
-        </a>
+                      <section class="footer-col">
+                        <h4>Links</h4>
+                        <ul>
+                          <li><a href="mailto:krocktim@gmail.com">krocktim@gmail.com</a></li>
+                          <li><a href="https://github.com/timothy-krock" target="_blank" rel="noopener">GitHub</a></li>
+                          <li><a href="https://cults3d.com/" target="_blank" rel="noopener">Cults3D</a></li>
+                        </ul>
+                      </section>
 
-        <!-- Card 4 -->
-        <a href="/log/hope.html" class="card">
-          <img src="/img/m2ea.png" class="card-icon-img" alt="M2EA Icon" />
-          <div class="card-body">
-            <h3 class="card-title">Hope</h3>
-            <p class="card-subtitle">DIY Attempts to Fly</p>
-          </div>
-        </a>
+                      <section class="footer-col">
+                        <h4>Maker</h4>
+                        <ul>
+                          <li>FDM: <a href="https://bambulab.com/en/x1" target="_blank" rel="noopener">Bambu X1C</a></li>
+                          <li>Resin: <a href="https://www.uniformation3d.com/gktwo" target="_blank" rel="noopener">Uniformation GK3</a></li>
+                          <li>Design: <a href="https://www.onshape.com/" target="_blank" rel="noopener">Onshape</a></li>
+                        </ul>
+                      </section>
 
-      </div>
-    </section>
-  </div>
+                      <section class="footer-col">
+                        <h4>Drones</h4>
+                        <ul>
+                          <li><span>Mavic 2 Enterprise Advanced</span></li>
+                          <li><span>Mavic Air 2S</span></li>
+                          <li><span>Mobula 03</span></li>
+                        </ul>
+                      </section>
 
-  
-  
-  
-  
-  
- 
- 
-  <!-- FOOTER -->
-  <footer class="site-footer site-footer--image"
-          style="--footer-bg:url('/assets/img/lander/background.png')">
-    <div class="container footer-grid">
-      <section class="footer-col">
-        <h4>Links</h4>
-        <ul>
-          <li><a href="mailto:krocktim@gmail.com">krocktim@gmail.com</a></li>
-          <li><a href="https://github.com/timothy-krock
-" target="_blank" rel="noopener">GitHub</a></li>
-          
-          <li><a href="https://cults3d.com/" target="_blank" rel="noopener">Cults3D</a></li>
-          
-        </ul>
-      </section>
-
-      <section class="footer-col">
-        <h4>Maker</h4>
-        <ul>
-          <li>FDM: <a href="https://bambulab.com/en/x1" target="_blank" rel="noopener">Bambu X1C</a></li>
-          <li>Resin: <a href="https://www.uniformation3d.com/gktwo" target="_blank" rel="noopener">Uniformation GK3</a></li>
-          <li>Design: <a href="https://www.onshape.com/" target="_blank" rel="noopener">Onshape</a></li>
-        </ul>
-      </section>
-
-      <section class="footer-col">
-        <h4>Drones</h4>
-        <ul>
-          <li><span>Mavic 2 Enterprise Advanced</span></li>
-          <li><span>Mavic Air 2S</span></li>
-          <li><span>Mobula 03</span></li>
-        </ul>
-      </section>
-
-      <section class="footer-col">
-        <h4>Research</h4>
-        <ul>
-          <li><a href="#" target="_blank" rel="noopener">Paperlink1</a></li>
-          <li><a href="#" target="_blank" rel="noopener">Paperlink2</a></li>
-          <li><a href="#" target="_blank" rel="noopener">Paperlink3</a></li>
-        </ul>
-      </section>
-    </div>
-
-    <div class="container footer-bottom">
-      <span>© <script>document.write(new Date().getFullYear())</script> Tim Krock</span>
-    </div>
-  </footer>
-  
-  <div class="footer-photo parallax-footer" role="img" aria-label="Scenic drone panorama"></div>
-
-</body>
-</html>
-
+                      <section class="footer-col">
+                        <h4>Research</h4>
+                        <ul>
+                          <li><a href="#" target="_blank" rel="noopener">Paperlink1</a></li>
+                          <li><a href="#" target="_blank" rel="noopener">Paperlink2</a></li>
+                          <li><a href="#" target="_blank" rel="noopener">Paperlink3</a></li>
+                        </ul>
+                      </section>
+                    
+                </div>
+                <div class="container footer-bottom">
+                    <span>© <script>document.write(new Date().getFullYear())</script> Tim Krock</span>
+                </div>
+            </footer>
+            
+        </section>
+        
+        <!-- Remove this to avoid a second image strip seam -->
+        <!-- <div class="footer-photo parallax-footer" role="img" aria-label="Scenic drone panorama"></div> -->
+        
+        
+        
+        <!-- IG slider bootstrap (arrows, dots, swipe sync) -->
+        <script>
+            (function initIGSliders(){
+                const sliders = document.querySelectorAll('.igslider');
+                sliders.forEach(slider => {
+                    const track = slider.querySelector('.track');
+                    const slides = [...slider.querySelectorAll('.slide')];
+                    const prevBtn = slider.querySelector('.prev');
+                    const nextBtn = slider.querySelector('.next');
+                    const dots    = [...slider.querySelectorAll('.dots > li')];
+                    
+                    const slideW = () => track.clientWidth;
+                    const maxIdx = slides.length - 1;
+                    let idx = 0;
+                    
+                    function setIndex(newIdx, smooth=true) {
+                        idx = Math.max(0, Math.min(maxIdx, newIdx));
+                        track.scrollTo({ left: idx * slideW(), behavior: smooth ? 'smooth' : 'auto' });
+                        if (prevBtn) prevBtn.hidden = (idx === 0);
+                        if (nextBtn) nextBtn.hidden = (idx === maxIdx);
+                        dots.forEach((d,i) => { d.setAttribute('aria-selected', i===idx ? 'true' : 'false'); d.tabIndex = i===idx ? 0 : -1; });
+                    }
+                    
+                    prevBtn?.addEventListener('click', () => setIndex(idx - 1));
+                    nextBtn?.addEventListener('click', () => setIndex(idx + 1));
+                    dots.forEach((dot,i) => {
+                        dot.addEventListener('click', () => setIndex(i));
+                        dot.addEventListener('keydown', (e) => {
+                            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setIndex(i); }
+                        });
+                    });
+                    
+                    let raf = null;
+                    track.addEventListener('scroll', () => {
+                        if (raf) return;
+                        raf = requestAnimationFrame(() => {
+                            const i = Math.round(track.scrollLeft / slideW());
+                            if (i !== idx) setIndex(i, false);
+                            raf = null;
+                        });
+                    });
+                    
+                    track.addEventListener('keydown', (e) => {
+                        if (e.key === 'ArrowRight') { e.preventDefault(); setIndex(idx + 1); }
+                        if (e.key === 'ArrowLeft')  { e.preventDefault(); setIndex(idx - 1); }
+                    });
+                    
+                    if (slides.length <= 1) {
+                        prevBtn?.setAttribute('hidden',''); nextBtn?.setAttribute('hidden','');
+                        slider.querySelector('.dots')?.setAttribute('hidden','');
+                    }
+                    
+                    addEventListener('resize', () => setIndex(idx, false));
+                    setIndex(0, false);
+                });
+            })();
+        </script>
+    </body>
+    
