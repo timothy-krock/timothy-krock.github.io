@@ -242,6 +242,27 @@ img,video{max-width:100%;height:auto;display:block}
 }
 .igslider .dots > li[aria-selected="true"] { background: #fff; }
 
+
+/* Ensure controls are *above* the scrolling track and receive taps */
+.igslider { position: relative; }
+.igslider .track { position: relative; z-index: 1; -webkit-overflow-scrolling: touch; }
+.igslider .nav,
+.igslider .dots { position: absolute; z-index: 5; pointer-events: auto; }
+
+/* Improve mobile tap targets */
+@media (max-width: 768px) {
+  .igslider .nav { width: 44px; height: 44px; }
+  .igslider .dots > li { width: 12px; height: 12px; }
+}
+
+/* Make buttons fast-tap on mobile */
+.igslider .nav { touch-action: manipulation; }
+.igslider .dots > li { touch-action: manipulation; }
+
+
+
+
+
 /* Text below slider (inherits your tokens) */
 .micro-title { margin:.5rem 0 0; font-size:.98rem; color:var(--text,#f2f2f2); }
 .micro-cap   { margin:.15rem 0 0; font-size:.9rem; color:var(--muted,#bdbdbd); }

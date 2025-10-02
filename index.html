@@ -138,7 +138,7 @@
                         
                         
                         
-                        <article class="card micro igpost" id="m-plate-2025">
+                        <article class="card micro igpost" id="qweqwe">
                             <div class="igslider" role="region" aria-roledescription="carousel" aria-label="Fresh Plate">
                                 <div class="track" tabindex="0">
                                     <figure class="slide">
@@ -180,25 +180,25 @@
                         
                         
                         
-                        <article class="card micro igpost" id="m-plate-2025">
-                            <div class="igslider" role="region" aria-roledescription="carousel" aria-label="Fresh Plate">
+                        <article class="card micro igpost" id="propagationtube">
+                            <div class="igslider" role="region" aria-roledescription="carousel" aria-label="3D Printed Propagation Tube">
                                 <div class="track" tabindex="0">
                                     <figure class="slide">
                                         <picture>
                                             <source srcset="/assets/img/posts/propagationtube/1.webp" type="image/webp">
-                                                <img loading="lazy" decoding="async" src="/assets/img/posts/propagationtube/1.jpg" alt="Resin minis on plate">
+                                                <img loading="lazy" decoding="async" src="/assets/img/posts/propagationtube/1.jpg" alt="Propagation Tube">
                                         </picture>
                                     </figure>
                                     <figure class="slide">
                                         <picture>
                                             <source srcset="/assets/img/posts/propagationtube/2.webp" type="image/webp">
-                                                <img loading="lazy" decoding="async" src="/assets/img/posts/propagationtube/2.jpg" alt="Close-up of vents">
+                                                <img loading="lazy" decoding="async" src="/assets/img/posts/propagationtube/2.jpg" alt="Propagation Tube">
                                         </picture>
                                     </figure>
                                     <figure class="slide">
                                         <picture>
                                             <source srcset="/assets/img/posts/propagationtube/3.webp" type="image/webp">
-                                                <img loading="lazy" decoding="async" src="/assets/img/posts/propagationtube/3.jpg" alt="Cured parts">
+                                                <img loading="lazy" decoding="async" src="/assets/img/posts/propagationtube/3.jpg" alt="Propagation Tube">
                                         </picture>
                                     </figure>
 
@@ -213,7 +213,7 @@
                                 </ol>
                             </div>
                             
-                            <h4 class="micro-title">Fresh Plate ✨</h4>
+                            <h4 class="micro-title">Propagation Tube</h4>
                             <p class="micro-cap">Dawn Treaders helmets—crisp vents, zero warp.</p>
                             <ul class="aff">
                                 <li><a rel="sponsored nofollow" href="https://amzn.to/xyz">Resin</a></li>
@@ -331,67 +331,102 @@
             
         </section>
         
-        <!-- Remove this to avoid a second image strip seam -->
-        <!-- <div class="footer-photo parallax-footer" role="img" aria-label="Scenic drone panorama"></div> -->
-        
-        
-        
-        <!-- IG slider bootstrap (arrows, dots, swipe sync) -->
         <script>
-            (function initIGSliders(){
-                const sliders = document.querySelectorAll('.igslider');
-                sliders.forEach(slider => {
-                    const track = slider.querySelector('.track');
-                    const slides = [...slider.querySelectorAll('.slide')];
-                    const prevBtn = slider.querySelector('.prev');
-                    const nextBtn = slider.querySelector('.next');
-                    const dots    = [...slider.querySelectorAll('.dots > li')];
-                    
-                    const slideW = () => track.clientWidth;
-                    const maxIdx = slides.length - 1;
-                    let idx = 0;
-                    
-                    function setIndex(newIdx, smooth=true) {
-                        idx = Math.max(0, Math.min(maxIdx, newIdx));
-                        track.scrollTo({ left: idx * slideW(), behavior: smooth ? 'smooth' : 'auto' });
-                        if (prevBtn) prevBtn.hidden = (idx === 0);
-                        if (nextBtn) nextBtn.hidden = (idx === maxIdx);
-                        dots.forEach((d,i) => { d.setAttribute('aria-selected', i===idx ? 'true' : 'false'); d.tabIndex = i===idx ? 0 : -1; });
-                    }
-                    
-                    prevBtn?.addEventListener('click', () => setIndex(idx - 1));
-                    nextBtn?.addEventListener('click', () => setIndex(idx + 1));
-                    dots.forEach((dot,i) => {
-                        dot.addEventListener('click', () => setIndex(i));
-                        dot.addEventListener('keydown', (e) => {
-                            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setIndex(i); }
-                        });
-                    });
-                    
-                    let raf = null;
-                    track.addEventListener('scroll', () => {
-                        if (raf) return;
-                        raf = requestAnimationFrame(() => {
-                            const i = Math.round(track.scrollLeft / slideW());
-                            if (i !== idx) setIndex(i, false);
-                            raf = null;
-                        });
-                    });
-                    
-                    track.addEventListener('keydown', (e) => {
-                        if (e.key === 'ArrowRight') { e.preventDefault(); setIndex(idx + 1); }
-                        if (e.key === 'ArrowLeft')  { e.preventDefault(); setIndex(idx - 1); }
-                    });
-                    
-                    if (slides.length <= 1) {
-                        prevBtn?.setAttribute('hidden',''); nextBtn?.setAttribute('hidden','');
-                        slider.querySelector('.dots')?.setAttribute('hidden','');
-                    }
-                    
-                    addEventListener('resize', () => setIndex(idx, false));
-                    setIndex(0, false);
-                });
-            })();
+        (function initIGSliders(){
+          const sliders = document.querySelectorAll('.igslider');
+          sliders.forEach(slider => {
+            const track = slider.querySelector('.track');
+            const slides = [...slider.querySelectorAll('.slide')];
+            const prevBtn = slider.querySelector('.prev');
+            const nextBtn = slider.querySelector('.next');
+            const dots    = [...slider.querySelectorAll('.dots > li')];
+            if (!track || !slides.length) return;
+
+            const slideW = () => track.clientWidth;
+            const maxIdx = slides.length - 1;
+            let idx = 0, raf = null, scrolling = false;
+
+            function disableSnap(){ track.style.scrollSnapType = track.style.webkitScrollSnapType = 'none'; }
+            function enableSnap(){ track.style.scrollSnapType = track.style.webkitScrollSnapType = 'x mandatory'; }
+
+            function goTo(px){
+              if (scrolling) { requestAnimationFrame(() => goTo(px)); return; }
+              disableSnap();
+              track.scrollLeft = px;
+              try { track.scrollTo({ left: px, behavior: 'auto' }); } catch(e) {}
+              requestAnimationFrame(enableSnap);
+            }
+
+            function setIndex(newIdx) {
+              idx = Math.max(0, Math.min(maxIdx, newIdx));
+              goTo(idx * slideW());
+              prevBtn && (prevBtn.hidden = (idx === 0));
+              nextBtn && (nextBtn.hidden = (idx === maxIdx));
+              dots.forEach((d,i) => {
+                d.setAttribute('aria-selected', i===idx ? 'true' : 'false');
+                d.tabIndex = i===idx ? 0 : -1;
+              });
+            }
+
+            // --------- DEDUPED TAP HANDLER (prevents +1 happening twice) ---------
+            function bindTapOnce(el, handler){
+              if (!el) return;
+              let last = 0;
+              const fire = (e) => {
+                e.preventDefault(); e.stopPropagation();
+                const now = Date.now();
+                if (now - last < 250) return;   // ignore duplicate within 250ms
+                last = now;
+                handler();
+              };
+              // Support pointer events if available (covers mouse & touch); plus fallback click
+              el.addEventListener('pointerup', fire, { passive:false });
+              el.addEventListener('touchend',  fire, { passive:false });
+              el.addEventListener('click',     fire, { passive:false });
+            }
+
+            bindTapOnce(prevBtn, () => setIndex(idx - 1));
+            bindTapOnce(nextBtn, () => setIndex(idx + 1));
+
+            dots.forEach((dot,i) => {
+              bindTapOnce(dot, () => setIndex(i));
+              dot.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setIndex(i); }
+              });
+            });
+
+            // Keep dots in sync when user swipes
+            track.addEventListener('scroll', () => {
+              scrolling = true;
+              if (raf) cancelAnimationFrame(raf);
+              raf = requestAnimationFrame(() => {
+                const i = Math.round(track.scrollLeft / slideW());
+                if (i !== idx) {
+                  idx = i;
+                  prevBtn && (prevBtn.hidden = (idx === 0));
+                  nextBtn && (nextBtn.hidden = (idx === maxIdx));
+                  dots.forEach((d,j) => {
+                    d.setAttribute('aria-selected', j===idx ? 'true' : 'false');
+                    d.tabIndex = j===idx ? 0 : -1;
+                  });
+                }
+                scrolling = false;
+              });
+            }, { passive:true });
+
+            track.addEventListener('keydown', (e) => {
+              if (e.key === 'ArrowRight') { e.preventDefault(); setIndex(idx + 1); }
+              if (e.key === 'ArrowLeft')  { e.preventDefault(); setIndex(idx - 1); }
+            });
+
+            addEventListener('resize', () => setIndex(idx));
+            addEventListener('orientationchange', () => setIndex(idx));
+            setIndex(0);
+          });
+        })();
         </script>
+
+
+
     </body>
     </html>
