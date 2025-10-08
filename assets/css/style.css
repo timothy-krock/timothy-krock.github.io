@@ -56,6 +56,16 @@ img,video{max-width:100%;height:auto;display:block}
   max-width:900px;margin:0 auto;
   padding-right:2rem;gap:2rem;
 }
+
+/* Make micro posts clickable while keeping controls accessible */
+.card.micro { position: relative; }
+.micro-title a { color: var(--accent); text-decoration: none; display:inline-block; transition: transform .12s ease, text-decoration .12s ease, color .12s ease; }
+.micro-title a:hover { transform: translateY(-2px); text-decoration: underline; }
+.micro-title a:focus { outline: 3px solid color-mix(in srgb, var(--accent) 30%, transparent); outline-offset: 3px; }
+.card.micro .igslider,
+.card.micro .stl-banner,
+.card.micro .aff { position: relative; z-index: 2; }
+
 .profile{
   width:150px;height:150px;border-radius:50%;
   object-fit:cover;border:3px solid var(--accent);flex-shrink:0;

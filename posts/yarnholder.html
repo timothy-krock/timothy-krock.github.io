@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Yarn Holder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/css/blog.css" />
+</head>
+<body>
+  <a href="/" style="position:fixed;top:1rem;left:1rem;background:rgba(0,0,0,.6);color:#fff;padding:.5rem .9rem;border-radius:999px;text-decoration:none;z-index:1000">← Back to Home</a>
+
+  <main class="blog-post">
+    <h1 class="blog-title">Yarn Holder</h1>
+
+    <p class="muted">I made this to impress my girlfriend.</p>
+
+    <div class="igslider" role="region" aria-roledescription="carousel" aria-label="Yarn Holder">
+      <div class="track" tabindex="0">
+        <figure class="slide">
+          <picture>
+            <source srcset="/assets/img/posts/yarnholder/1.webp" type="image/webp">
+            <img loading="lazy" decoding="async" src="/assets/img/posts/yarnholder/1.jpg" alt="Yarn holder - 1">
+          </picture>
+        </figure>
+        <figure class="slide">
+          <picture>
+            <source srcset="/assets/img/posts/yarnholder/2.webp" type="image/webp">
+            <img loading="lazy" decoding="async" src="/assets/img/posts/yarnholder/2.jpg" alt="Yarn holder - 2">
+          </picture>
+        </figure>
+      </div>
+      <button class="nav prev" type="button" aria-label="Previous image" hidden>&#10094;</button>
+      <button class="nav next" type="button" aria-label="Next image">&#10095;</button>
+      <ol class="dots" role="tablist" aria-label="Choose image">
+        <li role="tab" aria-selected="true" tabindex="0"></li>
+        <li role="tab" aria-selected="false" tabindex="-1"></li>
+      </ol>
+    </div>
+
+    <!-- STL banner -->
+    <div class="stl-banner" aria-label="STL links" style="margin-top: .75rem;">
+      <span class="stl-label">STL:</span>
+      <a class="stl-tile cults" href="https://cults3d.com/" target="_blank" rel="noopener" aria-label="Cults3D"><img src="/assets/img/icons/cults3d.png" alt=""></a>
+      <a class="stl-tile mmf" href="https://www.myminifactory.com/" target="_blank" rel="noopener" aria-label="MyMiniFactory"><img src="/assets/img/icons/mmf.png" alt=""></a>
+      <a class="stl-tile printables" href="https://www.printables.com/" target="_blank" rel="noopener" aria-label="Printables"><img src="/assets/img/icons/printables.jpeg" alt=""></a>
+      <a class="stl-tile makerworld" href="https://makerworld.com/" target="_blank" rel="noopener" aria-label="MakerWorld"><img src="/assets/img/icons/makerworld.png" alt=""></a>
+    </div>
+
+    <ul class="aff" style="margin-top:.5rem;">
+      <li><a rel="sponsored nofollow" href="https://amzn.to/magnets">Magnets</a></li>
+      <li><a rel="sponsored nofollow" href="https://amzn.to/weight">Weight</a></li>
+      <li><a rel="sponsored nofollow" href="https://amzn.to/feet">Feet</a></li>
+    </ul>
+
+  </main>
+</body>
+</html>
