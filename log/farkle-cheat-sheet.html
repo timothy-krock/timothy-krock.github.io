@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Farkle Cheat Sheet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/css/blog.css" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Farkle Cheat Sheet" />
+  <meta property="og:description" content="EV-driven stop thresholds, steal cutoffs, and risk notes for six-dice Farkle." />
+  <meta property="og:url" content="https://timkrock.com/log/farkle-cheat-sheet.html" />
+  <meta name="twitter:card" content="summary" />
+
+  <style>
+    .blog-post .lede { opacity: 0.9; }
+    .blog-post table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.8rem 0 1.2rem;
+      font-size: 0.98rem;
+    }
+    .blog-post th, .blog-post td {
+      border: 1px solid var(--border);
+      padding: 0.55rem 0.65rem;
+      text-align: left;
+    }
+    .blog-post th {
+      background: rgba(255,255,255,0.03);
+      color: var(--accent);
+    }
+    .blog-post .math {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.75rem 0.9rem;
+      overflow-x: auto;
+    }
+    .blog-post code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="/" style="position:fixed;top:1rem;left:1rem;background:rgba(0,0,0,.6);color:#fff;padding:.5rem .9rem;border-radius:999px;text-decoration:none;z-index:1000">← Back to Home</a>
+
+  <main class="blog-post">
+    <h1 class="blog-title">Farkle Cheat Sheet</h1>
+    <p class="lede">
+      Derived from exact dynamic programming under one ruleset. This is the same content as the PDF cheat sheet, converted to web format.
+    </p>
+
+    <h2>Assumptions Used</h2>
+    <ul>
+      <li>Turn-level optimization: maximize expected points this turn.</li>
+      <li>Hard cap for recursion at 11,000 turn points (20,000-point recursion limit resulted in negligible difference).</li>
+      <li>Scoring: single 1 = 100, single 5 = 50.</li>
+      <li>3-of-a-kind: 3x1 = 300, 3x(2..6) = face x 100.</li>
+      <li>4-kind = 1000, 5-kind = 2000, 6-kind = 3000.</li>
+      <li>Straight (1-6) = 1500, three pairs = 1500, two triplets = 2500, four-kind+pair = 1500.</li>
+    </ul>
+
+    <h2>Core Results</h2>
+    <ul>
+      <li>Fresh turn EV from <code>(t=0, n=6)</code>: <strong>U(0,6) = 542.063240</strong>.</li>
+      <li>Farkle probabilities:
+        <code>P(Farkle|n=1)=4/6=0.666667</code>,
+        <code>P(Farkle|n=2)=16/36=0.444444</code>,
+        <code>P(Farkle|n=3)=60/216=0.277778</code>.
+      </li>
+    </ul>
+
+    <h2>Stop vs Roll Cutoffs (Dice Remaining)</h2>
+    <p>Stop at or above these totals; otherwise roll.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Dice Remaining</th>
+          <th>Stop Threshold</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>282+</td></tr>
+        <tr><td>2</td><td>234+</td></tr>
+        <tr><td>3</td><td>393+</td></tr>
+        <tr><td>4</td><td>948+</td></tr>
+        <tr><td>5</td><td>2766+</td></tr>
+        <tr><td>6</td><td>No cutoff below 11,000 (roll)</td></tr>
+      </tbody>
+    </table>
+
+    <h2>When to Steal</h2>
+    <p>
+      Decision: steal opponent's banked stack with handed dice (must roll once) vs decline and start fresh
+      (fresh EV = 542.063240).
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Handed Dice</th>
+          <th>Minimum to Steal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>1130</td></tr>
+        <tr><td>2</td><td>799</td></tr>
+        <tr><td>3</td><td>601</td></tr>
+        <tr><td>4</td><td>466</td></tr>
+        <tr><td>5</td><td>319</td></tr>
+        <tr><td>6</td><td>0</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Key Example</h2>
+    <p>Takeover state <code>(t=1000, n=2)</code>: <strong>R(1000,2) = 652.766739</strong>.</p>
+
+    <h2>Simple Definitions</h2>
+    <ul>
+      <li><code>U(t,n)</code>: best expected final score from state (t points at risk, n dice left), with stop/roll choices allowed.</li>
+      <li><code>R(t,n)</code>: expected final score from state (t,n) if you must roll right now.</li>
+      <li><code>C(x)=U(x,6)-x</code>: continuation premium for six dice at total x.</li>
+    </ul>
+
+    <h2>1-Die Threshold Equation</h2>
+    <p>With 1 die left:</p>
+    <div class="math">R(t,1) = (1/6)U(t+100,6) + (1/6)U(t+50,6)</div>
+    <p>and</p>
+    <div class="math">R(t,1) - t = -(2/3)t + 25 + (C(t+50)+C(t+100))/6</div>
+    <p>
+      At around <code>t = 282</code>, this lands near zero, which is why 282 is the practical 1-die stop point in this model.
+    </p>
+  </main>
+
+</body>
+</html>
