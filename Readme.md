@@ -49,7 +49,7 @@
 
 
 - [x] hobbes post 
-   - [ ] proofread
+   - [x] proofread
 
 
 
