@@ -424,6 +424,10 @@
     const PRELOAD_RADIUS = 2;
     const PRELOAD_SECTION_RADIUS = 1;
 
+    function currentCompositeFrames() {
+      return mobileIntroQuery.matches ? compositeFramesMobile : compositeFramesDesktop;
+    }
+
     function clamp(value, min, max) {
       return Math.min(max, Math.max(min, value));
     }
@@ -622,6 +626,3 @@
   </script>
 </body>
 </html>
-    function currentCompositeFrames() {
-      return mobileIntroQuery.matches ? compositeFramesMobile : compositeFramesDesktop;
-    }
