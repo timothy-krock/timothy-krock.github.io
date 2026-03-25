@@ -235,9 +235,21 @@
     }
 
     @media (max-width: 960px) {
+      .stage-shell {
+        padding: 0;
+        margin-top: 0;
+      }
+
       .frame {
         width: 100vw;
+        height: 100dvh;
+        aspect-ratio: auto;
         border-radius: 0;
+      }
+
+      .story-frame,
+      .live-layer {
+        object-fit: cover;
       }
 
       .callout {
@@ -401,6 +413,22 @@
     const compositeFramesDesktop = { base: 'assets/composite_frames', count: 90, start: 1, ext: 'webp' };
     const compositeFramesMobile = { base: 'assets/mobile_composite_frames', count: 90, start: 1, ext: 'webp' };
     const mobileIntroQuery = window.matchMedia('(max-width: 768px)');
+    const liveStillSourcesDesktop = {
+      eo: 'assets/live_stills/eo.webp',
+      sparse: 'assets/live_stills/sparse.webp',
+      dense: 'assets/live_stills/dense.webp',
+      lidar: 'assets/live_stills/lidar.webp',
+      thermal_raw: 'assets/live_stills/thermal_raw.webp',
+      thermal_dense: 'assets/live_stills/thermal_dense.webp',
+    };
+    const liveStillSourcesMobile = {
+      eo: 'assets/mobile_live_stills/eo.webp',
+      sparse: 'assets/mobile_live_stills/sparse.webp',
+      dense: 'assets/mobile_live_stills/dense.webp',
+      lidar: 'assets/mobile_live_stills/lidar.webp',
+      thermal_raw: 'assets/mobile_live_stills/thermal_raw.webp',
+      thermal_dense: 'assets/mobile_live_stills/thermal_dense.webp',
+    };
 
     const metaEyebrow = document.getElementById('meta-eyebrow');
     const metaTitle = document.getElementById('meta-title');
@@ -426,6 +454,10 @@
 
     function currentCompositeFrames() {
       return mobileIntroQuery.matches ? compositeFramesMobile : compositeFramesDesktop;
+    }
+
+    function currentLiveStillSources() {
+      return mobileIntroQuery.matches ? liveStillSourcesMobile : liveStillSourcesDesktop;
     }
 
     function clamp(value, min, max) {
@@ -494,6 +526,16 @@
       const img = new Image();
       img.decoding = 'async';
       img.src = path;
+    }
+
+    function syncLiveStillSources() {
+      const sources = currentLiveStillSources();
+      liveLayers.forEach((layer) => {
+        const nextSrc = sources[layer.dataset.stream];
+        if (nextSrc && layer.getAttribute('src') !== nextSrc) {
+          layer.setAttribute('src', nextSrc);
+        }
+      });
     }
 
     function setCompositeFrame(progress) {
@@ -614,10 +656,12 @@
     }
 
     setCompositeFrame(0);
+    syncLiveStillSources();
     updateLiveTransition(0, 0);
     updateMeta('composite');
     mobileIntroQuery.addEventListener('change', () => {
       currentCompositeIndex = -1;
+      syncLiveStillSources();
       if (activeKey === 'composite') {
         setCompositeFrame(0);
       }
