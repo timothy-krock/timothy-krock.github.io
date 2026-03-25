@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registration Story Scroll Live Crops</title>
+  <style>
+    :root {
+      --fg: #f7f2e8;
+      --muted: #c7baa0;
+      --accent: #f1b82d;
+      --panel: rgba(10, 10, 10, 0.78);
+      --border: rgba(241, 184, 45, 0.22);
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      color: var(--fg);
+      font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+      background:
+        radial-gradient(circle at 18% 12%, rgba(241, 184, 45, 0.12), transparent 22%),
+        radial-gradient(circle at 84% 70%, rgba(241, 184, 45, 0.08), transparent 20%),
+        linear-gradient(180deg, #050505 0%, #0e0e0e 100%);
+    }
+
+    .intro {
+      padding: 6rem min(6vw, 72px) 2rem;
+      max-width: 1100px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      margin: 0 0 0.75rem;
+      font: 700 0.82rem/1.2 "Helvetica Neue", Helvetica, Arial, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--accent);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.3rem, 5vw, 5.6rem);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+    }
+
+    .lede {
+      max-width: 58rem;
+      margin: 1.25rem 0 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.45vw, 1.2rem);
+      line-height: 1.6;
+    }
+
+    .authors {
+      margin: 0.9rem 0 0;
+      font: 700 clamp(0.95rem, 1.2vw, 1.08rem)/1.2 "Helvetica Neue", Helvetica, Arial, sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .stage-shell {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      padding: 2.5rem min(3vw, 32px);
+      margin-top: -2rem;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .frame {
+      position: relative;
+      width: min(94vw, 1650px);
+      aspect-ratio: 3972 / 2954;
+      overflow: hidden;
+      border-radius: 24px;
+      background: #000;
+      box-shadow:
+        0 36px 90px rgba(0, 0, 0, 0.55),
+        0 12px 28px rgba(0, 0, 0, 0.35);
+      pointer-events: auto;
+    }
+
+    .media-stack,
+    .live-stack {
+      position: absolute;
+      inset: 0;
+      background: #000;
+    }
+
+    .story-frame,
+    .live-layer {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      background: #000;
+      opacity: 0;
+      transition: opacity 180ms linear;
+      will-change: clip-path, opacity;
+    }
+
+    .story-frame.active,
+    .live-stack.active .live-layer {
+      opacity: 1;
+    }
+
+    .live-stack {
+      opacity: 0;
+      transition: opacity 180ms linear;
+    }
+
+    .live-stack.active {
+      opacity: 1;
+    }
+
+    .meta,
+    .progress,
+    .legend,
+    .callout {
+      position: absolute;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+
+    .meta {
+      left: 20px;
+      top: 38px;
+      max-width: min(34rem, 62vw);
+      padding: 16px 18px;
+      border-radius: 16px;
+    }
+
+    .meta h2 {
+      margin: 0;
+      font-size: clamp(1.35rem, 2.2vw, 2.2rem);
+      line-height: 1.05;
+    }
+
+    .meta p {
+      margin: 0.6rem 0 0;
+      color: var(--muted);
+      font-size: clamp(0.95rem, 1.2vw, 1.04rem);
+      line-height: 1.45;
+    }
+
+    .progress {
+      left: 20px;
+      right: 20px;
+      top: 14px;
+      padding: 0;
+      border-radius: 999px;
+      background: transparent;
+      border: 0;
+      backdrop-filter: none;
+    }
+
+    .bar {
+      width: 100%;
+      height: 6px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: rgba(241, 184, 45, 0.18);
+    }
+
+    .bar-fill {
+      width: 0%;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, #f1b82d 0%, #ffd86b 100%);
+    }
+
+    .callout {
+      max-width: min(24rem, 34vw);
+      padding: 14px 16px;
+      border-radius: 16px;
+      box-shadow: 0 16px 38px rgba(24, 20, 15, 0.14);
+      opacity: 0;
+      transform: translateY(14px);
+    }
+
+    .callout h3 {
+      margin: 0 0 0.35rem;
+      font: 700 0.9rem/1.2 "Helvetica Neue", Helvetica, Arial, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+    }
+
+    .callout p {
+      margin: 0;
+      font-size: 0.97rem;
+      line-height: 1.45;
+      color: var(--muted);
+    }
+
+    .callout.one { right: 24px; top: 94px; }
+    .callout.two { right: 24px; bottom: 94px; }
+
+    .chapters {
+      position: relative;
+      z-index: 2;
+    }
+
+    .chapter {
+      height: 360vh;
+      position: relative;
+    }
+
+    .chapter.composite {
+      height: 460vh;
+    }
+
+    .marker {
+      position: absolute;
+      left: min(6vw, 72px);
+      top: 18vh;
+      width: min(28rem, 42vw);
+      padding: 1rem 1.1rem;
+      border-left: 3px solid rgba(241, 184, 45, 0.55);
+      color: rgba(247, 242, 232, 0.72);
+      font: 500 0.95rem/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    @media (max-width: 960px) {
+      .frame {
+        width: 100vw;
+        border-radius: 0;
+      }
+
+      .callout {
+        max-width: min(30rem, 72vw);
+      }
+
+      .callout.one {
+        left: 20px;
+        right: auto;
+        top: auto;
+        bottom: 132px;
+      }
+
+      .callout.two {
+        left: 20px;
+        right: auto;
+        bottom: 34px;
+      }
+
+      .marker {
+        width: min(30rem, 70vw);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="intro">
+    <h1>MMA: Mixed Multimodal Alignment</h1>
+    <p class="authors">Krock et al.</p>
+    <p class="lede">
+      We introduce a series of 3D to 3D and 2D to 2D alignment methods for finely registring electro-optical (EO) imagery, thermal infrared (IR) imagery, and light detection and ranging (LIDAR) data.
+    </p>
+  </header>
+
+  <div class="stage-shell">
+    <div class="frame">
+      <div class="media-stack">
+        <img class="story-frame active" data-key="composite" alt="" src="assets/composite_frames/frame_001.webp">
+      </div>
+
+      <div class="live-stack" id="live-stack">
+        <img class="live-layer" data-stream="eo" alt="" src="assets/live_stills/eo.webp">
+        <img class="live-layer" data-stream="sparse" alt="" src="assets/live_stills/sparse.webp">
+        <img class="live-layer" data-stream="dense" alt="" src="assets/live_stills/dense.webp">
+        <img class="live-layer" data-stream="lidar" alt="" src="assets/live_stills/lidar.webp">
+        <img class="live-layer" data-stream="thermal_raw" alt="" src="assets/live_stills/thermal_raw.webp">
+        <img class="live-layer" data-stream="thermal_dense" alt="" src="assets/live_stills/thermal_dense.webp">
+      </div>
+
+      <div class="meta">
+        <p class="eyebrow" id="meta-eyebrow">Introduction</p>
+        <h2 id="meta-title">Introduction</h2>
+        <p id="meta-body">A synchronized six-way view: EO image, sparse EO, dense EO, LiDAR height, thermal raw homography, and thermal-on-dense fusion.</p>
+      </div>
+
+      <div class="progress">
+        <div class="bar"><div class="bar-fill" id="bar-fill"></div></div>
+      </div>
+
+      <div class="callout one" id="callout-one">
+        <h3>Observation</h3>
+        <p id="callout-one-body"></p>
+      </div>
+
+      <div class="callout two" id="callout-two">
+        <h3>Use In Paper</h3>
+        <p id="callout-two-body"></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="chapters">
+    <section class="chapter composite" data-key="composite">
+      <div class="marker">Introduction</div>
+    </section>
+    <section class="chapter" data-key="eo">
+      <div class="marker">EO focus transition</div>
+    </section>
+    <section class="chapter" data-key="sparse">
+      <div class="marker">Sparse EO focus transition</div>
+    </section>
+    <section class="chapter" data-key="dense">
+      <div class="marker">Dense EO focus transition</div>
+    </section>
+    <section class="chapter" data-key="lidar">
+      <div class="marker">LiDAR height focus transition</div>
+    </section>
+    <section class="chapter" data-key="thermal_raw">
+      <div class="marker">Thermal raw focus transition</div>
+    </section>
+    <section class="chapter" data-key="thermal_dense">
+      <div class="marker">Thermal-on-dense focus transition</div>
+    </section>
+  </div>
+
+  <script>
+    const sections = {
+      composite: {
+        label: 'Introduction',
+        title: 'Introduction',
+        body: 'A synchronized six-way view: EO image, sparse EO, dense EO, LiDAR height, thermal raw homography, and thermal-on-dense fusion.',
+        legend: [
+          ['1', 'EO image'],
+          ['2', 'EO sparse model'],
+          ['3', 'EO dense model'],
+          ['4', 'LiDAR height'],
+          ['5', 'Thermal raw homography'],
+          ['6', 'Thermal dense model'],
+        ],
+      },
+      eo: {
+        label: 'Section 2',
+        title: 'EO Focus Transition',
+        body: 'The visible EO slice expands to full frame, emphasizing scene context and interpretability.',
+        calloutOne: 'Visible imagery anchors the geometry in familiar scene structure and surface appearance.',
+        calloutTwo: 'This frame works well for introducing the scene before moving into the reconstructed modalities.',
+      },
+      sparse: {
+        label: 'Section 3',
+        title: 'Sparse EO Focus Transition',
+        body: 'The sparse reconstruction expands forward, showing where the alignment is supported by tracked structure.',
+        calloutOne: 'The sparse cloud emphasizes stable multi-view correspondences rather than filled surfaces.',
+        calloutTwo: 'This is the cleanest view for discussing structural support and the geometry behind the final alignment.',
+      },
+      dense: {
+        label: 'Section 4',
+        title: 'Dense EO Focus Transition',
+        body: 'The dense EO render fills in surfaces and conveys how photogrammetric geometry occupies the image plane.',
+        calloutOne: 'Dense EO produces more continuous surfaces, but also makes local rendering defects easier to notice.',
+        calloutTwo: 'This is the right place to talk about completeness versus fidelity and why later geometric checks matter.',
+      },
+      lidar: {
+        label: 'Section 5',
+        title: 'LiDAR Height Focus Transition',
+        body: 'The LiDAR height rendering isolates the metric reference geometry that anchors the final registration.',
+        calloutOne: 'The height field stays visually coherent across the scene because it comes from the most trusted geometry.',
+        calloutTwo: 'This is the clearest frame for explaining why LiDAR serves as the geometric target for fusion.',
+      },
+      thermal_raw: {
+        label: 'Section 6',
+        title: 'Thermal Raw Focus Transition',
+        body: 'The raw thermal homography view foregrounds the sensor modality before it is fused back onto 3D structure.',
+        calloutOne: 'This view preserves thermal appearance directly in the EO image plane without geometric repainting.',
+        calloutTwo: 'It makes a good bridge between raw cross-modal registration and the later fused 3D visualization.',
+      },
+      thermal_dense: {
+        label: 'Section 7',
+        title: 'Thermal-on-Dense Focus Transition',
+        body: 'The fused thermal-on-dense view shows the end product: thermal appearance carried by a geometrically aligned 3D model.',
+        calloutOne: 'Thermal signal can be repainted onto the dense model once the EO-to-LiDAR alignment is stable enough.',
+        calloutTwo: 'This is the closing fusion result: modality-specific information attached to shared scene geometry.',
+      },
+    };
+
+    const compositeFrame = document.querySelector('.story-frame[data-key="composite"]');
+    const liveStack = document.getElementById('live-stack');
+    const liveLayers = Array.from(document.querySelectorAll('.live-layer'));
+    const chapterEls = Array.from(document.querySelectorAll('.chapter'));
+    const chapterKeys = chapterEls.map((el) => el.dataset.key);
+    const focusIndexMap = { eo: 0, sparse: 1, dense: 2, lidar: 3, thermal_raw: 4, thermal_dense: 5 };
+    const compositeFramesDesktop = { base: 'assets/composite_frames', count: 90, start: 1, ext: 'webp' };
+    const compositeFramesMobile = { base: 'assets/mobile_composite_frames', count: 90, start: 1, ext: 'webp' };
+    const mobileIntroQuery = window.matchMedia('(max-width: 768px)');
+
+    const metaEyebrow = document.getElementById('meta-eyebrow');
+    const metaTitle = document.getElementById('meta-title');
+    const metaBody = document.getElementById('meta-body');
+    const barFill = document.getElementById('bar-fill');
+    const calloutOne = document.getElementById('callout-one');
+    const calloutTwo = document.getElementById('callout-two');
+    const calloutOneBody = document.getElementById('callout-one-body');
+    const calloutTwoBody = document.getElementById('callout-two-body');
+
+    let activeKey = 'composite';
+    let lastScrollY = window.scrollY;
+    let lastActiveSectionKey = 'composite';
+    let lastTimestamp = performance.now();
+    const autoplayState = new Map();
+    const preloadedFramePaths = new Set();
+    let currentCompositeIndex = -1;
+
+    const TRANSITION_AUTOPLAY_SEC = 1.65;
+    const COMPOSITE_AUTOPLAY_SEC = 6.0;
+    const PRELOAD_RADIUS = 2;
+    const PRELOAD_SECTION_RADIUS = 1;
+
+    function clamp(value, min, max) {
+      return Math.min(max, Math.max(min, value));
+    }
+
+    function sectionProgress(el) {
+      const start = el.offsetTop;
+      const end = start + el.offsetHeight - window.innerHeight;
+      if (end <= start) return 0;
+      return clamp((window.scrollY - start) / (end - start), 0, 1);
+    }
+
+    function stateForSection(key, progress) {
+      if (key === 'composite') {
+        return { videoProgress: progress, calloutOne: 0, calloutTwo: 0 };
+      }
+      if (progress < 0.26) {
+        return { videoProgress: progress / 0.26, calloutOne: 0, calloutTwo: 0 };
+      }
+      if (progress < 0.40) {
+        return { videoProgress: 1, calloutOne: (progress - 0.26) / 0.14, calloutTwo: 0 };
+      }
+      if (progress < 0.54) {
+        return { videoProgress: 1, calloutOne: 1, calloutTwo: (progress - 0.40) / 0.14 };
+      }
+      if (progress < 0.72) {
+        return { videoProgress: 1, calloutOne: 1, calloutTwo: 1 };
+      }
+      const reverse = clamp((progress - 0.72) / 0.28, 0, 1);
+      const fade = 1 - clamp((progress - 0.82) / 0.18, 0, 1);
+      return { videoProgress: 1 - reverse, calloutOne: fade, calloutTwo: fade };
+    }
+
+    function setCallout(el, alpha) {
+      const a = clamp(alpha, 0, 1);
+      el.style.opacity = a.toFixed(3);
+      el.style.transform = `translateY(${14 * (1 - a)}px)`;
+    }
+
+    function setActiveKey(key) {
+      if (key === activeKey) return;
+      compositeFrame.classList.toggle('active', key === 'composite');
+      liveStack.classList.toggle('active', key !== 'composite');
+      activeKey = key;
+    }
+
+    function updateMeta(key) {
+      const config = sections[key];
+      metaEyebrow.textContent = config.label;
+      metaTitle.textContent = config.title;
+      metaBody.textContent = config.body;
+      calloutOneBody.textContent = config.calloutOne || '';
+      calloutTwoBody.textContent = config.calloutTwo || '';
+    }
+
+    function compositeFramePath(index) {
+      const compositeFrames = currentCompositeFrames();
+      const frameNumber = compositeFrames.start + index;
+      return `${compositeFrames.base}/frame_${String(frameNumber).padStart(3, '0')}.${compositeFrames.ext}`;
+    }
+
+    function preloadFrame(path) {
+      if (preloadedFramePaths.has(path)) return;
+      preloadedFramePaths.add(path);
+      const img = new Image();
+      img.decoding = 'async';
+      img.src = path;
+    }
+
+    function setCompositeFrame(progress) {
+      const compositeFrames = currentCompositeFrames();
+      const index = clamp(Math.round(progress * (compositeFrames.count - 1)), 0, compositeFrames.count - 1);
+      if (index === currentCompositeIndex) return;
+      currentCompositeIndex = index;
+      compositeFrame.src = compositeFramePath(index);
+    }
+
+    function preloadCompositeNeighborhood(progress) {
+      const compositeFrames = currentCompositeFrames();
+      const center = clamp(Math.round(progress * (compositeFrames.count - 1)), 0, compositeFrames.count - 1);
+      for (let i = Math.max(0, center - PRELOAD_RADIUS); i <= Math.min(compositeFrames.count - 1, center + PRELOAD_RADIUS); i += 1) {
+        preloadFrame(compositeFramePath(i));
+      }
+    }
+
+    function computeBounds(progress, numStreams, focusIndex) {
+      const bounds = [];
+      const leftScale = 1 - progress;
+      const rightScale = 1 - progress;
+      for (let idx = 0; idx < numStreams; idx += 1) {
+        const e0 = idx / numStreams;
+        const e1 = (idx + 1) / numStreams;
+        let x0;
+        let x1;
+        if (idx < focusIndex) {
+          x0 = e0 * leftScale;
+          x1 = e1 * leftScale;
+        } else if (idx > focusIndex) {
+          x0 = 1 - (1 - e0) * rightScale;
+          x1 = 1 - (1 - e1) * rightScale;
+        } else {
+          x0 = e0 * leftScale;
+          x1 = 1 - (1 - e1) * rightScale;
+        }
+        bounds.push([clamp(x0, 0, 1), clamp(x1, 0, 1)]);
+      }
+      return bounds;
+    }
+
+    function updateLiveTransition(focusIndex, progress) {
+      const bounds = computeBounds(progress, liveLayers.length, focusIndex);
+      liveLayers.forEach((layer, idx) => {
+        const [x0, x1] = bounds[idx];
+        const leftPct = x0 * 100;
+        const rightPct = (1 - x1) * 100;
+        const width = x1 - x0;
+        layer.style.clipPath = `inset(0 ${rightPct}% 0 ${leftPct}%)`;
+        layer.style.opacity = width > 0.0005 ? '1' : '0';
+      });
+    }
+
+    function update(timestamp) {
+      const scrollY = window.scrollY;
+      const scrollDirection = scrollY >= lastScrollY ? 1 : -1;
+      const dt = Math.min((timestamp - lastTimestamp) / 1000, 0.05);
+      lastTimestamp = timestamp;
+      lastScrollY = scrollY;
+
+      let currentSection = chapterEls[0];
+      let currentProgress = 0;
+      for (const el of chapterEls) {
+        const progress = sectionProgress(el);
+        if (progress > 0 || scrollY >= el.offsetTop) {
+          currentSection = el;
+          currentProgress = progress;
+        }
+      }
+
+      const key = currentSection.dataset.key;
+      if (key !== lastActiveSectionKey) {
+        if (scrollDirection >= 0) {
+          autoplayState.set(key, { active: true, progress: 0 });
+        }
+        lastActiveSectionKey = key;
+      }
+
+      setActiveKey(key);
+      updateMeta(key);
+
+      const state = stateForSection(key, currentProgress);
+      let targetProgress = state.videoProgress;
+      const sectionAutoplay = autoplayState.get(key) || { active: false, progress: 0 };
+      if (scrollDirection < 0) {
+        sectionAutoplay.active = false;
+      } else if (sectionAutoplay.active) {
+        const autoplaySec = key === 'composite' ? COMPOSITE_AUTOPLAY_SEC : TRANSITION_AUTOPLAY_SEC;
+        sectionAutoplay.progress = clamp(sectionAutoplay.progress + dt / autoplaySec, 0, 1);
+        targetProgress = Math.max(targetProgress, sectionAutoplay.progress);
+        if (sectionAutoplay.progress >= 1) {
+          sectionAutoplay.active = false;
+        }
+      }
+      autoplayState.set(key, sectionAutoplay);
+
+      if (key === 'composite') {
+        setCompositeFrame(targetProgress);
+        preloadCompositeNeighborhood(targetProgress);
+      } else {
+        updateLiveTransition(focusIndexMap[key], targetProgress);
+      }
+
+      const totalScrollable = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
+      const overallProgress = clamp(scrollY / totalScrollable, 0, 1);
+      barFill.style.width = `${overallProgress * 100}%`;
+
+      if (key === 'composite') {
+        setCallout(calloutOne, 0);
+        setCallout(calloutTwo, 0);
+      } else {
+        setCallout(calloutOne, state.calloutOne);
+        setCallout(calloutTwo, state.calloutTwo);
+      }
+
+      requestAnimationFrame(update);
+    }
+
+    setCompositeFrame(0);
+    updateLiveTransition(0, 0);
+    updateMeta('composite');
+    mobileIntroQuery.addEventListener('change', () => {
+      currentCompositeIndex = -1;
+      if (activeKey === 'composite') {
+        setCompositeFrame(0);
+      }
+    });
+    requestAnimationFrame(update);
+  </script>
+</body>
+</html>
+    function currentCompositeFrames() {
+      return mobileIntroQuery.matches ? compositeFramesMobile : compositeFramesDesktop;
+    }
