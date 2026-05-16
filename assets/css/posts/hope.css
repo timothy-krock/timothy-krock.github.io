@@ -1,4 +1,4 @@
-/* Only affects the Endurance post page */
+/* Only affects the Hope post page */
 .blog-post{
   /* Give this article its own accent if you want */
   --accent:#00ff99;;              /* mint for this post only */
@@ -22,7 +22,7 @@
 
 
 
-/* Endurance: fix BOM thumbnail centering & sizing */
+/* Hope: fix BOM thumbnail centering & sizing */
 .blog-post { --part-thumb: 150px; }
 
 .blog-post .grid-links a {
