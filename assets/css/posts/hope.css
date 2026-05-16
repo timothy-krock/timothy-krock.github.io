@@ -58,3 +58,27 @@
   display: block;
   margin: 0 auto;        /* center it */
 }
+
+.top-media-grid {
+  grid-template-columns: max-content max-content;
+  justify-content: center;
+  align-items: start;
+}
+
+.top-media-grid .video-sm {
+  width: auto;
+  max-width: none;
+  height: 236px;
+}
+
+@media (max-width: 768px) {
+  .top-media-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .top-media-grid .video-sm {
+    width: 420px;
+    max-width: 100%;
+    height: auto;
+  }
+}
