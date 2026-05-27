@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lonny</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/css/blog.css" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Lonny" />
+  <meta property="og:description" content="A short build log from an X thread about putting RTK and a Pixhawk into a remote controlled mower." />
+  <meta property="og:image" content="https://timkrock.com/assets/img/posts/rtk-mower/remote-mower.jpg" />
+  <meta property="og:url" content="https://timkrock.com/log/lonny/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <style>
+    .blog-post .log-media {
+      margin: 1.25rem 0 2rem;
+    }
+    .blog-post .log-media img,
+    .blog-post .log-media video {
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+      margin: 0 auto;
+    }
+    .blog-post .log-media img {
+      max-width: 900px;
+    }
+    .blog-post .log-media video {
+      max-width: 620px;
+      background: #111;
+    }
+    .blog-post .tweet-date {
+      opacity: 0.7;
+      font-size: 0.95rem;
+      margin-top: -0.25rem;
+    }
+  </style>
+</head>
+<body>
+  <a href="/" style="position:fixed;top:1rem;left:1rem;background:rgba(0,0,0,.6);color:#fff;padding:.5rem .9rem;border-radius:999px;text-decoration:none;z-index:1000">← Back to Home</a>
+
+  <main class="blog-post">
+    <h1 class="blog-title">Lonny</h1>
+
+    <p>
+      I've been captivated lately by robot mowers. I've written off unmanned ground vehicles (UGVs) as much less interesting than drones, because they can't travel as freely and easily. They're much less common than UGVs, for this reason, I think. While you might have a DJI on your shelf for taking pictures, you're less likely to have a rover. Then I saw a friend's robot mower, and it changed my viewpoint a little bit. It's a platform for autonomy tinkering. It's less stressful and constrained by energy than a drone, and it could potentially have a job! I started poking around on ebay, and immediately saw countless tracked "RC Mowers" that I thought looked very cool. I toyed with the idea for a few months and eventually pulled the trigger when I saw one at a local auction. Enter: Lonny (the robot lawnmower).
+    </p>
+
+    <figure class="log-media">
+      <picture>
+        <source srcset="/assets/img/posts/rtk-mower/remote-mower.webp" type="image/webp">
+        <img src="/assets/img/posts/rtk-mower/remote-mower.jpg" alt="Remote controlled mower listing" loading="lazy">
+      </picture>
+      <figcaption class="caption">Picture of Lonny's frame from eBay</figcaption>
+    </figure>
+
+    <h2>The Mower</h2>
+    <p class="tweet-date">May 18, 2026</p>
+    <p>
+      hello everyone and welcome to jackass, I bought one of these and I'm going stuff an RTK into it and give a pixhawk something responsible to do
+    </p>
+    <figure class="log-media">
+      <picture>
+        <source srcset="/assets/img/posts/rtk-mower/thread-card.webp" type="image/webp">
+        <img src="/assets/img/posts/rtk-mower/thread-card.jpg" alt="Remote control lawnmower meme image from the thread wrapper" loading="lazy">
+      </picture>
+      <figcaption class="caption">The framing device.</figcaption>
+    </figure>
+
+    <h2>Updates 1-2</h2>
+    <p class="tweet-date">May 18, 2026</p>
+    <p>
+      update 1: remote controlled mower didn't come with a remote<br>
+      update 2: the commies scraped the labels off the motor drivers
+    </p>
+    <figure class="log-media">
+      <picture>
+        <source srcset="/assets/img/posts/rtk-mower/motor-driver-labels.webp" type="image/webp">
+        <img src="/assets/img/posts/rtk-mower/motor-driver-labels.jpg" alt="Mower motor driver wiring and label area" loading="lazy">
+      </picture>
+      <figcaption class="caption">Motor drivers, with the useful bits hidden.</figcaption>
+    </figure>
+
+    <h2>Update 3</h2>
+    <p class="tweet-date">May 18, 2026</p>
+    <p>
+      motor drivers take in sbus. I plugged an esp into the sbus and told codex to start guessing.
+    </p>
+    <p>
+      guys it's such a good time to be a smug lazy jackass
+    </p>
+    <figure class="log-media">
+      <video controls preload="metadata" poster="/assets/img/posts/rtk-mower/sbus-control-poster.webp">
+        <source src="/assets/video/posts/rtk-mower/sbus-control.mp4" type="video/mp4">
+        Sorry, your browser doesn't support embedded videos.
+      </video>
+      <figcaption class="caption">ESP talking SBUS to the mower.</figcaption>
+    </figure>
+
+    <h2>Update 4</h2>
+    <p class="tweet-date">May 19, 2026</p>
+    <p>
+      vibecoded an sbus mixer to sanity check the controls. turns out it was actually pretty standard and easy to hand off to the pixhawk.
+    </p>
+    <figure class="log-media">
+      <picture>
+        <source srcset="/assets/img/posts/rtk-mower/sbus-mixer.webp" type="image/webp">
+        <img src="/assets/img/posts/rtk-mower/sbus-mixer.jpg" alt="SBUS mixer code and control sanity check" loading="lazy">
+      </picture>
+      <figcaption class="caption">SBUS mixer sanity check.</figcaption>
+    </figure>
+
+    <h2>Update 5</h2>
+    <p class="tweet-date">May 19, 2026</p>
+    <p>
+      update 5:🤠🤠
+    </p>
+    <p>
+      fought all afternoon with the remote firmware. plugging into the pixhawk was a breeze. gps works. cheapo telemetry link works. I'm gonna upgrade the telemetry link tomorrow, and drive it to his new home and forget about him until the RTK comes.
+    </p>
+    <figure class="log-media">
+      <video controls preload="metadata" poster="/assets/img/posts/rtk-mower/firmware-test-poster.webp">
+        <source src="/assets/video/posts/rtk-mower/firmware-test.mp4" type="video/mp4">
+        Sorry, your browser doesn't support embedded videos.
+      </video>
+      <figcaption class="caption">Firmware fought back; Pixhawk did not.</figcaption>
+    </figure>
+  </main>
+</body>
+</html>
