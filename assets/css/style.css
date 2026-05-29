@@ -120,6 +120,10 @@ img,video{max-width:100%;height:auto;display:block}
   flex:0 0 var(--icon-size);
   border-radius:50%;object-fit:cover;display:block;margin:0;
 }
+.card-grid picture{
+  flex:0 0 var(--icon-size);
+  display:block;
+}
 .card-grid .card-body{
   flex:1 1 auto;height:100%;
   display:flex;flex-direction:column;justify-content:center;

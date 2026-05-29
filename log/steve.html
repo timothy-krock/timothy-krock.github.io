@@ -27,68 +27,61 @@
     <h1 class="blog-title">Steve the Robot</h1>
 
     <p class="muted">
-      Pi 5 brain, OAK-D eyes, and a lot of vibecadding. Also: a shameless shout-out to my silicon co-pilot (hi, ChatGPT).
+      On January 20, 2017 I told my friend I built a robot. He said "Once it can fetch you a beer, I will be seriously impressed."
+      <br>Enter Steve–my deep dive into percieving the world robotically. How do you find a beer? How do you find a fridge? How do
+
+      Mark Zuckerberg's <a href=https://www.facebook.com/notes/775294156352065/>Building Jarvis</a> post was one of my first inspirations at this time.
+
+      A decade later with things like SAM, and cheap LiDAR, an entity focused spatial understanding feels distinctly acheivable.
     </p>
-
-    <!-- Bill of Materials -->
-    <h2>Bill of Materials</h2>
-    <p>Core components for the current Steve build. I’ll add wiring notes and PDFs here later.</p>
-
-    <div class="grid-links">
-      <a href="https://wiki.dfrobot.com/devastator_tank_mobile_platform_sku_rob0112" target="_blank" rel="noopener">
-        <div class="part-thumb">
-          <img src="/assets/img/posts/steve/robotchassis.png" alt="DFRobot Devastator Tank Mobile Platform" loading="lazy" decoding="async" width="150" height="150">
-        </div>
-        <p>DFRobot Devastator Tank Mobile Platform</p>
-      </a>
-
-      <a href="https://shop.unitree.com/en-gb/products/unitree-4d-lidar-l2" target="_blank" rel="noopener">
-        <div class="part-thumb">
-          <img src="/assets/img/posts/steve/unitree-l2-lidar.png" alt="Unitree L2 LiDAR" loading="lazy" decoding="async" width="150" height="150">
-        </div>
-        <p>Unitree L2 LiDAR</p>
-      </a>
-
-      <a href="https://shop.luxonis.com/products/oak-d" target="_blank" rel="noopener">
-        <div class="part-thumb">
-          <img src="/assets/img/posts/steve/oak-d.png" alt="Luxonis OAK-D camera" loading="lazy" decoding="async" width="150" height="150">
-        </div>
-        <p>Luxonis OAK-D</p>
-      </a>
-
-      <a href="https://www.raspberrypi.com/products/raspberry-pi-5/" target="_blank" rel="noopener">
-        <div class="part-thumb">
-          <img src="/assets/img/posts/steve/raspberry-pi-5.png" alt="Raspberry Pi 5" loading="lazy" decoding="async" width="150" height="150">
-        </div>
-        <p>Raspberry Pi 5</p>
-      </a>
-
-      <a href="https://www.amazon.com/s?k=Teyleten+Robot+TB6612FNG+Dual+DC+Stepper+Motor+Driver+Module+1.2A+Peak+3.2A+Better+Than+L298N+Pack+of+3" target="_blank" rel="noopener">
-        <div class="part-thumb">
-          <img src="/assets/img/posts/steve/tb6612fng.png" alt="TB6612FNG motor driver module" loading="lazy" decoding="async" width="150" height="150">
-        </div>
-        <p>TB6612FNG Motor Driver</p>
-      </a>
-    </div>
 
     <!-- Background -->
     <h2>Background</h2>
     <p>
-      Circa <strong>2017</strong>, baby Steve rolled for the first time—loose wires, scuffed treads, big dreams.
-      Extremely cute, slightly alarming, and absolutely the moment the mission creep began.
+      There's an intense joy in pressing a key and hearing something in the physical world twich
+      because of the code you've written. I got a raspberry pi for christmas a decade or so ago.
+      A few years later I switched my major to computer science, and I felt like I no longer had
+      an excuse not to work on it. I had also gotten some circuitry stuff from adafruit, so I went
+      in the hardware direction. I pulled boilerplate code to talk to an LCD screen, an ultrasonic rangefinder, a servo. I had
+      a little remote control bulldozer toy from my childhood with dupont connectors. Halfway
+      through winter break I figured out that transistors weren't ideal for bidirectional DC
+      motor control, and I found the L293D motor driver,
+      <a href=https://www.instructables.com/How-to-use-the-L293D-Motor-Driver-Arduino-Tutorial/>and this tutorial</a>
+      for how to control motors with it. I pulled several all-nighters watching the office, and finally got it moving forward and back.
     </p>
 
-    <!-- Baby video -->
-    <figure class="frame" style="margin:1.25rem 0">
-      <video class="media" controls preload="metadata" poster="/assets/img/posts/steve/baby-steve-2017-poster.jpg" style="width:100%;border-radius:12px">
-        <source src="/assets/video/posts/steve/oldsteve.webm" type="video/webm" />
-        <source src="/assets/video/posts/steve/oldsteve.mp4" type="video/mp4" />
-        Sorry, your browser doesn’t support embedded videos.
-      </video>
-      <figcaption style="text-align:center; opacity:.85; margin-top:.5rem;">
-        Baby Steve (2017): the primordial wobble.
-      </figcaption>
-    </figure>
+    <div class="gallery three" style="--ratio: 1/1;">
+      <div>
+        <figure class="frame">
+          <video class="media" controls preload="metadata" poster="/assets/img/posts/steve/baby-steve-2017-poster.jpg" style="width:100%;height:100%;object-fit:cover;">
+            <source src="/assets/video/posts/steve/oldsteve.webm" type="video/webm" />
+            <source src="/assets/video/posts/steve/oldsteve.mp4" type="video/mp4" />
+            Sorry, your browser doesn’t support embedded videos.
+          </video>
+        </figure>
+        <div class="caption">Baby Steve (2017): the primordial wobble.</div>
+      </div>
+
+      <div>
+        <figure class="frame">
+          <picture>
+            <source srcset="/assets/img/posts/steve/oldarm.webp" type="image/webp">
+            <img src="/assets/img/posts/steve/oldarm.png" alt="Early Steve arm hardware" loading="lazy" decoding="async">
+          </picture>
+        </figure>
+        <div class="caption">Early arm hardware.</div>
+      </div>
+
+      <div>
+        <figure class="frame">
+          <picture>
+            <source srcset="/assets/img/posts/steve/oldeyes.webp" type="image/webp">
+            <img src="/assets/img/posts/steve/oldeyes.jpeg" alt="Early Steve camera setup" loading="lazy" decoding="async">
+          </picture>
+        </figure>
+        <div class="caption">Early eyes.</div>
+      </div>
+    </div>
 
     <!-- Vibecadding -->
     <h2>Vibecadding: draw → print → test → repeat</h2>
@@ -101,6 +94,13 @@
       <li><strong>Constraint discovery:</strong> the part tells you what’s wrong when it touches reality.</li>
       <li><strong>Confidence compounding:</strong> many small wins &gt; one mythical “final” design.</li>
     </ul>
+
+    <figure class="frame" style="--ratio: 942/800; margin:1.25rem 0">
+      <picture>
+        <source srcset="/assets/img/posts/steve/cad.webp" type="image/webp">
+        <img src="/assets/img/posts/steve/cad.jpeg" alt="CAD model for Steve parts" loading="lazy" decoding="async">
+      </picture>
+    </figure>
 
     <!-- OAK-D + wiring -->
     <h2>Brains &amp; Eyes: Pi 5 + OAK-D, and a saner wiring loom</h2>
@@ -138,26 +138,75 @@
       </figcaption>
     </figure>
 
-    <!-- Quick hits -->
-    <h3>What worked (and what didn’t)</h3>
-    <ul>
-      <li>✅ <strong>Vibecad FTW:</strong> fitment bugs die fast when you print the problem.</li>
-      <li>✅ <strong>Shared ground:</strong> half the “mystery bugs” vanished.</li>
-      <li>✅ <strong>UI first:</strong> seeing state (and a panic stop) shortens the debug loop.</li>
-      <li>❌ <strong>Floating references:</strong> unreliable signals until we normalized grounds.</li>
-      <li>❌ <strong>Cable spaghetti:</strong> first harness drafted by a plate of linguine. Now: labeled + strain-relieved.</li>
-    </ul>
+    <!-- LiDAR -->
+    <h2>LiDAR</h2>
+    <p>
+      The LiDAR pass is the next layer of Steve’s spatial awareness. For now this is a parking spot for the sensor
+      mounting work, scan experiments, and the notes that will eventually turn into a more useful mapping pipeline.
+    </p>
 
-    <!-- Future Work -->
-    <h2>Future Work</h2>
-    <ul>
-      <li>Lightweight ORB-SLAM-ish pipeline with OAK-D features as priors.</li>
-      <li>Real-time point-cloud streaming to a laptop app (WebRTC/ZeroMQ → Qt/GL).</li>
-      <li>FOC/closed-loop drive for smoother low-speed torque.</li>
-      <li>Battery mgmt: smart pack + single-port charge-in-place.</li>
-      <li>Autonomy v0.1: corridor following, docking, and “fetch coffee” (stretch).</li>
-      <li>LED halo revival, because vibes.</li>
-    </ul>
+    <div class="gallery two" style="--ratio: 1/1;">
+      <div>
+        <figure class="frame">
+          <picture>
+            <source srcset="/assets/img/posts/steve/lidar.webp" type="image/webp">
+            <img src="/assets/img/posts/steve/lidar.png" alt="LiDAR mounted on Steve" loading="lazy" decoding="async">
+          </picture>
+        </figure>
+        <div class="caption">LiDAR mount.</div>
+      </div>
+
+      <div>
+        <figure class="frame">
+          <picture>
+            <source srcset="/assets/img/posts/steve/scan.webp" type="image/webp">
+            <img src="/assets/img/posts/steve/scan.png" alt="LiDAR scan output" loading="lazy" decoding="async">
+          </picture>
+        </figure>
+        <div class="caption">First scan output.</div>
+      </div>
+    </div>
+
+    <!-- Bill of Materials -->
+    <h2>Bill of Materials</h2>
+    <p>Core components for the current Steve build. I’ll add wiring notes and PDFs here later.</p>
+
+    <div class="grid-links">
+      <a href="/assets/img/posts/steve/robotchassis.png" target="_blank" rel="noopener">
+        <div class="part-thumb">
+          <img src="/assets/img/posts/steve/robotchassis.png" alt="eBay track chassis" loading="lazy" decoding="async" width="150" height="150">
+        </div>
+        <p>eBay Track Chassis</p>
+      </a>
+
+      <a href="https://shop.unitree.com/en-gb/products/unitree-4d-lidar-l2" target="_blank" rel="noopener">
+        <div class="part-thumb">
+          <img src="/assets/img/posts/steve/unitree-l2-lidar.png" alt="Unitree L2 LiDAR" loading="lazy" decoding="async" width="150" height="150">
+        </div>
+        <p>Unitree L2 LiDAR</p>
+      </a>
+
+      <a href="https://shop.luxonis.com/products/oak-d" target="_blank" rel="noopener">
+        <div class="part-thumb">
+          <img src="/assets/img/posts/steve/oak-d.png" alt="Luxonis OAK-D camera" loading="lazy" decoding="async" width="150" height="150">
+        </div>
+        <p>Luxonis OAK-D</p>
+      </a>
+
+      <a href="https://www.raspberrypi.com/products/raspberry-pi-5/" target="_blank" rel="noopener">
+        <div class="part-thumb">
+          <img src="/assets/img/posts/steve/raspberry-pi-5.png" alt="Raspberry Pi 5" loading="lazy" decoding="async" width="150" height="150">
+        </div>
+        <p>Raspberry Pi 5</p>
+      </a>
+
+      <a href="https://www.amazon.com/s?k=Teyleten+Robot+TB6612FNG+Dual+DC+Stepper+Motor+Driver+Module+1.2A+Peak+3.2A+Better+Than+L298N+Pack+of+3" target="_blank" rel="noopener">
+        <div class="part-thumb">
+          <img src="/assets/img/posts/steve/tb6612fng.png" alt="TB6612FNG motor driver module" loading="lazy" decoding="async" width="150" height="150">
+        </div>
+        <p>TB6612FNG Motor Driver</p>
+      </a>
+    </div>
 
     <!-- Credit -->
     <p class="muted">

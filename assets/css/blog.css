@@ -90,6 +90,11 @@
   object-fit: cover;         /* perfectly aligned crops */
   display: block;
 }
+.frame picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 .caption {
   text-align: center;
   font-size: 0.9rem;
