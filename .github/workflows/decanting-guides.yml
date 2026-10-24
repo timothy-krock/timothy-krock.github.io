@@ -1,0 +1,28 @@
+name: Refresh decanting GE guides
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 */6 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: decanting-guides
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python scripts/update-decanting-guides.py
+      - name: Save refreshed guide prices
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add decanting/ge-prices.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Refresh decanting GE guide prices'
+          git pull --rebase origin main
+          git push origin HEAD:main

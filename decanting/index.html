@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tim’s Decanting Calculator</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,sans-serif;background:#111411;color:#f0f0e9}*{box-sizing:border-box}body{margin:0}main{max-width:1050px;margin:9vh auto;padding:24px}header{display:flex;align-items:center;justify-content:space-between;gap:20px}h1{font-size:clamp(25px,4vw,38px);letter-spacing:-1.5px;margin:0 0 12px}p{color:#aab1a7;line-height:1.6}button{background:#e8e8d4;color:#151713;border:0;border-radius:8px;padding:12px 18px;font:inherit;cursor:pointer}button:disabled{opacity:.5}.batch{font-size:20px;color:#eee;margin:12px 0 30px}.scroll{overflow:auto}table{border-collapse:separate;border-spacing:0 12px;width:100%;min-width:670px}th{text-align:left;color:#aab1a7;font-size:12px;text-transform:uppercase;letter-spacing:1px;padding:10px 20px}td{padding:23px 20px;background:#20251f;font-variant-numeric:tabular-nums}td:first-child{border-radius:10px 0 0 10px;font-weight:650}td:last-child{border-radius:0 10px 10px 0;font-weight:750;font-size:20px}.profit td{background:#17372a}.loss td{background:#421f24}.profit td:last-child{color:#8fe1b5}.loss td:last-child{color:#ff949f}small{display:block;font-size:12px;font-weight:400;color:#c0c7bd;margin-top:6px}.note{font-size:13px;max-width:800px}#status{font-size:13px}a{color:#c6d7b4}details{margin-top:22px;color:#aab1a7;font-size:13px}summary{cursor:pointer}code{white-space:normal}@media(max-width:550px){main{margin:25px auto;padding:18px}header{align-items:flex-start}button{padding:10px}.batch{font-size:17px}}
+.potion-icon{display:block;object-fit:contain;image-rendering:pixelated}td:first-child{width:72px;padding:18px 16px}table{min-width:600px}</style></head><body><main>
+<header><h1>Tim’s Decanting Calculator</h1><button id="refresh">Refresh</button></header>
+<p class="batch">Buy 2,000 × (3) → decant → sell 1,500 × (4)</p>
+<label for="mode">Trading style </label><select id="mode" style="font:inherit;padding:8px;border-radius:8px;margin-bottom:12px"><option value="patient">Patient — wait on both offers</option><option value="instant">Instant — buy and sell now</option></select>
+<div class="scroll"><table><thead><tr><th aria-label="Potion"></th><th>Buy each (3)</th><th>Sell each (4)</th><th>Batch profit after tax</th></tr></thead><tbody id="rows"></tbody></table></div>
+<p id="status" role="status" aria-live="polite">Loading prices…</p>
+<p class="note" id="pricing-note"></p>
+<details><summary>Calculation & source</summary><p>Profit = 1,500 × [sell price − floor(sell price × 2%)] − 2,000 × buy price. GE tax is rounded down per potion (5m gp cap). Free NPC decanting; spare vial resale excluded. GE guide prices come from Jagex and are updated every six hours; they are reference prices, not live offers.</p><p><a href="https://prices.runescape.wiki/">OSRS Wiki / RuneLite price data</a> · refreshes every minute while open. The latest five-minute bucket must be no older than 15 minutes. Six buckets form each 30-minute estimate; High-side averages round up and low-side averages round down to whole gp.</p></details>
+</main><script src="math.js"></script><script src="prices.js"></script><script>
+const items=[['Prayer potion','139','2434'],['Super restore','3026','3024'],['Saradomin brew','6687','6685']];
+const potionIcons={"Prayer potion": "https://secure.runescape.com/m=itemdb_oldschool/1792485868077_obj_big.gif?id=2434", "Super restore": "https://secure.runescape.com/m=itemdb_oldschool/1792485868077_obj_big.gif?id=3024", "Saradomin brew": "https://secure.runescape.com/m=itemdb_oldschool/1792485868077_obj_big.gif?id=6685"};
+const potionIcon=name=>`<img class="potion-icon" src="${potionIcons[name]}" alt="${name}" title="${name}" width="40" height="40">`;
+const fmt=n=>Math.round(n).toLocaleString('en-US');
+let snapshot=null, guides={};
+const guideLine=id=>{
+ const value=guides[id];
+ const label=typeof value==='number'?fmt(value):typeof value==='string'&&/^[0-9,.]+[kmb]?$/.test(value)?value:null;
+ return `<small>GE: ${label===null?'—':label+' gp'}</small>`;
+};
+async function refreshGuides(){
+ try{let response;try{response=await fetch('https://raw.githubusercontent.com/timothy-krock/timothy-krock.github.io/main/decanting/ge-prices.json',{cache:'no-store'});}catch(e){}if(!response?.ok)response=await fetch('ge-prices.json',{cache:'no-store'});if(!response.ok)throw Error();const payload=await response.json();guides=Date.now()/1000-payload.fetched<86400?payload.data:{};}
+ catch(e){guides={};}
+ render();
+}
+function render(){
+ const patient=document.querySelector('#mode').value==='patient';
+ const buyKey=patient?'avgLowPrice':'avgHighPrice', sellKey=patient?'avgHighPrice':'avgLowPrice';
+ const buyVol=patient?'lowPriceVolume':'highPriceVolume',sellVol=patient?'highPriceVolume':'lowPriceVolume';
+ document.querySelector('#pricing-note').textContent='Green = profit. Red = loss. '+(patient?'Patient: place buy offers for (3)s near the 30-minute instant-sell average, then sell (4)s near the instant-buy average. Profit assumes both offers fill; waiting does not guarantee a fill or a stable margin.':'Instant: buy (3)s at the 30-minute instant-buy average and sell (4)s at the instant-sell average. Prices are estimates, not guaranteed fills.')+' Averages are volume-weighted. Thin samples are flagged; missing or stale prices stay neutral.';
+ const stale=!snapshot || Date.now()/1000-snapshot.timestamp>900 || snapshot.timestamp>Date.now()/1000+60;
+ document.querySelector('#rows').innerHTML=items.map(([name,b,s])=>{
+  const buy=snapshot?.data[b],sell=snapshot?.data[s];
+  const ok=!stale && Number.isFinite(buy?.[buyKey])&&buy[buyKey]>0&&buy[buyVol]>0&&Number.isFinite(sell?.[sellKey])&&sell[sellKey]>0&&sell[sellVol]>0;
+  if(!ok)return `<tr><td>${potionIcon(name)}</td><td>—${guideLine(b)}</td><td>—${guideLine(s)}</td><td>Unavailable<small>Missing or stale 30-minute trades</small></td></tr>`;
+  const r=batchProfit(buy[buyKey],sell[sellKey]), thin=buy[buyVol]<2000||sell[sellVol]<1500;
+  return `<tr class="${r.profit>0?'profit':'loss'}"><td>${potionIcon(name)}</td><td>${fmt(buy[buyKey])} gp${guideLine(b)}<small>${fmt(buy[buyVol])} traded / 30m</small></td><td>${fmt(sell[sellKey])} gp${guideLine(s)}<small>${fmt(sell[sellVol])} traded / 30m</small></td><td>${r.profit>0?'+':''}${fmt(r.profit)} gp<small>${fmt(r.tax)} gp total tax${thin?' · <span title="Fewer than 2,000 (3)s or 1,500 (4)s traded on the selected sides in the last 30 minutes.">thin sample</span>':''}</small></td></tr>`;
+ }).join('');
+}
+async function refresh(){
+ const btn=document.querySelector('#refresh');btn.disabled=true;
+ try{const data=await livePrices();if(!Number.isFinite(data.timestamp)||!data.data)throw Error();snapshot=data;render();document.querySelector('#status').textContent='30-minute window: '+new Date(data.windowStart*1000).toLocaleTimeString()+' – '+new Date(data.windowEnd*1000).toLocaleTimeString()+'. Checked '+new Date().toLocaleTimeString()+'.';}
+ catch(e){snapshot=null;render();document.querySelector('#status').textContent='Could not load prices. Try Refresh shortly.';}
+ finally{btn.disabled=false;}
+}
+document.querySelector('#mode').onchange=render;
+render();refresh();refreshGuides();setInterval(refreshGuides,3600000);setInterval(refresh,60000);setInterval(render,15000);document.querySelector('#refresh').onclick=()=>{refresh();refreshGuides();};
+</script></body></html>
