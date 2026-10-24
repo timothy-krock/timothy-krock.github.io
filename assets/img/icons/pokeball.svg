@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Poké Ball">
+  <circle cx="64" cy="64" r="55" fill="#f5f5f2"/>
+  <path d="M9 64a55 55 0 0 1 110 0Z" fill="#ef5350"/>
+  <circle cx="64" cy="64" r="55" fill="none" stroke="#27313c" stroke-width="7"/>
+  <path d="M10 64h108" stroke="#27313c" stroke-width="8"/>
+  <circle cx="64" cy="64" r="19" fill="#f5f5f2" stroke="#27313c" stroke-width="7"/>
+  <circle cx="64" cy="64" r="9" fill="#dce5e8"/>
+  <path d="M29 39a43 43 0 0 1 22-15" fill="none" stroke="#ffb6b4" stroke-width="6" stroke-linecap="round"/>
+</svg>
