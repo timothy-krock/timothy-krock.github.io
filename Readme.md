@@ -21,7 +21,7 @@
 - Vbecad blog 
 - vibecode post
     - [ ] link to steve
-    - [ ] link to nik's mask
+    - [ ] link to mask
     
 - wally 
 
@@ -33,7 +33,7 @@
    - [ ] let's add pictures of the soldering/banana plugs and such. 
 
 
-- Nik's Mask
+- mask
    - [ ] make gifs
    - [ ] screenshot ui
    - [ ] do I add stm code for the mask? 
@@ -51,5 +51,6 @@
 - [x] hobbes post 
    - [x] proofread
 
-
-
+- [x] Farkel
+- [x] Decanting Page
+- [x] Pokemon Go Page
