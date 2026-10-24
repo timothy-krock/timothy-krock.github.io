@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Potion">
+  <path d="M48 25h32v25l27 43c7 12-1 23-14 23H35c-13 0-21-11-14-23l27-43Z" fill="#e5f6f2" stroke="#41605a" stroke-width="5" stroke-linejoin="round"/>
+  <path d="m39 74-15 24c-3 6 1 12 11 12h58c10 0 14-6 11-12L89 74c-17 9-33-9-50 0Z" fill="#52b99a"/>
+  <rect x="47" y="10" width="34" height="20" rx="4" fill="#b68a57" stroke="#6f5337" stroke-width="4"/>
+  <path d="M48 59 33 87" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="73" cy="88" r="5" fill="#b6f0d5"/>
+  <circle cx="58" cy="99" r="3" fill="#b6f0d5"/>
+</svg>
