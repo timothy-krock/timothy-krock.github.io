@@ -13,3 +13,5 @@ main{padding-top:0}#cards{border-top:0}.raid-name{display:flex;align-items:cente
 .counter-link{display:inline-block;font-size:11px;margin-top:3px}
 
 .catch-cp{margin-top:6px;font-size:11px;line-height:1.7}.catch-cp span{color:var(--muted)}.catch-cp b{color:var(--mint)}
+
+.back-home{display:inline-block;margin-bottom:20px;padding:8px 14px;border:1px solid currentColor;border-radius:8px;font-size:14px;text-decoration:none}.back-home:hover{background:rgba(255,255,255,.08);text-decoration:none}.back-home:focus-visible{outline:2px solid currentColor;outline-offset:4px}
