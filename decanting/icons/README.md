@@ -1,0 +1,1 @@
+Potion artwork from the public OSRSBox item database (https://github.com/osrsbox/osrsbox-db/tree/master/docs/items-icons), saved locally on 2026-10-26. Item IDs: prayer potion(4) 2434, super restore(4) 3024, Saradomin brew(4) 6685. Artwork belongs to Jagex.

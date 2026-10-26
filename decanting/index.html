@@ -15,7 +15,7 @@
 <details><summary>Calculation & source</summary><p>Profit = 1,500 × [sell price − floor(sell price × 2%)] − 2,000 × buy price. GE tax is rounded down per potion (5m gp cap). Free NPC decanting; spare vial resale excluded. GE guide prices come from Jagex and are updated every six hours; they are reference prices, not live offers.</p><p><a href="https://prices.runescape.wiki/">OSRS Wiki / RuneLite price data</a> · refreshes every minute while open. The latest five-minute bucket must be no older than 15 minutes. Six buckets form each 30-minute estimate; High-side averages round up and low-side averages round down to whole gp.</p></details>
 </main><script src="math.js"></script><script src="prices.js"></script><script>
 const items=[['Prayer potion','139','2434'],['Super restore','3026','3024'],['Saradomin brew','6687','6685']];
-const potionIcons={"Prayer potion": "https://secure.runescape.com/m=itemdb_oldschool/1792485868077_obj_big.gif?id=2434", "Super restore": "https://secure.runescape.com/m=itemdb_oldschool/1792485868077_obj_big.gif?id=3024", "Saradomin brew": "https://secure.runescape.com/m=itemdb_oldschool/1792485868077_obj_big.gif?id=6685"};
+const potionIcons={"Prayer potion": "icons/prayer-potion.png", "Super restore": "icons/super-restore.png", "Saradomin brew": "icons/saradomin-brew.png"};
 const potionIcon=name=>`<img class="potion-icon" src="${potionIcons[name]}" alt="${name}" title="${name}" width="40" height="40">`;
 const fmt=n=>Math.round(n).toLocaleString('en-US');
 let snapshot=null, guides={};
