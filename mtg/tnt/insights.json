@@ -1,0 +1,192 @@
+[
+  {
+    "name": "Pia, Aether Ascetic",
+    "tag": "new",
+    "verdict": "Test first",
+    "title": "Creature tutors can now find Swift.",
+    "summary": "Pia is a bridge between TNT’s creature toolbox and its enchantment engines. The interesting upgrade is access, not raw card advantage.",
+    "mechanism": "With Devoted Druid already available, finding Pia with a creature tutor lets you discard a card for Swift Reconfiguration. Pia can instead find Training Grounds, Rhystic Study or Survival. Green Sun’s Zenith for X=3 costs four mana; casting Swift adds W. Pia puts the card in your hand, not onto the battlefield. A Druid turned into a noncreature Vehicle can tap immediately and accumulate -1/-1 counters without dying to zero toughness.",
+    "catch": "Pia requires a spare card. Three mana plus the enchantment’s cost is real tempo, and Grafdigger’s Cage / Opposition Agent / ETB suppression attack different parts of this route. Food Chain mana still cannot pay for Thrasios activations.",
+    "test": "Give Pia one flexible tutor/value slot. Log how often it finds a missing win piece versus spending five or six mana to develop a draw engine.",
+    "slot": "Compare with your slowest creature tutor or value creature; keep cheap unconditional tutors.",
+    "evidence": "Cross-shell lead: a Rog/Thras pilot list includes Pia; a Dog/Thras discussion uses the same enchantment bridge. These are usage examples, not tournament validation.",
+    "date": "2026-10-02",
+    "mana": "{2}{G}",
+    "image": "https://cards.scryfall.io/normal/front/f/f/ff0bc30f-9d20-458e-808f-bdc2825905a5.jpg?1789387120",
+    "oracle": "When Pia enters, you may discard a card. If you do, search your library for an enchantment card, reveal it, put it into your hand, then shuffle.",
+    "url": "https://scryfall.com/card/fra/264/pia-aether-ascetic",
+    "links": [
+      [
+        "Rog/Thras pilot list",
+        "https://archidekt.com/decks/24597117/rogthrasios_v15"
+      ],
+      [
+        "Dog/Thras discussion",
+        "https://www.reddit.com/r/CompetitiveEDH/comments/1wvrkoq/trying_dogthras_again/"
+      ]
+    ]
+  },
+  {
+    "name": "Formidable Speaker",
+    "tag": "new",
+    "verdict": "Test first",
+    "title": "A tutor that stays useful after the search.",
+    "summary": "Speaker’s second job is the reason to care: it turns a spent tutor body into repeatable access to your best mana permanent.",
+    "mechanism": "Discard Devoted Druid to find Hazel’s Brewmaster. Brewmaster can exile Druid and make a Food with Druid’s abilities: the noncreature Food can tap and untap without the toughness problem. This costs 3 + 4 mana across the two creatures, before commander costs. Alternatively, Speaker finds a creature now and, after summoning sickness, pays 1 to untap Cradle for N green: N−1 additional mana.",
+    "catch": "The untap ability has a tap symbol. Speaker normally waits a turn, cannot target itself, and does not make an infinite loop just because Cradle produces a lot. The Brewmaster line needs the discard, graveyard access and a surviving Brewmaster.",
+    "test": "Track searches that advance a win and later untaps that actually pay back the investment. Separate those from hands where this was merely a three-mana tutor.",
+    "slot": "Compare to a flexible three-mana tutor; evaluate against Eternal Witness by role, not as a strict upgrade.",
+    "evidence": "Observed in a published TNT list. cedhstats’ Oct 31 snapshot reports 444/1,248 TNT lists (35.6%); its negative performance correlation is not proof the card causes losses.",
+    "date": "2026-01-23",
+    "mana": "{2}{G}",
+    "image": "https://cards.scryfall.io/normal/front/2/6/265522eb-4f6a-40e7-b374-3833fa63c80b.jpg?1783904430",
+    "oracle": "When this creature enters, you may discard a card. If you do, search your library for a creature card, reveal it, put it into your hand, then shuffle.\n{1}, {T}: Untap another target permanent.",
+    "url": "https://scryfall.com/card/ecl/176/formidable-speaker",
+    "links": [
+      [
+        "TNT list example",
+        "https://mtgtop8.com/event?d=839353&e=84174&f=cEDH&switch=visual"
+      ],
+      [
+        "Published aggregate",
+        "https://cedhstats.org/commanders/thrasios-tymna/cards"
+      ]
+    ]
+  },
+  {
+    "name": "The Queen of Dale",
+    "tag": "new",
+    "verdict": "Test first",
+    "title": "Filtering can become a Cradle engine.",
+    "summary": "The reward is selection plus creature density. Calling this a draw engine alone misses both its cost and its best TNT payoff.",
+    "mechanism": "Each opponent’s first noncreature spell each turn makes you recruit: draw, discard, and make a Soldier if the discarded card is nonland. The token increases Cradle output immediately; on a later turn it may enable another Tymna connection. Pitching Druid can set up Brewmaster while making a body.",
+    "catch": "Recruit is normally card-neutral, not +1 card in hand. Discarding excess lands produces no token. Multiple spells from the same opponent in a turn do not keep triggering it. Tokens are not evasive and cannot immediately attack.",
+    "test": "Count useful filtering, nonland discards you were happy to make, and actual extra Cradle mana. Do not score every recruit as a card drawn for advantage.",
+    "slot": "Compare with the marginal two-mana draw/value creature, not with Rhystic Study.",
+    "evidence": "Card-pool candidate; no independently measured TNT adoption or win-rate claim in this edition.",
+    "date": "2026-08-14",
+    "mana": "{1}{W}",
+    "image": "https://cards.scryfall.io/normal/front/c/9/c977fb5f-4436-41d0-af68-93b6d05897e5.jpg?1784376948",
+    "oracle": "Whenever an opponent casts their first noncreature spell each turn, you recruit. (Draw a card, then discard a card. If you discarded a nonland card, create a 1/1 white Human Soldier creature token.)",
+    "url": "https://scryfall.com/card/hob/24/the-queen-of-dale",
+    "links": []
+  },
+  {
+    "name": "Jennifer Walters",
+    "tag": "new",
+    "verdict": "Compare",
+    "title": "One white pip buys a familiar protection job.",
+    "summary": "At 1W, Jennifer deserves a direct comparison with your existing protection creatures. TNT can use the green-white identity of the full card.",
+    "mechanism": "The front face stops opponents casting spells during your turn. That can protect a main-phase Druid or Oracle attempt once she resolves, and a 2/3 body contributes to Cradle and Tymna. You do not need to pay the transformation cost for this job.",
+    "catch": "She does not stop activated or triggered abilities. Grand Abolisher also blocks certain artifact, creature and enchantment activations; Jennifer does not replace that text. Like Voice of Victory, she does not protect an opponent-turn win.",
+    "test": "Compare opening-hand castability and the specific interactions that still beat your protected turn. Treat the back face as incidental.",
+    "slot": "Compare with Voice of Victory / Grand Abolisher according to which protection clause your pods require.",
+    "evidence": "Oracle-verified new card; recommendation is a role comparison, not a measured tournament improvement.",
+    "date": "2026-06-26",
+    "mana": "{1}{W}",
+    "image": "https://cards.scryfall.io/normal/front/6/1/61237530-ad49-469c-a952-67c92315708e.jpg?1783902978",
+    "oracle": "Jennifer Walters\nYour opponents can't cast spells during your turn.\n{3}{G}{W}{W}: Transform Jennifer Walters. Activate only as a sorcery.\n\nThe Sensational She-Hulk\nReach, trample\nYour opponents can't cast spells during your turn.\nWhenever a creature you control is dealt damage, you may have The Sensational She-Hulk deal that much damage to any target. Do this only once each turn.",
+    "url": "https://scryfall.com/card/msh/18/jennifer-walters-the-sensational-she-hulk",
+    "links": []
+  },
+  {
+    "name": "Gleaming Splendor",
+    "tag": "new",
+    "verdict": "Build-dependent",
+    "title": "A draw outlet, with a strict Treasure ceiling.",
+    "summary": "Splendor is interesting as a cheap passive resource piece that remains useful after you make infinite colored mana. It is not a miniature unconditional Smothering Tithe.",
+    "mechanism": "Its draw activation targets two different players. With arbitrarily large usable mana, you can select two opponents and repeat while at least two remain. Once only one opponent remains, you must also target yourself: finishing by forced draws then requires a sufficient library buffer or a way to survive/prevent your own draws. It is not an unconditional three-opponent kill from an empty library. With two Smothering Tithes, making two opponents draw can create four Treasures against the three-mana activation cost if neither pays. That is a conditional engine with setup and payment escape valves.",
+    "catch": "Splendor itself triggers only on each opponent’s second draw each turn. After that, repeat activations do not fund themselves. Infinite green alone cannot pay repeated W costs. Drawing opponents into interaction is a real cost unless your win is protected.",
+    "test": "Measure Treasure production before your next untap and whether you needed an alternate outlet. Test it separately from the larger double-Tithe package.",
+    "slot": "Compare with a marginal value enchantment or redundant outlet; retain Thrasios as your command-zone mana sink.",
+    "evidence": "cedhstats’ Oct 31 snapshot reports 446/1,248 TNT lists (35.7%). This establishes reported use, not superiority or a proven combo package.",
+    "date": "2026-08-14",
+    "mana": "{1}{W}",
+    "image": "https://cards.scryfall.io/normal/front/3/b/3b087bd4-bbb7-4963-bdb6-0a700ff19a04.jpg?1785496942",
+    "oracle": "Whenever an opponent draws their second card each turn, you create a Treasure token.\n{2}{W}: Two target players each draw a card.",
+    "url": "https://scryfall.com/card/hob/15/gleaming-splendor",
+    "links": [
+      [
+        "Published aggregate",
+        "https://cedhstats.org/commanders/thrasios-tymna/cards"
+      ]
+    ]
+  },
+  {
+    "name": "Captain America, Living Legend",
+    "tag": "experiment",
+    "verdict": "Cradle test",
+    "title": "Earthbending changes which untaps matter.",
+    "summary": "Captain can untap an earthbent Cradle because it is a creature. This is a specific reason to revisit him in a Cub shell.",
+    "mechanism": "On your turn, Captain untaps each creature the first time it becomes tapped that turn. An earthbent Cradle counts itself in your creature total and gets Cub’s extra G when tapped for mana. If you control N creatures and one Cub, two Cradle taps produce 2×(N+1) green before other costs. Other ready mana creatures can also tap twice.",
+    "catch": "The untap triggers use the stack; this is not uninterruptible mana. It is once per creature on your turn, not Seedborn Muse and not an infinite loop. Three colors and three mana compete with established engines.",
+    "test": "Test only in a creature-heavy Cub build. Record wins or meaningful extra Thrasios activations enabled the turn Captain lands.",
+    "slot": "Compare with the slow mana-engine slot. Do not add this by cutting interaction to inflate your best-case board.",
+    "evidence": "Card-pool experiment derived from verified text. No adoption frequency or claimed novelty; this may already be known tech.",
+    "date": "2026-06-26",
+    "mana": "{1}{W}{U}",
+    "image": "https://cards.scryfall.io/normal/front/6/5/6516f292-469d-4092-b099-97c698f373cd.jpg?1783902903",
+    "oracle": "Vigilance\nWhenever a creature you control becomes tapped during your turn, if it's the first time that creature has become tapped this turn, untap it.",
+    "url": "https://scryfall.com/card/msh/210/captain-america-living-legend",
+    "links": []
+  },
+  {
+    "name": "Abigale, Eloquent First-Year",
+    "tag": "experiment",
+    "verdict": "Metagame test",
+    "title": "A tutorable answer that leaves the commander in play.",
+    "summary": "Abigale can disable an opposing creature engine without giving its controller a normal death/exile trip to the command zone.",
+    "mechanism": "The ETB strips another creature’s abilities with no stated duration, then supplies flying, first strike and lifelink counters. Abigale’s own evasive body can connect for Tymna. A two-mana creature slot gives you access through creature tutors.",
+    "catch": "This does not counter an ability already on the stack. The creature keeps its body and gains combat abilities; blink or bounce resets it. Layer interactions can matter when other effects grant abilities later. Sorcery-speed deployment is not emergency stack interaction.",
+    "test": "Try in commander-engine-heavy pods. Count durable shutoffs and how often you would simply have preferred Swords to Plowshares.",
+    "slot": "Compare with flexible creature removal, not a universal stack answer.",
+    "evidence": "Card-pool experiment. Functional case is clear; TNT slot efficiency remains untested.",
+    "date": "2026-01-23",
+    "mana": "{W/B}{W/B}",
+    "image": "https://cards.scryfall.io/normal/front/b/f/bf708169-a307-494b-b8d8-baae53b2e2f2.jpg?1783904418",
+    "oracle": "Flying, first strike, lifelink\nWhen Abigale enters, up to one other target creature loses all abilities. Put a flying counter, a first strike counter, and a lifelink counter on that creature.",
+    "url": "https://scryfall.com/card/ecl/204/abigale-eloquent-first-year",
+    "links": []
+  },
+  {
+    "name": "Sewer-veillance Cam",
+    "tag": "experiment",
+    "verdict": "Narrow test",
+    "title": "One blue mana can untap an earthbent Cradle.",
+    "summary": "Cam is a cheap instant-speed burst candidate only when your land is also a creature. Its ordinary floor is much less exciting.",
+    "mechanism": "With Cub having animated Cradle, Cam’s ETB can untap it. With N creatures and Cub, that yields another N+1 green for a U investment. Sacrificing Cam for 3U draws two and creates another leave-the-battlefield untap trigger. Count the colored setup cost, not just the gross green output.",
+    "catch": "It cannot untap an ordinary, noncreature Cradle. Earthbending is an extra dependency, and the draw mode costs four more mana. This is a burst tool, not a repeatable engine by itself.",
+    "test": "Compare against Emerald Charm or Snap in a Cub-focused list. Keep it only if the artifact and draw modes repeatedly matter.",
+    "slot": "One experimental untap slot; do not assume a new card beats broader old tools.",
+    "evidence": "Found through an independent post-Avatar card search, not selected because of an inclusion statistic.",
+    "date": "2026-03-06",
+    "mana": "{U}",
+    "image": "https://cards.scryfall.io/normal/front/a/b/ab47a37b-b66d-4f70-9bf0-4d5ed6b518f3.jpg?1783904112",
+    "oracle": "Flash\nWhen this artifact enters or leaves the battlefield, you may tap or untap target creature.\n{3}{U}, Sacrifice this artifact: Draw two cards.",
+    "url": "https://scryfall.com/card/tmt/53/sewer-veillance-cam",
+    "links": []
+  },
+  {
+    "name": "Badgermole Cub",
+    "tag": "context",
+    "verdict": "Rules check",
+    "title": "Relic taps a legend. Cub does not reward that.",
+    "summary": "Avatar-era context: Cub boosts a creature’s own tap-symbol mana ability. This distinction changes several tempting TNT packages.",
+    "mechanism": "An earthbent Cradle is a creature with its own tap-symbol mana ability, so it gets the extra G. A creature given a tap-for-mana ability by Enduring Vitality also qualifies. Relic of Legends’ second ability belongs to the artifact and has no tap symbol: tapping a legend to pay for it does not trigger Cub.",
+    "catch": "Candelabra can untap Cradle once per activation but must itself tap. One Candelabra plus one Cradle is not an infinite loop without a way to reset Candelabra. Cub is context from your cutoff, not a new 2026 recommendation.",
+    "test": "Write out the source and cost of every proposed mana ability before crediting a Cub bonus. Compare actual mana curves with and without each extra engine.",
+    "slot": "Keep package evaluation separate from adding a new card.",
+    "evidence": "Confirmed by Scryfall’s published official Badgermole Cub rulings.",
+    "date": "2025-11-21",
+    "mana": "{1}{G}",
+    "image": "https://cards.scryfall.io/normal/front/3/4/340c5799-4964-44dd-8c48-8f3f3aba5211.jpg?1786399172",
+    "oracle": "When this creature enters, earthbend 1. (Target land you control becomes a 0/0 creature with haste that's still a land. Put a +1/+1 counter on it. When it dies or is exiled, return it to the battlefield tapped.)\nWhenever you tap a creature for mana, add an additional {G}.",
+    "url": "https://scryfall.com/card/tla/167/badgermole-cub",
+    "links": [
+      [
+        "Official rulings via Scryfall",
+        "https://api.scryfall.com/cards/340c5799-4964-44dd-8c48-8f3f3aba5211/rulings"
+      ]
+    ]
+  }
+]
