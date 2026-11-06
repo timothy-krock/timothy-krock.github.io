@@ -1,5 +1,5 @@
 {
-  "checked": "2026-10-21",
+  "checked": "2026-11-06",
   "coverageEnd": "2026-12-01",
   "raids": [
     {
@@ -1193,24 +1193,50 @@
       }
     },
     {
-      "name": "Boss not announced",
+      "name": "Mega Clefable",
       "kind": "Super Mega",
       "start": "2026-11-28T14:00",
       "end": "2026-11-28T17:00",
       "types": [
-        "Unknown"
+        "Fairy",
+        "Flying"
       ],
-      "weaknesses": [],
+      "weaknesses": [
+        {
+          "type": "Electric",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Ice",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Poison",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Rock",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Steel",
+          "multiplier": 1.6
+        }
+      ],
       "team": null,
-      "source": "https://leekduck.com/events/super-mega-raid-day-november-2026/",
-      "sourceLabel": "Leek Duck",
-      "note": "Date announced; boss, typing, weaknesses and team size pending.",
+      "source": "https://pokemongo.com/en/news/clefable-super-mega-raid-day-2026",
+      "sourceLabel": "Pok\u00e9mon GO",
+      "note": "Boss announced November 5. Fairy/Flying typing; catch encounter is regular Clefable. Super Mega trainer estimate remains unverified. Artwork shows the catch form.",
       "raidHour": "",
       "weekends": false,
-      "guide": "",
-      "image": null,
+      "guide": "https://leekduck.com/events/clefable-super-mega-raid-day-2026/",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/36.png",
       "pokebattler": null,
-      "catchCP": null
+      "catchCP": {
+        "level20": 1392,
+        "level25": 1741,
+        "encounter": "Clefable"
+      }
     }
   ]
 }
