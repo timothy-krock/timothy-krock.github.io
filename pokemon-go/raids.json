@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-06",
+  "checked": "2026-11-24",
   "coverageEnd": "2026-12-01",
   "raids": [
     {
@@ -1246,6 +1246,153 @@
         "settings": "Level 40 attackers, no weather or friendship boost; ordinary Mega raid simulation",
         "reason": "Pok\u00e9battler currently models an ordinary Mega raid here, not the announced Super Mega event."
       }
+    },
+    {
+      "name": "Mega Beedrill",
+      "kind": "Mega \u00b7 4-star",
+      "start": "2026-11-24T10:00",
+      "end": "2026-11-30T20:00",
+      "types": [
+        "Bug",
+        "Poison"
+      ],
+      "weaknesses": [
+        {
+          "type": "Fire",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Flying",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Psychic",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Rock",
+          "multiplier": 1.6
+        }
+      ],
+      "team": null,
+      "source": "https://leekduck.com/events/twilight-wishes-2026/",
+      "sourceLabel": "Leek Duck \u00b7 Twilight Wishes",
+      "note": "Twilight Wishes event Mega raid. Times are local to the raid location. Trainer estimate has not been verified for this listing.",
+      "raidHour": "",
+      "weekends": false,
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10090.png",
+      "pokebattler": "https://www.pokebattler.com/raids/beedrill_mega",
+      "catchCP": {
+        "level20": 1054,
+        "level25": 1318,
+        "encounter": "Beedrill",
+        "source": "https://leekduck.com/events/twilight-wishes-2026/"
+      },
+      "trainerEstimate": null
+    },
+    {
+      "name": "Mega Houndoom",
+      "kind": "Mega \u00b7 4-star",
+      "start": "2026-11-24T10:00",
+      "end": "2026-11-30T20:00",
+      "types": [
+        "Dark",
+        "Fire"
+      ],
+      "weaknesses": [
+        {
+          "type": "Fighting",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Ground",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Rock",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Water",
+          "multiplier": 1.6
+        }
+      ],
+      "team": null,
+      "source": "https://leekduck.com/events/twilight-wishes-2026/",
+      "sourceLabel": "Leek Duck \u00b7 Twilight Wishes",
+      "note": "Twilight Wishes event Mega raid. Times are local to the raid location. Trainer estimate has not been verified for this listing.",
+      "raidHour": "",
+      "weekends": false,
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10048.png",
+      "pokebattler": "https://www.pokebattler.com/raids/houndoom_mega",
+      "catchCP": {
+        "level20": 1505,
+        "level25": 1882,
+        "encounter": "Houndoom",
+        "source": "https://leekduck.com/events/twilight-wishes-2026/"
+      },
+      "trainerEstimate": null
+    },
+    {
+      "name": "Mega Sableye",
+      "kind": "Mega \u00b7 4-star",
+      "start": "2026-11-24T10:00",
+      "end": "2026-11-30T20:00",
+      "types": [
+        "Dark",
+        "Ghost"
+      ],
+      "weaknesses": [
+        {
+          "type": "Fairy",
+          "multiplier": 1.6
+        }
+      ],
+      "team": null,
+      "source": "https://leekduck.com/events/twilight-wishes-2026/",
+      "sourceLabel": "Leek Duck \u00b7 Twilight Wishes",
+      "note": "Twilight Wishes event Mega raid. Times are local to the raid location. Trainer estimate has not been verified for this listing.",
+      "raidHour": "",
+      "weekends": false,
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10066.png",
+      "pokebattler": "https://www.pokebattler.com/raids/sableye_mega",
+      "catchCP": {
+        "level20": 843,
+        "level25": 1054,
+        "encounter": "Sableye",
+        "source": "https://leekduck.com/events/twilight-wishes-2026/"
+      },
+      "trainerEstimate": null
+    },
+    {
+      "name": "Mega Manectric",
+      "kind": "Mega \u00b7 4-star",
+      "start": "2026-11-24T10:00",
+      "end": "2026-11-30T20:00",
+      "types": [
+        "Electric"
+      ],
+      "weaknesses": [
+        {
+          "type": "Ground",
+          "multiplier": 1.6
+        }
+      ],
+      "team": null,
+      "source": "https://leekduck.com/events/twilight-wishes-2026/",
+      "sourceLabel": "Leek Duck \u00b7 Twilight Wishes",
+      "note": "Twilight Wishes event Mega raid. Times are local to the raid location. Trainer estimate has not been verified for this listing.",
+      "raidHour": "",
+      "weekends": false,
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10055.png",
+      "pokebattler": "https://www.pokebattler.com/raids/manectric_mega",
+      "catchCP": {
+        "level20": 1337,
+        "level25": 1672,
+        "encounter": "Manectric",
+        "source": "https://leekduck.com/events/twilight-wishes-2026/"
+      },
+      "trainerEstimate": null
     }
   ]
 }
