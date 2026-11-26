@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Resume</title>
+  <title>Tim Krock · Résumé</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -12,11 +12,32 @@
 <body>
 
 <div class="container">
-  <h2>Resume</h2>
+  <header class="resume-header">
+    <h1>Tim Krock</h1>
+    <p>Résumé · Computer Vision, Geospatial Imaging &amp; UAS Sensors</p>
+  </header>
+  <section class="resume-skills" aria-labelledby="skills-heading">
+    <h2 id="skills-heading">Technical Skills</h2>
+    <ul>
+      <li><strong>Imaging &amp; geospatial:</strong> Computer vision, thermal imagery, LiDAR processing, GIS, photogrammetry, and 3D reconstruction.</li>
+      <li><strong>UAS &amp; sensors:</strong> Sensor integration, aerial surveys, ROS integration, and sensor testing and evaluation.</li>
+      <li><strong>Prototyping:</strong> 3D design, 3D printing, and laboratory support.</li>
+    </ul>
+  </section>
+  <section class="resume-experience" aria-labelledby="experience-heading">
+    <h2 id="experience-heading">Job Experience</h2>
+    <h3>DOD Intern — LiDAR Imagery Scientist <small>2025</small></h3>
+    <p>Supported sensor testing and evaluation (T&amp;E) through 3D design, 3D printing, laboratory support, and photogrammetry.</p>
+    <h3>DOD Intern — LiDAR Imagery Scientist <small>2024</small></h3>
+    <p>Worked on computer vision, LiDAR processing, and GIS.</p>
+    <h3>DOD Intern — Thermal Imagery Scientist <small>2023</small></h3>
+    <p>Helped integrate and test UAS sensors for aerial survey and research applications.</p>
+  </section>
+  <h2>Education &amp; Research</h2>
   <!-- Illinois -->
   <div class="media">
     <div class="media-left">
-      <img src="img/illinois.png" class="media-object" style="width:60px">
+      <img src="img/illinois.png" class="media-object" alt="" style="width:60px">
     </div>
     <div class="media-body">
         <h4 class="media-heading">BS Independent Study: Computer Science+Economics
@@ -26,7 +47,7 @@
           <li>CS 105 Course Assistant <small>2015</small></li>
           <li>Lead Course Assistant 2016</li>
           
-          <li><a href="http://www.timkrock.com/office">Did Micheal Scott impact the IMDB ratings of the Office?</a></li>
+          <li><a href="/office.html">Did Michael Scott impact the IMDb ratings of the Office?</a></li>
       </ul>
     </div>
   </div>
@@ -34,12 +55,12 @@
   <!-- Bradley -->
   <div class="media">
     <div class="media-left">
-      <img src="img/bradley.png" class="media-object" style="width:60px">
+      <img src="img/bradley.png" class="media-object" alt="" style="width:60px">
     </div>
     <div class="media-body">
         <h4 class="media-heading">Bradley University <small>2018–2019</small>
         </h4>
-      <h5>Interlabs Research Assistant <small>2018</small></h5>
+      <h5>InterLabs Research Assistant <small>2018</small></h5>
       <h5>Ciliate Macronuclear Database Graduate Programmer <small>2018-2019</small></h5>
       <ul>
       <li>Built Euplotes vannus Genome database and Ciliate Macronuclear Shapes Database</li>
@@ -62,18 +83,19 @@
   <!-- Mizzou -->
   <div class="media">
     <div class="media-left">
-      <img src="img/mizzou.png" class="media-object" style="width:60px">
+      <img src="img/mizzou.png" class="media-object" alt="" style="width:60px">
     </div>
     <div class="media-body">
-        <h4 class="media-heading">PhD: Computer Science
-            <br> University of Missouri <small>2019-Present</small>
+        <h4 class="media-heading">PhD in Computer Science (in progress)
+            <br> University of Missouri <small>2019–Present</small>
+            <br>Finalizing dissertation defense
             <br>Computational Imaging and Visual Analysis Lab (CIVA)
 
         </h4>
         <ul>
         <li>Dean's Excellence Fellowship</li>
         <li>Worked with TransparentSky in New Mexico to build a drone mounted sensor carrying FLIR IR+ Custom EO WAMI sensor with LIDAR Summer 2020</li>
-        <li>Flew at Yuma Proving Grounds in Arizona Summer 2021 (<a href = "https://engineering.missouri.edu/2021/army-research-lab-internship-part-of-ongoing-research-around-drones/?fbclid=IwAR3oxx91Jtsa6qR_1PBuNh1RTvhUWI3btR48m2HdAqLKXnzEKsKYLhVEbIU">MU article</a>)
+        <li>Flew at Yuma Proving Grounds in Arizona Summer 2021 (<a href = "https://engineering.missouri.edu/2021/army-research-lab-internship-part-of-ongoing-research-around-drones/">MU article</a>)
             <ul>
                 <li>Recorded Ground Truth Data for ARL’s Intelligent Perception Branch for project convergence using the drone/sensor package mentioned above. </li>
                 <li>500+ meter manned flight missions in the desert required problem solving on the fly (no pun intended), soldering in the hotel room, wrote our own FPV/IP thermal stream one night so we could find targets better, etc. </li>

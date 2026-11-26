@@ -3,3 +3,11 @@
 .publications h4 { margin-top: 1.5rem; margin-bottom: .75rem; }
 .publication-list { padding-left: 1.25rem; }
 .publication-list li { margin-bottom: 1rem; line-height: 1.6; overflow-wrap: anywhere; }
+
+.resume-header { margin-bottom: 2rem; }
+.resume-header h1 { margin-bottom: .5rem; }
+.resume-skills, .resume-experience { margin-bottom: 2rem; }
+.resume-skills li, .resume-experience p { line-height: 1.6; }
+.resume-skills li { margin-bottom: .5rem; }
+.resume-experience h3 { margin-top: 1.5rem; margin-bottom: .5rem; }
+.resume-experience small { display: block; margin-top: .25rem; font-size: .85em; font-weight: normal; }
