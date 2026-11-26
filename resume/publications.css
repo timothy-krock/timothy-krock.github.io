@@ -1,0 +1,5 @@
+.publications { margin-top: 2rem; }
+.publications h3 { margin-bottom: 1rem; }
+.publications h4 { margin-top: 1.5rem; margin-bottom: .75rem; }
+.publication-list { padding-left: 1.25rem; }
+.publication-list li { margin-bottom: 1rem; line-height: 1.6; overflow-wrap: anywhere; }
