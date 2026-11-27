@@ -1,10 +1,10 @@
 {
-  "checked": "2026-11-24",
-  "coverageEnd": "2026-12-01",
+  "checked": "2026-11-27",
+  "coverageEnd": "2027-01-05",
   "raids": [
     {
-      "name": "Shadow Landorus \u00b7 Incarnate",
-      "kind": "Shadow \u00b7 5-star",
+      "name": "Shadow Landorus · Incarnate",
+      "kind": "Shadow · 5-star",
       "start": "2026-10-07T06:00",
       "end": "2026-11-03T22:00",
       "types": [
@@ -40,7 +40,7 @@
         "slug": "LANDORUS_SHADOW_FORM",
         "trainers": 3,
         "estimator": 2.23,
-        "line": "About 3 trainers needed to beat Landorus (Shadow) \u2014 best counter estimator 2.23.",
+        "line": "About 3 trainers needed to beat Landorus (Shadow) — best counter estimator 2.23.",
         "checked": "2026-10-22",
         "source": "https://www.pokebattler.com/raids/landorus_shadow_form",
         "settings": "Best counter; level 40 attackers, no weather, no friend boost; default page settings",
@@ -49,7 +49,7 @@
     },
     {
       "name": "Mega Charizard X",
-      "kind": "Mega \u00b7 4-star",
+      "kind": "Mega · 4-star",
       "start": "2026-10-21T06:00",
       "end": "2026-10-27T22:00",
       "types": [
@@ -89,7 +89,7 @@
         "slug": "CHARIZARD_MEGA_X",
         "trainers": 1,
         "estimator": 0.89,
-        "line": "About 1 trainer needed to beat Mega Charizard X \u2014 best counter estimator 0.89.",
+        "line": "About 1 trainer needed to beat Mega Charizard X — best counter estimator 0.89.",
         "checked": "2026-10-22",
         "source": "https://www.pokebattler.com/raids/charizard_mega_x",
         "settings": "Best counter; level 40 attackers, no weather, no friend boost; default page settings",
@@ -98,7 +98,7 @@
     },
     {
       "name": "Mega Charizard Y",
-      "kind": "Mega \u00b7 4-star",
+      "kind": "Mega · 4-star",
       "start": "2026-10-21T06:00",
       "end": "2026-10-27T22:00",
       "types": [
@@ -138,7 +138,7 @@
         "slug": "CHARIZARD_MEGA_Y",
         "trainers": 1,
         "estimator": 0.77,
-        "line": "About 1 trainer needed to beat Mega Charizard Y \u2014 best counter estimator 0.77.",
+        "line": "About 1 trainer needed to beat Mega Charizard Y — best counter estimator 0.77.",
         "checked": "2026-10-22",
         "source": "https://www.pokebattler.com/raids/charizard_mega_y",
         "settings": "Best counter; level 40 attackers, no weather, no friend boost; default page settings",
@@ -168,7 +168,7 @@
       "source": "https://leekduck.com/events/palkia-in-5-star-raid-battles-october-2026/",
       "sourceLabel": "Leek Duck",
       "note": "Use powered-up Dragon or Fairy counters.",
-      "raidHour": "Oct 21 \u00b7 6\u20137 PM",
+      "raidHour": "Oct 21 · 6–7 PM",
       "weekends": false,
       "guide": "https://pokemongohub.net/post/guide/palkia-raid-guide/",
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/484.png",
@@ -190,7 +190,7 @@
       }
     },
     {
-      "name": "Giratina \u00b7 Origin",
+      "name": "Giratina · Origin",
       "kind": "5-star",
       "start": "2026-10-28T06:00",
       "end": "2026-11-03T22:00",
@@ -224,7 +224,7 @@
       "source": "https://leekduck.com/events/giratina-origin-forme-in-5-star-raid-battles-october-2026/",
       "sourceLabel": "Leek Duck",
       "note": "",
-      "raidHour": "Oct 28 \u00b7 6\u20137 PM",
+      "raidHour": "Oct 28 · 6–7 PM",
       "weekends": false,
       "guide": "",
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10007.png",
@@ -239,7 +239,7 @@
         "slug": "GIRATINA_ORIGIN_FORM",
         "trainers": 2,
         "estimator": 1.4,
-        "line": "About 2 trainers needed to beat Giratina Origin Form \u2014 best counter estimator 1.40.",
+        "line": "About 2 trainers needed to beat Giratina Origin Form — best counter estimator 1.40.",
         "checked": "2026-10-22",
         "source": "https://www.pokebattler.com/raids/giratina_origin_form",
         "settings": "Best counter; level 40 attackers, no weather, no friend boost; default page settings",
@@ -248,7 +248,7 @@
     },
     {
       "name": "Mega Sableye",
-      "kind": "Mega \u00b7 4-star",
+      "kind": "Mega · 4-star",
       "start": "2026-10-28T06:00",
       "end": "2026-11-08T22:00",
       "types": [
@@ -264,7 +264,7 @@
       "team": "2",
       "source": "https://leekduck.com/events/mega-sableye-in-mega-raids-october-2026/",
       "sourceLabel": "Leek Duck",
-      "note": "Fairy is its only weakness: 1.6\u00d7, not 2.56\u00d7.",
+      "note": "Fairy is its only weakness: 1.6×, not 2.56×.",
       "raidHour": "",
       "weekends": false,
       "guide": "https://pokemongohub.net/post/guide/mega-sableye-raid-counters-guide/",
@@ -280,7 +280,7 @@
         "slug": "SABLEYE_MEGA",
         "trainers": 2,
         "estimator": 1.21,
-        "line": "About 2 trainers needed to beat Mega Sableye \u2014 best counter estimator 1.21.",
+        "line": "About 2 trainers needed to beat Mega Sableye — best counter estimator 1.21.",
         "checked": "2026-10-22",
         "source": "https://www.pokebattler.com/raids/sableye_mega",
         "settings": "Best counter; level 40 attackers, no weather, no friend boost; default page settings",
@@ -320,8 +320,8 @@
       ],
       "team": null,
       "source": "https://pokemongo.com/en/news/chandelure-super-mega-raid-day-2026",
-      "sourceLabel": "Pok\u00e9mon GO",
-      "note": "Pok\u00e9battler estimates 2 trainers for ordinary Mega Chandelure (estimator 1.03). This is not verified for the Super Mega event.",
+      "sourceLabel": "Pokémon GO",
+      "note": "Pokébattler estimates 2 trainers for ordinary Mega Chandelure (estimator 1.03). This is not verified for the Super Mega event.",
       "raidHour": "",
       "weekends": false,
       "guide": "",
@@ -337,7 +337,7 @@
         "slug": "CHANDELURE_MEGA",
         "trainers": 2,
         "estimator": 1.03,
-        "line": "About 2 trainers needed to beat Mega Chandelure \u2014 best counter estimator 1.03.",
+        "line": "About 2 trainers needed to beat Mega Chandelure — best counter estimator 1.03.",
         "checked": "2026-10-22",
         "source": "https://www.pokebattler.com/raids/chandelure_mega",
         "settings": "Best counter; level 40 attackers, no weather, no friend boost; default page settings",
@@ -345,7 +345,7 @@
       }
     },
     {
-      "name": "Giratina \u00b7 Altered",
+      "name": "Giratina · Altered",
       "kind": "5-star",
       "start": "2026-11-04T06:00",
       "end": "2026-11-08T22:00",
@@ -379,7 +379,7 @@
       "source": "https://leekduck.com/events/giratina-altered-forme-in-5-star-raid-battles-november-2026/",
       "sourceLabel": "Leek Duck",
       "note": "",
-      "raidHour": "Nov 4 \u00b7 6\u20137 PM",
+      "raidHour": "Nov 4 · 6–7 PM",
       "weekends": false,
       "guide": "",
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/487.png",
@@ -394,7 +394,7 @@
         "slug": "GIRATINA_ALTERED_FORM",
         "trainers": 2,
         "estimator": 1.56,
-        "line": "About 2 trainers needed to beat Giratina Altered Form \u2014 best counter estimator 1.56.",
+        "line": "About 2 trainers needed to beat Giratina Altered Form — best counter estimator 1.56.",
         "checked": "2026-10-22",
         "source": "https://www.pokebattler.com/raids/giratina_altered_form",
         "settings": "Best counter; level 40 attackers, no weather, no friend boost; default page settings",
@@ -402,8 +402,8 @@
       }
     },
     {
-      "name": "Shadow Tornadus \u00b7 Incarnate",
-      "kind": "Shadow \u00b7 5-star",
+      "name": "Shadow Tornadus · Incarnate",
+      "kind": "Shadow · 5-star",
       "start": "2026-11-04T06:00",
       "end": "2026-11-08T22:00",
       "types": [
@@ -442,7 +442,7 @@
         "slug": "TORNADUS_SHADOW_FORM",
         "trainers": 3,
         "estimator": 2.83,
-        "line": "About 3 trainers needed to beat Tornadus (Shadow) \u2014 best counter estimator 2.83.",
+        "line": "About 3 trainers needed to beat Tornadus (Shadow) — best counter estimator 2.83.",
         "checked": "2026-10-22",
         "source": "https://www.pokebattler.com/raids/tornadus_shadow_form",
         "settings": "Best counter; level 40 attackers, no weather, no friend boost; default page settings",
@@ -474,9 +474,9 @@
       ],
       "team": "2",
       "source": "https://pokemongo.com/en/news/into-the-wild-2026",
-      "sourceLabel": "Pok\u00e9mon GO",
+      "sourceLabel": "Pokémon GO",
       "note": "Into the Wild event rotation.",
-      "raidHour": "Nov 10 \u00b7 6\u20137 PM",
+      "raidHour": "Nov 10 · 6–7 PM",
       "weekends": false,
       "guide": "",
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10189.png",
@@ -484,14 +484,14 @@
       "catchCP": {
         "level20": 2188,
         "level25": 2735,
-        "encounter": "Zamazenta \u00b7 Hero",
+        "encounter": "Zamazenta · Hero",
         "source": "https://pogoapi.net/api/v1/pokemon_stats.json"
       },
       "trainerEstimate": {
         "slug": "ZAMAZENTA_CROWNED_SHIELD_FORM",
         "trainers": 2,
         "estimator": 1.85,
-        "line": "About 2 trainers needed to beat Zamazenta Crowned Shield Form \u2014 best counter estimator 1.85.",
+        "line": "About 2 trainers needed to beat Zamazenta Crowned Shield Form — best counter estimator 1.85.",
         "checked": "2026-10-22",
         "source": "https://www.pokebattler.com/raids/zamazenta_crowned_shield_form",
         "settings": "Best counter; level 40 attackers, no weather, no friend boost; default page settings",
@@ -519,9 +519,9 @@
       ],
       "team": "2",
       "source": "https://pokemongo.com/en/news/into-the-wild-2026",
-      "sourceLabel": "Pok\u00e9mon GO",
+      "sourceLabel": "Pokémon GO",
       "note": "Into the Wild event rotation.",
-      "raidHour": "Nov 9 \u00b7 6\u20137 PM",
+      "raidHour": "Nov 9 · 6–7 PM",
       "weekends": false,
       "guide": "",
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10188.png",
@@ -529,14 +529,14 @@
       "catchCP": {
         "level20": 2188,
         "level25": 2735,
-        "encounter": "Zacian \u00b7 Hero",
+        "encounter": "Zacian · Hero",
         "source": "https://pogoapi.net/api/v1/pokemon_stats.json"
       },
       "trainerEstimate": {
         "slug": "ZACIAN_CROWNED_SWORD_FORM",
         "trainers": 2,
         "estimator": 1.85,
-        "line": "About 2 trainers needed to beat Zacian Crowned Sword Form \u2014 best counter estimator 1.85.",
+        "line": "About 2 trainers needed to beat Zacian Crowned Sword Form — best counter estimator 1.85.",
         "checked": "2026-10-22",
         "source": "https://www.pokebattler.com/raids/zacian_crowned_sword_form",
         "settings": "Best counter; level 40 attackers, no weather, no friend boost; default page settings",
@@ -593,7 +593,7 @@
         "slug": "KYUREM_WHITE_FORM",
         "trainers": 2,
         "estimator": 1.19,
-        "line": "About 2 trainers needed to beat Kyurem White Form \u2014 best counter estimator 1.19.",
+        "line": "About 2 trainers needed to beat Kyurem White Form — best counter estimator 1.19.",
         "checked": "2026-10-22",
         "source": "https://www.pokebattler.com/raids/kyurem_white_form",
         "settings": "Best counter; level 40 attackers, no weather, no friend boost; default page settings",
@@ -646,7 +646,7 @@
         "slug": "ZEKROM",
         "trainers": 2,
         "estimator": 1.56,
-        "line": "About 2 trainers needed to beat Zekrom \u2014 best counter estimator 1.56.",
+        "line": "About 2 trainers needed to beat Zekrom — best counter estimator 1.56.",
         "checked": "2026-10-22",
         "source": "https://www.pokebattler.com/raids/zekrom",
         "settings": "Best counter; level 40 attackers, no weather, no friend boost; default page settings",
@@ -703,7 +703,7 @@
         "slug": "KYUREM_BLACK_FORM",
         "trainers": 2,
         "estimator": 1.22,
-        "line": "About 2 trainers needed to beat Kyurem Black Form \u2014 best counter estimator 1.22.",
+        "line": "About 2 trainers needed to beat Kyurem Black Form — best counter estimator 1.22.",
         "checked": "2026-10-22",
         "source": "https://www.pokebattler.com/raids/kyurem_black_form",
         "settings": "Best counter; level 40 attackers, no weather, no friend boost; default page settings",
@@ -752,7 +752,7 @@
         "slug": "RESHIRAM",
         "trainers": 2,
         "estimator": 1.63,
-        "line": "About 2 trainers needed to beat Reshiram \u2014 best counter estimator 1.63.",
+        "line": "About 2 trainers needed to beat Reshiram — best counter estimator 1.63.",
         "checked": "2026-10-22",
         "source": "https://www.pokebattler.com/raids/reshiram",
         "settings": "Best counter; level 40 attackers, no weather, no friend boost; default page settings",
@@ -785,7 +785,7 @@
       "source": "https://leekduck.com/events/cresselia-darkrai-in-5-star-raid-battles-november-2026/",
       "sourceLabel": "Leek Duck",
       "note": "Uses the dated Leek Duck listing; some monthly summaries incorrectly start this rotation Nov 9.",
-      "raidHour": "Nov 18 \u00b7 6\u20137 PM",
+      "raidHour": "Nov 18 · 6–7 PM",
       "weekends": false,
       "guide": "",
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/488.png",
@@ -800,7 +800,7 @@
         "slug": "CRESSELIA",
         "trainers": 2,
         "estimator": 1.87,
-        "line": "About 2 trainers needed to beat Cresselia \u2014 best counter estimator 1.87.",
+        "line": "About 2 trainers needed to beat Cresselia — best counter estimator 1.87.",
         "checked": "2026-10-22",
         "source": "https://www.pokebattler.com/raids/cresselia",
         "settings": "Best counter; level 40 attackers, no weather, no friend boost; default page settings",
@@ -833,7 +833,7 @@
       "source": "https://leekduck.com/events/cresselia-darkrai-in-5-star-raid-battles-november-2026/",
       "sourceLabel": "Leek Duck",
       "note": "Uses the dated Leek Duck listing; some monthly summaries incorrectly start this rotation Nov 9.",
-      "raidHour": "Nov 18 \u00b7 6\u20137 PM",
+      "raidHour": "Nov 18 · 6–7 PM",
       "weekends": false,
       "guide": "",
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/491.png",
@@ -848,7 +848,7 @@
         "slug": "DARKRAI",
         "trainers": 2,
         "estimator": 1.27,
-        "line": "About 2 trainers needed to beat Darkrai \u2014 best counter estimator 1.27.",
+        "line": "About 2 trainers needed to beat Darkrai — best counter estimator 1.27.",
         "checked": "2026-10-22",
         "source": "https://www.pokebattler.com/raids/darkrai",
         "settings": "Best counter; level 40 attackers, no weather, no friend boost; default page settings",
@@ -857,7 +857,7 @@
     },
     {
       "name": "Mega Banette",
-      "kind": "Mega \u00b7 4-star",
+      "kind": "Mega · 4-star",
       "start": "2026-11-16T06:00",
       "end": "2026-11-24T22:00",
       "types": [
@@ -892,7 +892,7 @@
         "slug": "BANETTE_MEGA",
         "trainers": 1,
         "estimator": 0.78,
-        "line": "About 1 trainer needed to beat Mega Banette \u2014 best counter estimator 0.78.",
+        "line": "About 1 trainer needed to beat Mega Banette — best counter estimator 0.78.",
         "checked": "2026-10-22",
         "source": "https://www.pokebattler.com/raids/banette_mega",
         "settings": "Best counter; level 40 attackers, no weather, no friend boost; default page settings",
@@ -900,8 +900,8 @@
       }
     },
     {
-      "name": "Shadow Tornadus \u00b7 Incarnate",
-      "kind": "Shadow \u00b7 5-star",
+      "name": "Shadow Tornadus · Incarnate",
+      "kind": "Shadow · 5-star",
       "start": "2026-11-16T06:00",
       "end": "2026-12-01T22:00",
       "types": [
@@ -929,7 +929,7 @@
       "weekends": true,
       "guide": "",
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/641.png",
-      "pokebattler": "https://www.pokebattler.com/raids/tornadus_shadow_form",
+      "pokebattler": "https://www.pokebattler.com/raids/TORNADUS_SHADOW_FORM",
       "catchCP": {
         "level20": 1911,
         "level25": 2389,
@@ -939,16 +939,15 @@
       "trainerEstimate": {
         "slug": "TORNADUS_SHADOW_FORM",
         "trainers": 3,
-        "estimator": 2.83,
-        "line": "About 3 trainers needed to beat Tornadus (Shadow) \u2014 best counter estimator 2.83.",
-        "checked": "2026-10-22",
-        "source": "https://www.pokebattler.com/raids/tornadus_shadow_form",
-        "settings": "Best counter; level 40 attackers, no weather, no friend boost; default page settings",
+        "estimator": 2.79,
+        "checked": "2026-11-27",
+        "source": "https://www.pokebattler.com/raids/TORNADUS_SHADOW_FORM",
+        "settings": "Public default rankings; Overall boss moveset. Attacker level, weather and friendship settings are not exposed in the public view. Shadow results use no Purified Gems.",
         "applicable": true
       }
     },
     {
-      "name": "Deoxys \u00b7 Attack",
+      "name": "Deoxys · Attack",
       "kind": "5-star",
       "start": "2026-11-25T06:00",
       "end": "2026-12-01T22:00",
@@ -973,11 +972,11 @@
       "source": "https://leekduck.com/events/deoxys-normal-defense-attack-speed-formes-in-5-star-raid-battles-november-2026/",
       "sourceLabel": "Leek Duck",
       "note": "",
-      "raidHour": "Nov 25 \u00b7 6\u20137 PM",
+      "raidHour": "Nov 25 · 6–7 PM",
       "weekends": false,
       "guide": "",
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10001.png",
-      "pokebattler": "https://www.pokebattler.com/raids/deoxys_attack_form",
+      "pokebattler": "https://www.pokebattler.com/raids/DEOXYS_ATTACK_FORM",
       "catchCP": {
         "level20": 1474,
         "level25": 1842,
@@ -988,15 +987,14 @@
         "slug": "DEOXYS_ATTACK_FORM",
         "trainers": 1,
         "estimator": 0.48,
-        "line": "About 1 trainer needed to beat Deoxys Attack Form \u2014 best counter estimator 0.48.",
-        "checked": "2026-10-22",
-        "source": "https://www.pokebattler.com/raids/deoxys_attack_form",
-        "settings": "Best counter; level 40 attackers, no weather, no friend boost; default page settings",
+        "checked": "2026-11-27",
+        "source": "https://www.pokebattler.com/raids/DEOXYS_ATTACK_FORM",
+        "settings": "Public default rankings; Overall boss moveset. Attacker level, weather and friendship settings are not exposed in the public view.",
         "applicable": true
       }
     },
     {
-      "name": "Deoxys \u00b7 Defense",
+      "name": "Deoxys · Defense",
       "kind": "5-star",
       "start": "2026-11-25T06:00",
       "end": "2026-12-01T22:00",
@@ -1021,11 +1019,11 @@
       "source": "https://leekduck.com/events/deoxys-normal-defense-attack-speed-formes-in-5-star-raid-battles-november-2026/",
       "sourceLabel": "Leek Duck",
       "note": "",
-      "raidHour": "Nov 25 \u00b7 6\u20137 PM",
+      "raidHour": "Nov 25 · 6–7 PM",
       "weekends": false,
       "guide": "https://pokemongohub.net/post/guide/defense-deoxys-raid-guide/",
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10002.png",
-      "pokebattler": "https://www.pokebattler.com/raids/deoxys_defense_form",
+      "pokebattler": "https://www.pokebattler.com/raids/DEOXYS_DEFENSE_FORM",
       "catchCP": {
         "level20": 1299,
         "level25": 1624,
@@ -1035,16 +1033,15 @@
       "trainerEstimate": {
         "slug": "DEOXYS_DEFENSE_FORM",
         "trainers": 3,
-        "estimator": 2.42,
-        "line": "About 3 trainers needed to beat Deoxys Defense Form \u2014 best counter estimator 2.42.",
-        "checked": "2026-10-22",
-        "source": "https://www.pokebattler.com/raids/deoxys_defense_form",
-        "settings": "Best counter; level 40 attackers, no weather, no friend boost; default page settings",
+        "estimator": 2.43,
+        "checked": "2026-11-27",
+        "source": "https://www.pokebattler.com/raids/DEOXYS_DEFENSE_FORM",
+        "settings": "Public default rankings; Overall boss moveset. Attacker level, weather and friendship settings are not exposed in the public view.",
         "applicable": true
       }
     },
     {
-      "name": "Deoxys \u00b7 Normal",
+      "name": "Deoxys · Normal",
       "kind": "5-star",
       "start": "2026-11-25T06:00",
       "end": "2026-12-01T22:00",
@@ -1069,11 +1066,11 @@
       "source": "https://leekduck.com/events/deoxys-normal-defense-attack-speed-formes-in-5-star-raid-battles-november-2026/",
       "sourceLabel": "Leek Duck",
       "note": "",
-      "raidHour": "Nov 25 \u00b7 6\u20137 PM",
+      "raidHour": "Nov 25 · 6–7 PM",
       "weekends": false,
       "guide": "",
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/386.png",
-      "pokebattler": "https://www.pokebattler.com/raids/deoxys",
+      "pokebattler": "https://www.pokebattler.com/raids/DEOXYS",
       "catchCP": {
         "level20": 1806,
         "level25": 2257,
@@ -1083,16 +1080,15 @@
       "trainerEstimate": {
         "slug": "DEOXYS",
         "trainers": 1,
-        "estimator": 0.96,
-        "line": "About 1 trainer needed to beat Deoxys \u2014 best counter estimator 0.96.",
-        "checked": "2026-10-22",
-        "source": "https://www.pokebattler.com/raids/deoxys",
-        "settings": "Best counter; level 40 attackers, no weather, no friend boost; default page settings",
+        "estimator": 0.95,
+        "checked": "2026-11-27",
+        "source": "https://www.pokebattler.com/raids/DEOXYS",
+        "settings": "Public default rankings; Overall boss moveset. Attacker level, weather and friendship settings are not exposed in the public view.",
         "applicable": true
       }
     },
     {
-      "name": "Deoxys \u00b7 Speed",
+      "name": "Deoxys · Speed",
       "kind": "5-star",
       "start": "2026-11-25T06:00",
       "end": "2026-12-01T22:00",
@@ -1117,11 +1113,11 @@
       "source": "https://leekduck.com/events/deoxys-normal-defense-attack-speed-formes-in-5-star-raid-battles-november-2026/",
       "sourceLabel": "Leek Duck",
       "note": "",
-      "raidHour": "Nov 25 \u00b7 6\u20137 PM",
+      "raidHour": "Nov 25 · 6–7 PM",
       "weekends": false,
       "guide": "",
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10003.png",
-      "pokebattler": "https://www.pokebattler.com/raids/deoxys_speed_form",
+      "pokebattler": "https://www.pokebattler.com/raids/DEOXYS_SPEED_FORM",
       "catchCP": {
         "level20": 1645,
         "level25": 2056,
@@ -1131,17 +1127,16 @@
       "trainerEstimate": {
         "slug": "DEOXYS_SPEED_FORM",
         "trainers": 2,
-        "estimator": 1.63,
-        "line": "About 2 trainers needed to beat Deoxys Speed Form \u2014 best counter estimator 1.63.",
-        "checked": "2026-10-22",
-        "source": "https://www.pokebattler.com/raids/deoxys_speed_form",
-        "settings": "Best counter; level 40 attackers, no weather, no friend boost; default page settings",
+        "estimator": 1.64,
+        "checked": "2026-11-27",
+        "source": "https://www.pokebattler.com/raids/DEOXYS_SPEED_FORM",
+        "settings": "Public default rankings; Overall boss moveset. Attacker level, weather and friendship settings are not exposed in the public view.",
         "applicable": true
       }
     },
     {
       "name": "Mega Metagross",
-      "kind": "Mega \u00b7 4-star",
+      "kind": "Mega · 4-star",
       "start": "2026-11-25T06:00",
       "end": "2026-12-01T22:00",
       "types": [
@@ -1174,7 +1169,7 @@
       "weekends": false,
       "guide": "https://pokemongohub.net/post/guide/mega-metagross-raid-guide/",
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10076.png",
-      "pokebattler": "https://www.pokebattler.com/raids/metagross_mega",
+      "pokebattler": "https://www.pokebattler.com/raids/METAGROSS_MEGA",
       "catchCP": {
         "level20": 2166,
         "level25": 2708,
@@ -1184,11 +1179,10 @@
       "trainerEstimate": {
         "slug": "METAGROSS_MEGA",
         "trainers": 2,
-        "estimator": 1.25,
-        "line": "About 2 trainers needed to beat Mega Metagross \u2014 best counter estimator 1.25.",
-        "checked": "2026-10-22",
-        "source": "https://www.pokebattler.com/raids/metagross_mega",
-        "settings": "Best counter; level 40 attackers, no weather, no friend boost; default page settings",
+        "estimator": 1.27,
+        "checked": "2026-11-27",
+        "source": "https://www.pokebattler.com/raids/METAGROSS_MEGA",
+        "settings": "Public default rankings; Overall boss moveset. Attacker level, weather and friendship settings are not exposed in the public view.",
         "applicable": true
       }
     },
@@ -1223,33 +1217,33 @@
           "multiplier": 1.6
         }
       ],
-      "team": null,
+      "team": "3",
       "source": "https://pokemongo.com/en/news/clefable-super-mega-raid-day-2026",
-      "sourceLabel": "Pok\u00e9mon GO",
-      "note": "Fairy/Flying typing; catch encounter is regular Clefable. Pok\u00e9battler checked November 6: ordinary Mega estimate is 1 trainer (0.88), which is not verified for this Super Mega event. Event trainer count remains TBD. Artwork shows the catch form.",
+      "sourceLabel": "Pokémon GO",
+      "note": "Pokébattler now models Super Mega Raid (Tier 4), 25,000 HP. The catch encounter and artwork are regular Clefable.",
       "raidHour": "",
       "weekends": false,
       "guide": "https://leekduck.com/events/clefable-super-mega-raid-day-2026/",
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/36.png",
-      "pokebattler": "https://www.pokebattler.com/raids/clefable_mega",
+      "pokebattler": "https://www.pokebattler.com/raids/CLEFABLE_MEGA",
       "catchCP": {
         "level20": 1392,
         "level25": 1741,
         "encounter": "Clefable"
       },
       "trainerEstimate": {
-        "applicable": false,
-        "checked": "2026-11-06",
-        "source": "https://www.pokebattler.com/raids/clefable_mega",
-        "estimator": 0.88,
-        "trainers": 1,
-        "settings": "Level 40 attackers, no weather or friendship boost; ordinary Mega raid simulation",
-        "reason": "Pok\u00e9battler currently models an ordinary Mega raid here, not the announced Super Mega event."
+        "slug": "CLEFABLE_MEGA",
+        "trainers": 3,
+        "estimator": 2.07,
+        "checked": "2026-11-27",
+        "source": "https://www.pokebattler.com/raids/CLEFABLE_MEGA",
+        "settings": "Public default rankings; Overall boss moveset. Attacker level, weather and friendship settings are not exposed in the public view.",
+        "applicable": true
       }
     },
     {
       "name": "Mega Beedrill",
-      "kind": "Mega \u00b7 4-star",
+      "kind": "Mega · 4-star",
       "start": "2026-11-24T10:00",
       "end": "2026-11-30T20:00",
       "types": [
@@ -1274,25 +1268,33 @@
           "multiplier": 1.6
         }
       ],
-      "team": null,
+      "team": "1",
       "source": "https://leekduck.com/events/twilight-wishes-2026/",
-      "sourceLabel": "Leek Duck \u00b7 Twilight Wishes",
-      "note": "Twilight Wishes event Mega raid. Times are local to the raid location. Trainer estimate has not been verified for this listing.",
+      "sourceLabel": "Leek Duck · Twilight Wishes",
+      "note": "Twilight Wishes event Mega raid. Times are local to the raid location.",
       "raidHour": "",
       "weekends": false,
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10090.png",
-      "pokebattler": "https://www.pokebattler.com/raids/beedrill_mega",
+      "pokebattler": "https://www.pokebattler.com/raids/BEEDRILL_MEGA",
       "catchCP": {
         "level20": 1054,
         "level25": 1318,
         "encounter": "Beedrill",
         "source": "https://leekduck.com/events/twilight-wishes-2026/"
       },
-      "trainerEstimate": null
+      "trainerEstimate": {
+        "slug": "BEEDRILL_MEGA",
+        "trainers": 1,
+        "estimator": 0.54,
+        "checked": "2026-11-27",
+        "source": "https://www.pokebattler.com/raids/BEEDRILL_MEGA",
+        "settings": "Public default rankings; Overall boss moveset. Attacker level, weather and friendship settings are not exposed in the public view.",
+        "applicable": true
+      }
     },
     {
       "name": "Mega Houndoom",
-      "kind": "Mega \u00b7 4-star",
+      "kind": "Mega · 4-star",
       "start": "2026-11-24T10:00",
       "end": "2026-11-30T20:00",
       "types": [
@@ -1317,25 +1319,33 @@
           "multiplier": 1.6
         }
       ],
-      "team": null,
+      "team": "1",
       "source": "https://leekduck.com/events/twilight-wishes-2026/",
-      "sourceLabel": "Leek Duck \u00b7 Twilight Wishes",
-      "note": "Twilight Wishes event Mega raid. Times are local to the raid location. Trainer estimate has not been verified for this listing.",
+      "sourceLabel": "Leek Duck · Twilight Wishes",
+      "note": "Twilight Wishes event Mega raid. Times are local to the raid location.",
       "raidHour": "",
       "weekends": false,
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10048.png",
-      "pokebattler": "https://www.pokebattler.com/raids/houndoom_mega",
+      "pokebattler": "https://www.pokebattler.com/raids/HOUNDOOM_MEGA",
       "catchCP": {
         "level20": 1505,
         "level25": 1882,
         "encounter": "Houndoom",
         "source": "https://leekduck.com/events/twilight-wishes-2026/"
       },
-      "trainerEstimate": null
+      "trainerEstimate": {
+        "slug": "HOUNDOOM_MEGA",
+        "trainers": 1,
+        "estimator": 0.73,
+        "checked": "2026-11-27",
+        "source": "https://www.pokebattler.com/raids/HOUNDOOM_MEGA",
+        "settings": "Public default rankings; Overall boss moveset. Attacker level, weather and friendship settings are not exposed in the public view.",
+        "applicable": true
+      }
     },
     {
       "name": "Mega Sableye",
-      "kind": "Mega \u00b7 4-star",
+      "kind": "Mega · 4-star",
       "start": "2026-11-24T10:00",
       "end": "2026-11-30T20:00",
       "types": [
@@ -1348,25 +1358,33 @@
           "multiplier": 1.6
         }
       ],
-      "team": null,
+      "team": "2",
       "source": "https://leekduck.com/events/twilight-wishes-2026/",
-      "sourceLabel": "Leek Duck \u00b7 Twilight Wishes",
-      "note": "Twilight Wishes event Mega raid. Times are local to the raid location. Trainer estimate has not been verified for this listing.",
+      "sourceLabel": "Leek Duck · Twilight Wishes",
+      "note": "Twilight Wishes event Mega raid. Times are local to the raid location.",
       "raidHour": "",
       "weekends": false,
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10066.png",
-      "pokebattler": "https://www.pokebattler.com/raids/sableye_mega",
+      "pokebattler": "https://www.pokebattler.com/raids/SABLEYE_MEGA",
       "catchCP": {
         "level20": 843,
         "level25": 1054,
         "encounter": "Sableye",
         "source": "https://leekduck.com/events/twilight-wishes-2026/"
       },
-      "trainerEstimate": null
+      "trainerEstimate": {
+        "slug": "SABLEYE_MEGA",
+        "trainers": 2,
+        "estimator": 1.24,
+        "checked": "2026-11-27",
+        "source": "https://www.pokebattler.com/raids/SABLEYE_MEGA",
+        "settings": "Public default rankings; Overall boss moveset. Attacker level, weather and friendship settings are not exposed in the public view.",
+        "applicable": true
+      }
     },
     {
       "name": "Mega Manectric",
-      "kind": "Mega \u00b7 4-star",
+      "kind": "Mega · 4-star",
       "start": "2026-11-24T10:00",
       "end": "2026-11-30T20:00",
       "types": [
@@ -1378,20 +1396,1038 @@
           "multiplier": 1.6
         }
       ],
-      "team": null,
+      "team": "1",
       "source": "https://leekduck.com/events/twilight-wishes-2026/",
-      "sourceLabel": "Leek Duck \u00b7 Twilight Wishes",
-      "note": "Twilight Wishes event Mega raid. Times are local to the raid location. Trainer estimate has not been verified for this listing.",
+      "sourceLabel": "Leek Duck · Twilight Wishes",
+      "note": "Twilight Wishes event Mega raid. Times are local to the raid location.",
       "raidHour": "",
       "weekends": false,
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10055.png",
-      "pokebattler": "https://www.pokebattler.com/raids/manectric_mega",
+      "pokebattler": "https://www.pokebattler.com/raids/MANECTRIC_MEGA",
       "catchCP": {
         "level20": 1337,
         "level25": 1672,
         "encounter": "Manectric",
         "source": "https://leekduck.com/events/twilight-wishes-2026/"
       },
+      "trainerEstimate": {
+        "slug": "MANECTRIC_MEGA",
+        "trainers": 1,
+        "estimator": 0.87,
+        "checked": "2026-11-27",
+        "source": "https://www.pokebattler.com/raids/MANECTRIC_MEGA",
+        "settings": "Public default rankings; Overall boss moveset. Attacker level, weather and friendship settings are not exposed in the public view.",
+        "applicable": true
+      }
+    },
+    {
+      "name": "Regidrago",
+      "kind": "5-star",
+      "start": "2026-12-02T06:00",
+      "end": "2026-12-08T22:00",
+      "types": [
+        "Dragon"
+      ],
+      "weaknesses": [
+        {
+          "type": "Dragon",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Fairy",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Ice",
+          "multiplier": 1.6
+        }
+      ],
+      "team": "2",
+      "source": "https://leekduck.com/events/regidrago-in-5-star-raid-battles-december-2026/",
+      "sourceLabel": "Leek Duck",
+      "note": "",
+      "raidHour": "Dec 2 · 6–7 PM",
+      "weekends": false,
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/895.png",
+      "pokebattler": "https://www.pokebattler.com/raids/REGIDRAGO",
+      "trainerEstimate": {
+        "slug": "REGIDRAGO",
+        "trainers": 2,
+        "estimator": 1.37,
+        "checked": "2026-11-27",
+        "source": "https://www.pokebattler.com/raids/REGIDRAGO",
+        "settings": "Public default rankings; Overall boss moveset. Attacker level, weather and friendship settings are not exposed in the public view.",
+        "applicable": true
+      },
+      "catchCP": {
+        "level20": 1699,
+        "level25": 2124,
+        "encounter": "",
+        "source": "https://leekduck.com/events/regidrago-in-5-star-raid-battles-december-2026/"
+      }
+    },
+    {
+      "name": "Mega Slowbro",
+      "kind": "Mega · 4-star",
+      "start": "2026-12-02T06:00",
+      "end": "2026-12-08T22:00",
+      "types": [
+        "Water",
+        "Psychic"
+      ],
+      "weaknesses": [
+        {
+          "type": "Bug",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Dark",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Electric",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Ghost",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Grass",
+          "multiplier": 1.6
+        }
+      ],
+      "team": "2",
+      "source": "https://leekduck.com/events/mega-slowbro-in-mega-raids-december-2026/",
+      "sourceLabel": "Leek Duck",
+      "note": "",
+      "raidHour": "",
+      "weekends": false,
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10071.png",
+      "pokebattler": "https://www.pokebattler.com/raids/SLOWBRO_MEGA",
+      "trainerEstimate": {
+        "slug": "SLOWBRO_MEGA",
+        "trainers": 2,
+        "estimator": 1.17,
+        "checked": "2026-11-27",
+        "source": "https://www.pokebattler.com/raids/SLOWBRO_MEGA",
+        "settings": "Public default rankings; Overall boss moveset. Attacker level, weather and friendship settings are not exposed in the public view.",
+        "applicable": true
+      },
+      "catchCP": {
+        "level20": 1454,
+        "level25": 1817,
+        "encounter": "Slowbro",
+        "source": "https://pogoapi.net/api/v1/pokemon_stats.json"
+      }
+    },
+    {
+      "name": "Shadow Dialga",
+      "kind": "Shadow · 5-star",
+      "start": "2026-12-02T06:00",
+      "end": "2027-01-05T22:00",
+      "types": [
+        "Steel",
+        "Dragon"
+      ],
+      "weaknesses": [
+        {
+          "type": "Fighting",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Ground",
+          "multiplier": 1.6
+        }
+      ],
+      "team": "3",
+      "source": "https://leekduck.com/events/shadow-dialga-in-shadow-raids-december-2026/",
+      "sourceLabel": "Leek Duck",
+      "note": "Pokébattler estimate assumes no Purified Gems. Gems can substantially reduce difficulty. The published listing does not specify a weekends-only restriction; recheck the source near the event.",
+      "raidHour": "",
+      "weekends": false,
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/483.png",
+      "pokebattler": "https://www.pokebattler.com/raids/DIALGA_SHADOW_FORM",
+      "trainerEstimate": {
+        "slug": "DIALGA_SHADOW_FORM",
+        "trainers": 3,
+        "estimator": 2.68,
+        "checked": "2026-11-27",
+        "source": "https://www.pokebattler.com/raids/DIALGA_SHADOW_FORM",
+        "settings": "Public default rankings; Overall boss moveset. Attacker level, weather and friendship settings are not exposed in the public view. Shadow results use no Purified Gems.",
+        "applicable": true
+      },
+      "catchCP": {
+        "level20": 2307,
+        "level25": 2884,
+        "encounter": "",
+        "source": "https://leekduck.com/events/shadow-dialga-in-shadow-raids-december-2026/"
+      }
+    },
+    {
+      "name": "Latias",
+      "kind": "5-star",
+      "start": "2026-12-09T06:00",
+      "end": "2026-12-15T22:00",
+      "types": [
+        "Dragon",
+        "Psychic"
+      ],
+      "weaknesses": [
+        {
+          "type": "Bug",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Dark",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Dragon",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Fairy",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Ghost",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Ice",
+          "multiplier": 1.6
+        }
+      ],
+      "team": "2",
+      "source": "https://leekduck.com/events/pokemon-champions-celebration-5-star-raid-battles-december-2026/",
+      "sourceLabel": "Leek Duck",
+      "note": "Champions rotation window; individual daily boss schedules are not announced. Do not assume this boss is available every day. Special Background eligibility ends with the event on December 14 at 8 PM.",
+      "raidHour": "Dec 9 · 6–7 PM · lineup pending",
+      "weekends": false,
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/380.png",
+      "pokebattler": "https://www.pokebattler.com/raids/LATIAS",
+      "trainerEstimate": {
+        "slug": "LATIAS",
+        "trainers": 2,
+        "estimator": 1.79,
+        "checked": "2026-11-27",
+        "source": "https://www.pokebattler.com/raids/LATIAS",
+        "settings": "Public default rankings; Overall boss moveset. Attacker level, weather and friendship settings are not exposed in the public view.",
+        "applicable": true
+      },
+      "catchCP": {
+        "level20": 2006,
+        "level25": 2507,
+        "encounter": "",
+        "source": "https://leekduck.com/events/pokemon-champions-celebration-5-star-raid-battles-december-2026/"
+      },
+      "schedulePending": true
+    },
+    {
+      "name": "Latios",
+      "kind": "5-star",
+      "start": "2026-12-09T06:00",
+      "end": "2026-12-15T22:00",
+      "types": [
+        "Dragon",
+        "Psychic"
+      ],
+      "weaknesses": [
+        {
+          "type": "Bug",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Dark",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Dragon",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Fairy",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Ghost",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Ice",
+          "multiplier": 1.6
+        }
+      ],
+      "team": "2",
+      "source": "https://leekduck.com/events/pokemon-champions-celebration-5-star-raid-battles-december-2026/",
+      "sourceLabel": "Leek Duck",
+      "note": "Champions rotation window; individual daily boss schedules are not announced. Do not assume this boss is available every day. Special Background eligibility ends with the event on December 14 at 8 PM.",
+      "raidHour": "Dec 9 · 6–7 PM · lineup pending",
+      "weekends": false,
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/381.png",
+      "pokebattler": "https://www.pokebattler.com/raids/LATIOS",
+      "trainerEstimate": {
+        "slug": "LATIOS",
+        "trainers": 2,
+        "estimator": 1.54,
+        "checked": "2026-11-27",
+        "source": "https://www.pokebattler.com/raids/LATIOS",
+        "settings": "Public default rankings; Overall boss moveset. Attacker level, weather and friendship settings are not exposed in the public view.",
+        "applicable": true
+      },
+      "catchCP": {
+        "level20": 2178,
+        "level25": 2723,
+        "encounter": "",
+        "source": "https://leekduck.com/events/pokemon-champions-celebration-5-star-raid-battles-december-2026/"
+      },
+      "schedulePending": true
+    },
+    {
+      "name": "Heatran",
+      "kind": "5-star",
+      "start": "2026-12-09T06:00",
+      "end": "2026-12-15T22:00",
+      "types": [
+        "Fire",
+        "Steel"
+      ],
+      "weaknesses": [
+        {
+          "type": "Ground",
+          "multiplier": 2.56
+        },
+        {
+          "type": "Fighting",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Water",
+          "multiplier": 1.6
+        }
+      ],
+      "team": "2",
+      "source": "https://leekduck.com/events/pokemon-champions-celebration-5-star-raid-battles-december-2026/",
+      "sourceLabel": "Leek Duck",
+      "note": "Champions rotation window; individual daily boss schedules are not announced. Do not assume this boss is available every day. Special Background eligibility ends with the event on December 14 at 8 PM.",
+      "raidHour": "Dec 9 · 6–7 PM · lineup pending",
+      "weekends": false,
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/485.png",
+      "pokebattler": "https://www.pokebattler.com/raids/HEATRAN",
+      "trainerEstimate": {
+        "slug": "HEATRAN",
+        "trainers": 2,
+        "estimator": 1.13,
+        "checked": "2026-11-27",
+        "source": "https://www.pokebattler.com/raids/HEATRAN",
+        "settings": "Public default rankings; Overall boss moveset. Attacker level, weather and friendship settings are not exposed in the public view.",
+        "applicable": true
+      },
+      "catchCP": {
+        "level20": 2145,
+        "level25": 2681,
+        "encounter": "",
+        "source": "https://leekduck.com/events/pokemon-champions-celebration-5-star-raid-battles-december-2026/"
+      },
+      "schedulePending": true
+    },
+    {
+      "name": "Cobalion",
+      "kind": "5-star",
+      "start": "2026-12-09T06:00",
+      "end": "2026-12-15T22:00",
+      "types": [
+        "Steel",
+        "Fighting"
+      ],
+      "weaknesses": [
+        {
+          "type": "Fighting",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Fire",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Ground",
+          "multiplier": 1.6
+        }
+      ],
+      "team": "2",
+      "source": "https://leekduck.com/events/pokemon-champions-celebration-5-star-raid-battles-december-2026/",
+      "sourceLabel": "Leek Duck",
+      "note": "Champions rotation window; individual daily boss schedules are not announced. Do not assume this boss is available every day. Special Background eligibility ends with the event on December 14 at 8 PM.",
+      "raidHour": "Dec 9 · 6–7 PM · lineup pending",
+      "weekends": false,
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/638.png",
+      "pokebattler": "https://www.pokebattler.com/raids/COBALION",
+      "trainerEstimate": {
+        "slug": "COBALION",
+        "trainers": 2,
+        "estimator": 1.35,
+        "checked": "2026-11-27",
+        "source": "https://www.pokebattler.com/raids/COBALION",
+        "settings": "Public default rankings; Overall boss moveset. Attacker level, weather and friendship settings are not exposed in the public view.",
+        "applicable": true
+      },
+      "catchCP": {
+        "level20": 1727,
+        "level25": 2159,
+        "encounter": "",
+        "source": "https://leekduck.com/events/pokemon-champions-celebration-5-star-raid-battles-december-2026/"
+      },
+      "schedulePending": true
+    },
+    {
+      "name": "Terrakion",
+      "kind": "5-star",
+      "start": "2026-12-09T06:00",
+      "end": "2026-12-15T22:00",
+      "types": [
+        "Rock",
+        "Fighting"
+      ],
+      "weaknesses": [
+        {
+          "type": "Fairy",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Fighting",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Grass",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Ground",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Psychic",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Steel",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Water",
+          "multiplier": 1.6
+        }
+      ],
+      "team": "2",
+      "source": "https://leekduck.com/events/pokemon-champions-celebration-5-star-raid-battles-december-2026/",
+      "sourceLabel": "Leek Duck",
+      "note": "Champions rotation window; individual daily boss schedules are not announced. Do not assume this boss is available every day. Special Background eligibility ends with the event on December 14 at 8 PM.",
+      "raidHour": "Dec 9 · 6–7 PM · lineup pending",
+      "weekends": false,
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/639.png",
+      "pokebattler": "https://www.pokebattler.com/raids/TERRAKION",
+      "trainerEstimate": {
+        "slug": "TERRAKION",
+        "trainers": 2,
+        "estimator": 1.03,
+        "checked": "2026-11-27",
+        "source": "https://www.pokebattler.com/raids/TERRAKION",
+        "settings": "Public default rankings; Overall boss moveset. Attacker level, weather and friendship settings are not exposed in the public view.",
+        "applicable": true
+      },
+      "catchCP": {
+        "level20": 2113,
+        "level25": 2641,
+        "encounter": "",
+        "source": "https://leekduck.com/events/pokemon-champions-celebration-5-star-raid-battles-december-2026/"
+      },
+      "schedulePending": true
+    },
+    {
+      "name": "Virizion",
+      "kind": "5-star",
+      "start": "2026-12-09T06:00",
+      "end": "2026-12-15T22:00",
+      "types": [
+        "Grass",
+        "Fighting"
+      ],
+      "weaknesses": [
+        {
+          "type": "Flying",
+          "multiplier": 2.56
+        },
+        {
+          "type": "Fairy",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Fire",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Ice",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Poison",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Psychic",
+          "multiplier": 1.6
+        }
+      ],
+      "team": "1",
+      "source": "https://leekduck.com/events/pokemon-champions-celebration-5-star-raid-battles-december-2026/",
+      "sourceLabel": "Leek Duck",
+      "note": "Champions rotation window; individual daily boss schedules are not announced. Do not assume this boss is available every day. Special Background eligibility ends with the event on December 14 at 8 PM.",
+      "raidHour": "Dec 9 · 6–7 PM · lineup pending",
+      "weekends": false,
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/640.png",
+      "pokebattler": "https://www.pokebattler.com/raids/VIRIZION",
+      "trainerEstimate": {
+        "slug": "VIRIZION",
+        "trainers": 1,
+        "estimator": 0.93,
+        "checked": "2026-11-27",
+        "source": "https://www.pokebattler.com/raids/VIRIZION",
+        "settings": "Public default rankings; Overall boss moveset. Attacker level, weather and friendship settings are not exposed in the public view.",
+        "applicable": true
+      },
+      "catchCP": {
+        "level20": 1727,
+        "level25": 2159,
+        "encounter": "",
+        "source": "https://leekduck.com/events/pokemon-champions-celebration-5-star-raid-battles-december-2026/"
+      },
+      "schedulePending": true
+    },
+    {
+      "name": "Regieleki",
+      "kind": "5-star",
+      "start": "2026-12-09T06:00",
+      "end": "2026-12-15T22:00",
+      "types": [
+        "Electric"
+      ],
+      "weaknesses": [
+        {
+          "type": "Ground",
+          "multiplier": 1.6
+        }
+      ],
+      "team": "2",
+      "source": "https://leekduck.com/events/pokemon-champions-celebration-5-star-raid-battles-december-2026/",
+      "sourceLabel": "Leek Duck",
+      "note": "Champions rotation window; individual daily boss schedules are not announced. Do not assume this boss is available every day. Special Background eligibility ends with the event on December 14 at 8 PM.",
+      "raidHour": "Dec 9 · 6–7 PM · lineup pending",
+      "weekends": false,
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/894.png",
+      "pokebattler": "https://www.pokebattler.com/raids/REGIELEKI",
+      "trainerEstimate": {
+        "slug": "REGIELEKI",
+        "trainers": 2,
+        "estimator": 1.82,
+        "checked": "2026-11-27",
+        "source": "https://www.pokebattler.com/raids/REGIELEKI",
+        "settings": "Public default rankings; Overall boss moveset. Attacker level, weather and friendship settings are not exposed in the public view.",
+        "applicable": true
+      },
+      "catchCP": {
+        "level20": 1602,
+        "level25": 2002,
+        "encounter": "",
+        "source": "https://leekduck.com/events/pokemon-champions-celebration-5-star-raid-battles-december-2026/"
+      },
+      "schedulePending": true
+    },
+    {
+      "name": "Mega Gengar",
+      "kind": "Mega · 4-star",
+      "start": "2026-12-09T06:00",
+      "end": "2026-12-15T22:00",
+      "types": [
+        "Ghost",
+        "Poison"
+      ],
+      "weaknesses": [
+        {
+          "type": "Dark",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Ghost",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Ground",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Psychic",
+          "multiplier": 1.6
+        }
+      ],
+      "team": "1",
+      "source": "https://leekduck.com/events/mega-gengar-in-mega-raids-december-2026/",
+      "sourceLabel": "Leek Duck",
+      "note": "",
+      "raidHour": "",
+      "weekends": false,
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10038.png",
+      "pokebattler": "https://www.pokebattler.com/raids/GENGAR_MEGA",
+      "trainerEstimate": {
+        "slug": "GENGAR_MEGA",
+        "trainers": 1,
+        "estimator": 0.67,
+        "checked": "2026-11-27",
+        "source": "https://www.pokebattler.com/raids/GENGAR_MEGA",
+        "settings": "Public default rankings; Overall boss moveset. Attacker level, weather and friendship settings are not exposed in the public view.",
+        "applicable": true
+      },
+      "catchCP": {
+        "level20": 1644,
+        "level25": 2055,
+        "encounter": "Gengar",
+        "source": "https://pogoapi.net/api/v1/pokemon_stats.json"
+      }
+    },
+    {
+      "name": "Ho-Oh",
+      "kind": "5-star",
+      "start": "2026-12-16T06:00",
+      "end": "2026-12-22T22:00",
+      "types": [
+        "Fire",
+        "Flying"
+      ],
+      "weaknesses": [
+        {
+          "type": "Rock",
+          "multiplier": 2.56
+        },
+        {
+          "type": "Electric",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Water",
+          "multiplier": 1.6
+        }
+      ],
+      "team": "2",
+      "source": "https://leekduck.com/events/ho-oh-in-5-star-raid-battles-december-2026/",
+      "sourceLabel": "Leek Duck",
+      "note": "",
+      "raidHour": "Dec 16 · 6–7 PM",
+      "weekends": false,
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/250.png",
+      "pokebattler": "https://www.pokebattler.com/raids/HO_OH",
+      "trainerEstimate": {
+        "slug": "HO_OH",
+        "trainers": 2,
+        "estimator": 1.69,
+        "checked": "2026-11-27",
+        "source": "https://www.pokebattler.com/raids/HO_OH",
+        "settings": "Public default rankings; Overall boss moveset. Attacker level, weather and friendship settings are not exposed in the public view.",
+        "applicable": true
+      },
+      "catchCP": {
+        "level20": 2207,
+        "level25": 2759,
+        "encounter": "",
+        "source": "https://leekduck.com/events/ho-oh-in-5-star-raid-battles-december-2026/"
+      }
+    },
+    {
+      "name": "Mega Skarmory",
+      "kind": "Mega · 4-star",
+      "start": "2026-12-16T06:00",
+      "end": "2026-12-22T22:00",
+      "types": [
+        "Steel",
+        "Flying"
+      ],
+      "weaknesses": [
+        {
+          "type": "Electric",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Fire",
+          "multiplier": 1.6
+        }
+      ],
+      "team": "2",
+      "source": "https://leekduck.com/events/mega-skarmory-in-mega-raids-december-2026/",
+      "sourceLabel": "Leek Duck",
+      "note": " Artwork shows the catch form.",
+      "raidHour": "",
+      "weekends": false,
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/227.png",
+      "pokebattler": "https://www.pokebattler.com/raids/SKARMORY_MEGA",
+      "trainerEstimate": {
+        "slug": "SKARMORY_MEGA",
+        "trainers": 2,
+        "estimator": 1.02,
+        "checked": "2026-11-27",
+        "source": "https://www.pokebattler.com/raids/SKARMORY_MEGA",
+        "settings": "Public default rankings; Overall boss moveset. Attacker level, weather and friendship settings are not exposed in the public view.",
+        "applicable": true
+      },
+      "catchCP": {
+        "level20": 1204,
+        "level25": 1506,
+        "encounter": "Skarmory",
+        "source": "https://pogoapi.net/api/v1/pokemon_stats.json"
+      }
+    },
+    {
+      "name": "Lugia",
+      "kind": "5-star",
+      "start": "2026-12-23T06:00",
+      "end": "2026-12-29T22:00",
+      "types": [
+        "Psychic",
+        "Flying"
+      ],
+      "weaknesses": [
+        {
+          "type": "Dark",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Electric",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Ghost",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Ice",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Rock",
+          "multiplier": 1.6
+        }
+      ],
+      "team": "3",
+      "source": "https://leekduck.com/events/lugia-in-5-star-raid-battles-december-2026/",
+      "sourceLabel": "Leek Duck",
+      "note": "",
+      "raidHour": "Dec 23 · 6–7 PM",
+      "weekends": false,
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/249.png",
+      "pokebattler": "https://www.pokebattler.com/raids/LUGIA",
+      "trainerEstimate": {
+        "slug": "LUGIA",
+        "trainers": 3,
+        "estimator": 2.44,
+        "checked": "2026-11-27",
+        "source": "https://www.pokebattler.com/raids/LUGIA",
+        "settings": "Public default rankings; Overall boss moveset. Attacker level, weather and friendship settings are not exposed in the public view.",
+        "applicable": true
+      },
+      "catchCP": {
+        "level20": 2115,
+        "level25": 2645,
+        "encounter": "",
+        "source": "https://leekduck.com/events/lugia-in-5-star-raid-battles-december-2026/"
+      }
+    },
+    {
+      "name": "Mega Glalie",
+      "kind": "Mega · 4-star",
+      "start": "2026-12-23T06:00",
+      "end": "2026-12-29T22:00",
+      "types": [
+        "Ice"
+      ],
+      "weaknesses": [
+        {
+          "type": "Fighting",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Fire",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Rock",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Steel",
+          "multiplier": 1.6
+        }
+      ],
+      "team": "1",
+      "source": "https://leekduck.com/events/mega-glalie-in-mega-raids-december-2026/",
+      "sourceLabel": "Leek Duck",
+      "note": "",
+      "raidHour": "",
+      "weekends": false,
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10074.png",
+      "pokebattler": "https://www.pokebattler.com/raids/GLALIE_MEGA",
+      "trainerEstimate": {
+        "slug": "GLALIE_MEGA",
+        "trainers": 1,
+        "estimator": 0.64,
+        "checked": "2026-11-27",
+        "source": "https://www.pokebattler.com/raids/GLALIE_MEGA",
+        "settings": "Public default rankings; Overall boss moveset. Attacker level, weather and friendship settings are not exposed in the public view.",
+        "applicable": true
+      },
+      "catchCP": {
+        "level20": 1203,
+        "level25": 1504,
+        "encounter": "Glalie",
+        "source": "https://pogoapi.net/api/v1/pokemon_stats.json"
+      }
+    },
+    {
+      "name": "Tornadus · Therian",
+      "kind": "5-star",
+      "start": "2026-12-30T06:00",
+      "end": "2027-01-05T22:00",
+      "types": [
+        "Flying"
+      ],
+      "weaknesses": [
+        {
+          "type": "Electric",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Ice",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Rock",
+          "multiplier": 1.6
+        }
+      ],
+      "team": "2",
+      "source": "https://leekduck.com/events/tornadus-thundurus-landorus-therian-formes-in-5-star-raid-battles-december-2026/",
+      "sourceLabel": "Leek Duck",
+      "note": "",
+      "raidHour": "Dec 30 · 6–7 PM",
+      "weekends": false,
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10019.png",
+      "pokebattler": "https://www.pokebattler.com/raids/TORNADUS_THERIAN_FORM",
+      "trainerEstimate": {
+        "slug": "TORNADUS_THERIAN_FORM",
+        "trainers": 2,
+        "estimator": 1.57,
+        "checked": "2026-11-27",
+        "source": "https://www.pokebattler.com/raids/TORNADUS_THERIAN_FORM",
+        "settings": "Public default rankings; Overall boss moveset. Attacker level, weather and friendship settings are not exposed in the public view.",
+        "applicable": true
+      },
+      "catchCP": {
+        "level20": 1837,
+        "level25": 2296,
+        "encounter": "",
+        "source": "https://leekduck.com/events/tornadus-thundurus-landorus-therian-formes-in-5-star-raid-battles-december-2026/"
+      }
+    },
+    {
+      "name": "Thundurus · Therian",
+      "kind": "5-star",
+      "start": "2026-12-30T06:00",
+      "end": "2027-01-05T22:00",
+      "types": [
+        "Electric",
+        "Flying"
+      ],
+      "weaknesses": [
+        {
+          "type": "Ice",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Rock",
+          "multiplier": 1.6
+        }
+      ],
+      "team": "2",
+      "source": "https://leekduck.com/events/tornadus-thundurus-landorus-therian-formes-in-5-star-raid-battles-december-2026/",
+      "sourceLabel": "Leek Duck",
+      "note": "",
+      "raidHour": "Dec 30 · 6–7 PM",
+      "weekends": false,
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10020.png",
+      "pokebattler": "https://www.pokebattler.com/raids/THUNDURUS_THERIAN_FORM",
+      "trainerEstimate": {
+        "slug": "THUNDURUS_THERIAN_FORM",
+        "trainers": 2,
+        "estimator": 1.47,
+        "checked": "2026-11-27",
+        "source": "https://www.pokebattler.com/raids/THUNDURUS_THERIAN_FORM",
+        "settings": "Public default rankings; Overall boss moveset. Attacker level, weather and friendship settings are not exposed in the public view.",
+        "applicable": true
+      },
+      "catchCP": {
+        "level20": 2091,
+        "level25": 2614,
+        "encounter": "",
+        "source": "https://leekduck.com/events/tornadus-thundurus-landorus-therian-formes-in-5-star-raid-battles-december-2026/"
+      }
+    },
+    {
+      "name": "Landorus · Therian",
+      "kind": "5-star",
+      "start": "2026-12-30T06:00",
+      "end": "2027-01-05T22:00",
+      "types": [
+        "Ground",
+        "Flying"
+      ],
+      "weaknesses": [
+        {
+          "type": "Ice",
+          "multiplier": 2.56
+        },
+        {
+          "type": "Water",
+          "multiplier": 1.6
+        }
+      ],
+      "team": "2",
+      "source": "https://leekduck.com/events/tornadus-thundurus-landorus-therian-formes-in-5-star-raid-battles-december-2026/",
+      "sourceLabel": "Leek Duck",
+      "note": "",
+      "raidHour": "Dec 30 · 6–7 PM",
+      "weekends": false,
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10021.png",
+      "pokebattler": "https://www.pokebattler.com/raids/LANDORUS_THERIAN_FORM",
+      "trainerEstimate": {
+        "slug": "LANDORUS_THERIAN_FORM",
+        "trainers": 2,
+        "estimator": 1.08,
+        "checked": "2026-11-27",
+        "source": "https://www.pokebattler.com/raids/LANDORUS_THERIAN_FORM",
+        "settings": "Public default rankings; Overall boss moveset. Attacker level, weather and friendship settings are not exposed in the public view.",
+        "applicable": true
+      },
+      "catchCP": {
+        "level20": 2241,
+        "level25": 2801,
+        "encounter": "",
+        "source": "https://leekduck.com/events/tornadus-thundurus-landorus-therian-formes-in-5-star-raid-battles-december-2026/"
+      }
+    },
+    {
+      "name": "Mega Falinks",
+      "kind": "Mega · 4-star",
+      "start": "2026-12-30T06:00",
+      "end": "2027-01-05T22:00",
+      "types": [
+        "Fighting"
+      ],
+      "weaknesses": [
+        {
+          "type": "Fairy",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Flying",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Psychic",
+          "multiplier": 1.6
+        }
+      ],
+      "team": "1",
+      "source": "https://leekduck.com/events/mega-falinks-in-mega-raids-december-2026/",
+      "sourceLabel": "Leek Duck",
+      "note": " Artwork shows the catch form.",
+      "raidHour": "",
+      "weekends": false,
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/870.png",
+      "pokebattler": "https://www.pokebattler.com/raids/FALINKS_MEGA",
+      "trainerEstimate": {
+        "slug": "FALINKS_MEGA",
+        "trainers": 1,
+        "estimator": 0.75,
+        "checked": "2026-11-27",
+        "source": "https://www.pokebattler.com/raids/FALINKS_MEGA",
+        "settings": "Public default rankings; Overall boss moveset. Attacker level, weather and friendship settings are not exposed in the public view.",
+        "applicable": true
+      },
+      "catchCP": {
+        "level20": 1347,
+        "level25": 1683,
+        "encounter": "Falinks",
+        "source": "https://pogoapi.net/api/v1/pokemon_stats.json"
+      }
+    },
+    {
+      "name": "Regidrago",
+      "kind": "5-star",
+      "start": "2026-12-09T06:00",
+      "end": "2026-12-15T22:00",
+      "types": [
+        "Dragon"
+      ],
+      "weaknesses": [
+        {
+          "type": "Dragon",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Fairy",
+          "multiplier": 1.6
+        },
+        {
+          "type": "Ice",
+          "multiplier": 1.6
+        }
+      ],
+      "team": "2",
+      "source": "https://leekduck.com/events/pokemon-champions-celebration-5-star-raid-battles-december-2026/",
+      "sourceLabel": "Leek Duck",
+      "note": "Champions rotation window; daily boss schedules are not announced. Special Background eligibility ends December 14 at 8 PM.",
+      "raidHour": "Dec 9 · 6–7 PM · lineup pending",
+      "weekends": false,
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/895.png",
+      "pokebattler": "https://www.pokebattler.com/raids/REGIDRAGO",
+      "trainerEstimate": {
+        "slug": "REGIDRAGO",
+        "trainers": 2,
+        "estimator": 1.37,
+        "checked": "2026-11-27",
+        "source": "https://www.pokebattler.com/raids/REGIDRAGO",
+        "settings": "Public default rankings; Overall boss moveset. Attacker level, weather and friendship settings are not exposed in the public view.",
+        "applicable": true
+      },
+      "catchCP": {
+        "level20": 1699,
+        "level25": 2124,
+        "encounter": "",
+        "source": "https://leekduck.com/events/regidrago-in-5-star-raid-battles-december-2026/"
+      },
+      "schedulePending": true
+    },
+    {
+      "name": "Raid Day · boss unannounced",
+      "kind": "Raid Day",
+      "start": "2026-12-19T14:00",
+      "end": "2026-12-19T17:00",
+      "types": [],
+      "weaknesses": [],
+      "team": null,
+      "source": "https://leekduck.com/events/raid-day-december-2026/",
+      "sourceLabel": "Leek Duck",
+      "note": "Featured boss and difficulty are not announced.",
+      "raidHour": "",
+      "weekends": false,
+      "image": "",
       "trainerEstimate": null
     }
   ]
